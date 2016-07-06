@@ -14,6 +14,6 @@
 
 4. Don't forget to commit changes until doing push
 
-<h2>Congratulation, you are ready to get started!!!</h2>
+<h2>Congratulations, you are ready to get started!!!</h2>
 
 
