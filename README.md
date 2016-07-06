@@ -1,16 +1,18 @@
-This our remote repository.
+<h1>This our remote repository.</h1>
 
-Create remote branch, make local branch, which will track remote
+1. Create remote branch on github
+2. Create local branch, which will track remote
 
 Do this by comand
-
 :~$ git checkout -b serverfix origin/your_branch_name
 
 your_branch_name replace with the name of your branch
 
-That's all, now you can start work in your branch and do pushes with this comand
+4. Upload you code with next comand
 
-:~$ git push origin your_branch_name 
+:~$ git push origin your_branch_name
+
+5. Don't forget to commit changes until doing push
 
 Congratulation, you are ready to get started!!!
 
