@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact</title>
+    <!--Google fonts-->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
+    <!--Main style, only google fonts-->
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <div class="contact">
+        <h2>My address:</h2>
+        <p>Ukraine, c.Zaporogie st.Rustavi h.1</p>
+        <p>Tel: 555-555-555</p>
+        <form action="contact.php" method="post" class="contact_form">
+            <fieldset>
+                <legend>Your message</legend>
+                <label for="user_name">
+                    <input type="text" id="user_name" name="Name" value="" placeholder="Name:"> <br>
+                </label>
+                <label for="user_email">
+                    <input type="email" id="user_email" name="email" placeholder="Email:"> <br>
+                </label>
+                <label for="message">
+                <textarea name="user_message" id="message" cols="30" rows="10" placeholder="Write your message here"></textarea> <br>
+                </label>
+                <button type="submit">Send</button>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
