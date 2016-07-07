@@ -8,7 +8,7 @@
 
   <b>your_branch_name</b> replace with the name of your branch
 
-3. Upload you code with next comand
+3. Upload your code with next comand
 
   :~$ git push origin <b>your_branch_name</b>
 
