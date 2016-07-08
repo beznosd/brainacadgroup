@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Autobiagraphy</title>
+    </head>
+    <body>
+        <ul>
+            <h1>Info about me</h1>
+            <ol> My Name:</ol>
+                <p>Roman Azmanov</p>
+            <ol>My adress:</ol>
+                <p>Ukrain, s.Zaporozhye, str.Magistralnaya 74a</p>
+            <ol>My Contact</ol>
+                <em><li>roman.azmanets@gmail.com</li></em>
+                <li><a href="https://vk.com/azmanets"> my vkontakte </a></li>
+                <li>+380-99-225-0609</li>
+        </ul>
+    </body>
+</html>
