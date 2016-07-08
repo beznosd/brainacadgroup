@@ -4,7 +4,7 @@
 2. Create local branch, which will track remote
 
   Do this by comand
-  :~$ git checkout -b serverfix origin/<b>your_branch_name</b>
+  :~$ git checkout -b <b>your_branch_name</b> origin/<b>your_branch_name</b>
 
   <b>your_branch_name</b> replace with the name of your branch
 
