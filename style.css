@@ -1,0 +1,68 @@
+.main {
+	width: 1000px;
+	margin: auto;
+	margin-top: -8px;
+}
+.header {
+	background-color: #2f4f4f;
+	height: 58px;
+}
+.left {
+	float: left;
+}
+.right {
+	float: right;
+	height: 50px;
+	padding: 8px 20px 0px 20px;
+}
+h1 {
+	margin: 0px;
+	font-family: arial;
+	font-size: 50px;
+	color: white;
+}
+.red {
+	color: red;
+}
+.cont {
+	font-family: times;
+	font-size: 30px;
+	color: white;
+}
+a:hover {
+	background-color: #ff8c00;
+}
+.p {
+	font-family: times;
+	font-size: 20px;
+	color: 2f4f4f;
+}
+.que {
+	font-weight: bold;
+}
+img {
+	height: 250px;
+	width: 250px;
+}
+.pics {
+	height: 310px;
+}
+.pic {
+	height: 300px;
+	width: 250px;
+	margin: 5px 40px 5px 40px;
+	float: left;
+}
+.tpic {
+	text-align: center;
+	font-family: times;
+	font-size: 15px;
+	letter-spacing: 0.3em;
+} 
+h2 {
+	font-family: times;
+	font-style: italic;
+	font-size: 10px;
+	text-align: center;
+	font-weight: 100;
+}
