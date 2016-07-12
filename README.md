@@ -1,19 +1,16 @@
 <h1>This our remote repository.</h1>
 
-1. Create remote branch on github
-2. Create local branch, which will track remote
+Исходники нашей странички фотографа находятся в папке <b>first_work</b>
 
-  Do this by comand
-  :~$ git checkout -b <b>your_branch_name</b> origin/<b>your_branch_name</b>
+Исходник списка который мы вместе создавали в папке <b>list</b>
 
-  <b>your_branch_name</b> replace with the name of your branch
+Разберитесь со всем кодом хорошенько, особенно со свойством background и закончите то, что начали на уроке.
 
-3. Upload your code with next comand
+Пройдитесь по презентации, повторите все что мы прошли.
 
-  :~$ git push origin <b>your_branch_name</b>
+Вот еще сайт на котором я вам показывал примеры, сайт отличнейший, там можно быстренько найти и вспомнить то, что подзабыли, слева менюшка, где все по категориям разбито.
 
-4. Don't forget to commit changes until doing push
+http://www.w3schools.com/css/default.asp
 
-<h2>Congratulations, you are ready to get started!!!</h2>
-
-
+<h2>Следующее занятие в пятницу</h2>
+<h3>Что б никто не пришол в среду</h3>
