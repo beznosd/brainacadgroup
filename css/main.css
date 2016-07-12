@@ -1,0 +1,109 @@
+/*
+Colors:
+
+header - rgb(26, 26, 26);
+body, h1 - rgb(4, 62, 98);
+h2 - rgb(235, 71, 175);
+
+ */
+
+body {
+	width: 1280px;
+	background: rgb(4, 62, 98);
+	font-family: Raleway, monospace, serif, Arial;
+	font-size: 16px;
+}
+/***************HEADER STYLE********************/
+header {
+	background: rgb(26, 26, 26);
+	height: 110px;
+	margin-top: -23px;
+}
+
+header h1 {
+	padding-top: 20px;
+	text-align: center;
+	font-size: 35px;
+	color: rgb(4, 62, 98);
+}
+
+header h2 {
+	padding-right: 7px;
+	text-align: right;
+	color: rgb(4, 62, 98);
+}
+/******************IMAGE STYLE*****************************/
+.main_img {
+	/*Text style*/
+	color: #fff;
+	text-align: right;
+	font-size: 24px;
+	font-weight: 700;
+	padding: 20px 40px 0;
+	/*img style*/
+	height: 600px;
+	background: url("../img/Sky.jpg") no-repeat fixed 70% 100%;
+	background-size: cover;
+	margin-bottom: 40px;
+}
+/***********************BYTTON STYLE****************************/
+.main_button {
+	width: 150px;
+	margin: 0 auto 40px;
+	padding: 12px 15px;
+	background: rgb(0, 128, 0);
+	border: 1px solid rgb(242, 242, 242);
+	border-radius: 5px;
+}
+.main_button a {
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: 700;
+	color: #fff;
+}
+.main_button a:hover {
+	text-decoration: underline;
+}
+.main_button:hover {
+	cursor: pointer;
+	background: rgb(0, 153, 0);
+}
+.main_button:active {
+	border: 1px solid rgb(4, 62, 98);
+}
+.main_button a:active {
+	color: rgb(4, 62, 98);
+}
+
+
+/******************List style**********************/
+main .question {
+	font-size: 16px;
+	color: red;
+}
+
+main ul {
+	background: red;
+	padding: 20px 20px 20px 60px;
+}
+
+main ul li {
+	background: #FFE4C4;
+}
+
+
+
+
+footer {
+	height: 100px;
+	border: 1px solid #000;
+	background: #fff;
+	text-align: center;
+	box-sizing: border-box;
+}
+.footer_img {
+	overflow: hidden;
+	height: 100px;
+	background: url("/img/spongebob_happy.jpg") no-repeat  right top;
+}
