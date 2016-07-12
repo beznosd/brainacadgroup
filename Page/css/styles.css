@@ -1,0 +1,111 @@
+html{
+	margin:0px;
+	padding: 0px;
+}
+
+body{
+	margin:0px;
+	padding: 0px;
+	font-family: Arial;
+	background-image:	url("../images/background1.png");
+	background-position: top;
+	background-repeat: repeat-y;
+}
+
+div.header h1,h2{
+	text-align: center;
+}
+
+div.header h1{
+	color: blue;
+}
+
+div.header h2{
+	color: magenta;
+}
+
+div.picture{
+	background-image:	url("../images/1.jpg");
+	height:	600px;
+	background-attachment: fixed;
+	background-size: cover;
+    text-align: right;
+}
+
+.picture p{
+	color: white;
+	font-size: 2em;
+	font-family:serif;
+	margin: 20px 20px 0 0;
+	padding: 20px 20px 0 0;
+
+}
+
+.button{
+	margin: 30px 0;
+	text-align: center;
+	
+}
+
+.button a{
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  background: green;
+  padding: 20px;
+  width: 40px;
+  height: 20px;
+  border: 2px solid gray;
+  border-radius: 10px;
+}
+
+.button a:hover{
+	background-color: lightgreen;
+	color: yellow;
+	font-weight: bold;
+	border-left-color:  white;
+	border-top-color: white;
+}
+
+.button a:active{
+	cursor: grabbing;
+	border-left-color:  gray;
+	border-top-color: gray;
+	border-right-color:  white;
+	border-bottom-color: white;
+	font-weight: normal;
+	background-color: darkgreen;
+
+}
+
+.list{
+	padding: 20px;
+}
+
+ul{
+	list-style-type: square;
+	list-style-position: inside;
+	background-color: gray;
+	font-family:sans-serif;
+	padding: 20px;
+}
+
+ul li{
+	background-color: lightgray;
+	margin: 10px;
+}
+
+.footer{
+	background-color: black;
+	text-align: center;
+	color: white;
+	height: 40px;
+	background-image: url("../images/mops1.png");
+	background-position: right;
+	background-repeat: no-repeat;
+	background-size: 40px 40px;
+}
+.footer p{
+	margin: 0;
+	padding-top: 10px;
+}
