@@ -76,24 +76,62 @@ header h2 {
 	color: rgb(4, 62, 98);
 }
 
-
 /******************List style**********************/
+
 main .question {
-	font-size: 16px;
-	color: red;
+	padding-left: 30px;
+	margin-bottom: 20px;
+	font-size: 20px;
+	color: #fff;
 }
 
 main ul {
-	background: red;
-	padding: 20px 20px 20px 60px;
+	margin-bottom: 0;
 }
 
-main ul li {
-	background: #FFE4C4;
+main ul,
+main ul:first-child {
+	list-style-type: none;
+	background: url("../img/space.png") no-repeat;
+	opacity: 0.9;
+	color: #fff;
+
 }
 
+main ul:first-child {
+	padding-left: 70px;
+	padding-bottom: 10px;
+	list-style-type: square;
+	font-size: 18px;
+	opacity: 0.7;
+	background: none;
+}
 
+main ul li .list_article {
+	width: 650px;
+	line-height: 1.4em;
+}
 
+.stars_item,
+.planet_item,
+.universe_item {
+	padding-left: 270px;
+	font-size: 20px;
+}
+
+.stars_item {
+	color: rgb(255, 255, 26);
+}
+
+.planet_item {
+	color: rgb(0, 230, 230);
+}
+
+.universe_item {
+	color: #BC734C;
+}
+
+/****************FOOTER STYLE**************************/
 
 footer {
 	height: 100px;
@@ -103,7 +141,5 @@ footer {
 	box-sizing: border-box;
 }
 .footer_img {
-	overflow: hidden;
-	height: 100px;
-	background: url("/img/spongebob_happy.jpg") no-repeat  right top;
+	background: url("../img/nature.jpg") no-repeat;
 }
