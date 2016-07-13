@@ -134,12 +134,15 @@ main ul li .list_article {
 /****************FOOTER STYLE**************************/
 
 footer {
-	height: 100px;
-	border: 1px solid #000;
-	background: #fff;
-	text-align: center;
-	box-sizing: border-box;
+	margin-bottom: -10px;
+	padding-top: 10px;
+	text-align: left;
+	color: #fff;
+	background: #000;
 }
+
 .footer_img {
-	background: url("../img/nature.jpg") no-repeat;
+	margin-left: 1220px;
+	padding-bottom: 50px;
+	background: url("../img/small-star.png") no-repeat;
 }
