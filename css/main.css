@@ -61,7 +61,7 @@ header h2 {
 .main_button {
 	width: 150px;
 	margin: 0 auto 40px;
-	padding: 12px 15px;
+	padding: 10px 10px 10px 17px;
 	background: rgb(0, 128, 0);
 	border: 1px solid rgb(242, 242, 242);
 	border-radius: 5px;
@@ -72,6 +72,7 @@ header h2 {
 	text-transform: uppercase;
 	font-weight: 700;
 	color: #fff;
+	border: none;
 }
 .main_button a:hover {
 	text-decoration: underline;
