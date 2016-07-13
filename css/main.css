@@ -1,11 +1,4 @@
-/*
-Colors:
 
-header - rgb(26, 26, 26);
-body, h1 - rgb(4, 62, 98);
-h2 - rgb(235, 71, 175);
-
- */
 /****************MAIN STYLE************************8**/
 
 body {
@@ -47,6 +40,7 @@ header h2 {
 	text-align: right;
 	color: rgb(4, 62, 98);
 }
+
 /******************IMAGE STYLE*****************************/
 
 .main_img {
@@ -162,6 +156,7 @@ main ul li .list_article {
 	margin-left: 50%;
 	padding:  40px 0;
 }
+
 .frame_parah {
 	margin: 50px 0 auto 20px;
 	width: 450px;
