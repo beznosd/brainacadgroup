@@ -9,10 +9,12 @@ h2 - rgb(235, 71, 175);
 /****************MAIN STYLE************************8**/
 
 body {
-	width: 1280px;
+	/*width: 1280px;*/
 	background: rgb(4, 62, 98);
 	font-family: Raleway, monospace, serif, Arial;
 	font-size: 16px;
+	margin: 0;
+	padding: 0;
 }
 
 a {
@@ -20,11 +22,13 @@ a {
 	text-decoration: none;
 	color: #000;
 }
+
 a:hover {
 	border-bottom: 2px dotted #fff;
 }
 
 /***************HEADER STYLE********************/
+
 header {
 	background: rgb(26, 26, 26);
 	height: 110px;
@@ -44,6 +48,7 @@ header h2 {
 	color: rgb(4, 62, 98);
 }
 /******************IMAGE STYLE*****************************/
+
 .main_img {
 	/*Text style*/
 	color: #fff;
@@ -57,7 +62,9 @@ header h2 {
 	background-size: cover;
 	margin-bottom: 40px;
 }
+
 /***********************BYTTON STYLE****************************/
+
 .main_button {
 	width: 150px;
 	margin: 0 auto 40px;
@@ -66,6 +73,7 @@ header h2 {
 	border: 1px solid rgb(242, 242, 242);
 	border-radius: 5px;
 }
+
 .main_button a {
 	text-align: center;
 	text-decoration: none;
@@ -74,16 +82,20 @@ header h2 {
 	color: #fff;
 	border: none;
 }
+
 .main_button a:hover {
 	text-decoration: underline;
 }
+
 .main_button:hover {
 	cursor: pointer;
 	background: rgb(0, 153, 0);
 }
+
 .main_button:active {
 	border: 1px solid rgb(4, 62, 98);
 }
+
 .main_button a:active {
 	color: rgb(4, 62, 98);
 }
@@ -141,6 +153,21 @@ main ul li .list_article {
 
 .universe_item {
 	color: #BC734C;
+}
+
+/*****************FRAME SECTION*************************/
+
+.frame div {
+	margin-top: -310px;
+	margin-left: 50%;
+	padding:  40px 0;
+}
+.frame_parah {
+	margin: 50px 0 auto 20px;
+	width: 450px;
+	color: #fff;
+	line-height: 1.4em;
+	font-size: 18px;
 }
 
 /****************FOOTER STYLE**************************/
