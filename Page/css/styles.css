@@ -6,7 +6,7 @@ html{
 body{
 	margin:0px;
 	padding: 0px;
-	font-family: Arial;
+	font-family: Times;
 	background-image:	url("../images/background1.png");
 	background-position: top;
 	background-repeat: repeat-y;
@@ -24,6 +24,12 @@ div.header h2{
 	color: magenta;
 }
 
+div.header h2 span {
+	color: #cd2990;
+	font
+}
+
+
 div.picture{
 	background-image:	url("../images/1.jpg");
 	height:	600px;
@@ -35,7 +41,7 @@ div.picture{
 .picture p{
 	color: white;
 	font-size: 2em;
-	font-family:serif;
+	font-family: Lobster,serif;
 	margin: 20px 20px 0 0;
 	padding: 20px 20px 0 0;
 
@@ -80,6 +86,10 @@ div.picture{
 
 .list{
 	padding: 20px;
+}
+
+.list p{
+	font-weight: bold;
 }
 
 ul{
