@@ -1,0 +1,77 @@
+h1, h2 { 
+	text-align: center;
+}
+h1 {
+	color:lightblue;
+}
+h2 {
+	color:green;
+}
+body {
+	margin: 0;
+	background-color: yellow;
+	font-family:MV Boli;
+	}
+
+p {
+	margin-left:5px;
+	}
+.picture {
+	background-image: url("../images/Norway.jpg");
+	background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	height: 600px;
+	padding-top:10px;
+	padding-right:10px;
+	color: lightyellow;
+	font-family: Bradley Hand ITC;
+	font-size: 30px;
+	font-weight:bold;
+	text-align:right;
+	margin-bottom:30px;
+}
+.button {
+	margin:auto;
+	background: lightblue;
+	border: 2px solid grey;
+	padding: 10px 20px;
+	width:100px;
+	text-align: center;
+}
+.button a {
+	font-size:20px;
+	font-weight:bold;
+	color:white;
+	text-decoration:none;
+}
+.button:hover {
+	background:pink;
+}
+.button:active {
+	border:4px dotted red;
+	}
+ul {	
+	background: pink;
+	padding:10px 10px 10px 30px;
+}
+li {
+	background: grey;
+	padding:5px;
+	margin:5px;
+}
+li:hover {
+	background: lightblue;
+	}
+footer{
+	border-top:dotted;
+	border-color:lightblue;
+	background:lightyellow;
+	padding:30px;
+	text-align:center;
+	font-weight:bold;
+	background-image: url("../images/flag.gif");
+	background-repeat: no-repeat;
+	background-position: right top;
+	}
