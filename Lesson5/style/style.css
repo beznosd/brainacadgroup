@@ -1,0 +1,86 @@
+
+body {
+	margin: 0px;
+	background-color: #FFFACD;
+	font-family: sans-serif;
+}
+
+/*Header*/
+
+h1 {
+	font-size: 2em;
+	color: darkblue;
+	text-align: center;
+}
+h2 {
+	font-size: 24px;
+	text-align: center;	
+	color: #800080;
+}
+.header h2{
+	background-color: #FFFACD;
+	height: 30px;
+}
+
+/*Image*/
+
+.background {
+	background-image: url('../images/k.jpg');
+	height: 700px;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+/*Button*/
+
+.block {
+	margin: 50px;
+	text-align: center;	
+}
+a.button {
+	text-decoration: none;
+	width: 120px;
+	height: 40px;
+	background-color: green;
+	padding: 15px 25px;
+	font-size: 22px;
+	text-transform: uppercase;
+	border: 5px solid grey;
+	color: white;
+}
+a.button:hover {
+	background:#98FB98;
+}
+
+/*List*/
+p {
+	padding-left: 20px;
+}
+.List {
+	padding-left: 30PX;
+}
+ul {
+	background-color: #F08080;
+	padding: 30px;
+}
+li {
+	background-color: #FFDAB9;
+	padding: 10px;
+	margin: 5px;
+	margin-left: 30PX;
+}
+
+/*Footer*/
+
+.footer{
+	background: url('../images/orange.png') no-repeat right top;
+	text-align: center;
+	background-color: white;
+	height: 30px;
+	padding: 20px;
+	
+}
+
+
+	
