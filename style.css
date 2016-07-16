@@ -1,0 +1,74 @@
+body {
+	background-color: #fff2aa;
+	font-family: sans-serif;
+	margin: 0px;
+}
+
+.headr {
+	color: grey;
+ 	text-align: center;
+}
+
+.headertwo {
+	color: red;
+	text-align: center;
+}
+
+.image {
+	height: 800px;
+	background-image: url(../images/new_york.jpg);
+	background-attachment: fixed;
+	background-size: cover; 
+}
+
+.abutton-b {
+	text-align: center;
+}
+.button {
+	padding: 15px 20px;
+	color: black;
+	background: #5e7191;
+	border: 5px outset black;
+	font-size: 18px;
+	font-weight: bold;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.button:hover {
+	background: white;	
+}
+
+.content {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.content p {
+	padding-left: 30px;
+}
+
+ul {
+	background: #5e7191;
+	padding: 20px;
+}
+
+ul li {
+	background: #5e7191;
+	margin: 5px;
+    padding: 5px;
+    margin-left: 30px;
+}	
+
+.one:hover {
+	background: #bec2c7;
+}
+
+.footer {
+	background: grey url(../images/BMW.jpg) no-repeat top;
+	padding: 30px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 18px;
+	color: #ecd0cf;
+}
