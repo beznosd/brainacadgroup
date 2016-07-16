@@ -90,3 +90,42 @@ section figure figcaption {
 	padding: 10px;
 	text-align: center;
 }
+
+/****************MAIN_CONTANT********************/
+
+.main_contant h2 {
+	text-align: center;
+	font-size: 25px;
+}
+
+.main_contant img {
+	width: 300px;
+	margin: 10px 15px;
+	-webkit-box-shadow: 10px 8px 15px rgb(0, 100, 0);
+	-moz-box-shadow: 10px 8px 15px rgb(0, 100, 0);
+	-ms-box-shadow: 10px 8px 15px rgb(0, 100, 0);
+	-o-box-shadow: 10px 8px 15px rgb(0, 100, 0);
+	box-shadow: 10px 8px 15px rgb(0, 100, 0);
+}
+
+.main_contant .contant_one img {
+	float: right;
+}
+
+.main_contant .contant_two img {
+	float: left;
+}
+
+.main_contant .contant_two img {
+	-webkit-box-shadow: -10px 8px 15px rgb(0, 100, 0) ;
+	-moz-box-shadow: -10px 8px 15px rgb(0, 100, 0);
+	-ms-box-shadow: -10px 8px 15px rgb(0, 100, 0);
+	-o-box-shadow: -10px 8px 15px rgb(0, 100, 0);
+	box-shadow: -10px 8px 15px rgb(0, 100, 0);
+}
+
+.main_contant p {
+	font-size: 16px;
+	line-height: 1.4em;
+}
+
