@@ -23,7 +23,6 @@ body {
 /***************HEADER SECTION******************/
 
 header {
-	margin: 0;
 	height: 60px;
 	background: #333;
 }
@@ -31,6 +30,7 @@ header {
 header ul {
 	list-style-type: none;
 	margin: 0;
+	padding: 0;
 }
 
 header ul li {
@@ -63,3 +63,30 @@ header ul li:hover {
 	background: rgb(0, 100, 0);
 }
 
+/***************GALLERY SECTION********************/
+
+section .gallery {
+	border: 1px solid;
+}
+
+section figure {
+	float: left;
+	margin: 20px auto 20px;
+	width: 250px;
+	padding: 2px;
+	border: 1px solid rgb(204, 204, 204);
+}
+
+section figure:hover {
+	outline: 1px solid rgb(204, 204, 204);
+	background: rgb(204, 204, 204);
+}
+
+section figure img {
+	width: 100%;
+}
+
+section figure figcaption {
+	padding: 10px;
+	text-align: center;
+}
