@@ -1,0 +1,12 @@
+.clear_fix:after {
+	content: "";
+
+	display: block;
+	clear: both;
+}
+
+.container {
+	width: 1024px;
+	margin: 0 auto;
+}
+
