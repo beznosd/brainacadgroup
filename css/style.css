@@ -27,7 +27,7 @@ header {
 	width: 100%;
 	height: 60px;
 	background: #333;
-	z-index: 10;
+	z-index: 1;
 }
 
 header ul {
@@ -67,10 +67,6 @@ header ul li:hover {
 }
 
 /***************GALLERY SECTION********************/
-
-section .gallery {
-	border: 1px solid;
-}
 
 section figure {
 	float: left;
@@ -168,7 +164,6 @@ footer .socials_list ul {
 }
 
 .copyright {
-	vertical-align: bottom;
 	font-size: 14px;
 	color: #fff;
 }
