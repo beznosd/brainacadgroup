@@ -1,0 +1,158 @@
+  	body{
+  		margin: 0;
+  		padding: 0;
+  		background: url("../images/back.jpg");
+  		font-family: helvetica;
+  	}
+	
+  	/*.active{
+  		background: green;
+  		float: right;
+  	}*/
+
+	/* header */
+	
+  	.header{
+  		margin-top:0px;
+  		padding-top: 0px;
+  		height:60px;
+  		background:#333;
+		width: 100%;
+		z-index: 2;
+		position: fixed;
+		top:0px;
+  	}
+
+  	.header .menu{
+  		width: 1024px;
+  		margin: 0 auto;
+  	}
+
+  	.header .menu ul{
+  		list-style-type: none;
+  		margin: 0;
+  		padding: 0;
+ 
+  	}
+
+  	.header .menu ul:after{
+  		content: "";
+  		display: block;
+  		clear: both;
+  	}
+
+  	.header .menu ul  li{
+  		float: left;
+  	}
+
+  	.header .menu ul li a{
+  		display: block;
+  		color: white;
+  		text-decoration: none;
+  		padding: 20px 22px;
+   	}
+   	.header .menu li a:hover{
+   		background: #4CAF50;
+   	}
+
+   	.header .menu li a:active{
+   		background: #4CAF50;
+		float: right;
+   	}
+
+
+  	.header .menu li:last-child{
+  		float: right;
+  		background: green;
+  	}
+  	
+	/* gallery */
+
+	div.gallery{
+		width: 1024px;
+		margin: 80px auto 20px;
+
+	}
+
+	div.gallery:after{
+		content: "";
+		display: block;
+		clear: both;
+	}
+
+	div.image-block{
+		width: 250px;
+		float: left;
+		outline: 1px solid black;
+		margin: 3px;
+		background: grey;
+	}
+
+	div.image-block img{
+		width: 100%;
+	}
+
+	div.image-block:hover{
+		outline: 1px solid grey;
+	}
+
+	div.image-block div{
+		height: 60px;
+		margin: 10px;
+		text-align: center;
+	}
+
+	div.image-block:hover {
+		background: white;
+	}
+
+	div.image-block:hover  img {
+		opacity: 0.8;
+	}
+
+	/* arcticle */
+	.article{
+		width: 1024px;
+		margin: 0 auto;
+		text-align: justify;
+	}
+	
+	.article p{
+		text-indent: 50px;	
+	}
+	.article h1{
+		text-align: center;
+	}
+	
+	.r-img{
+		width: 300px;
+		margin-left: 10px;
+		float: right;
+	}
+	.l-img{
+		width: 300px;
+		margin-right: 10px;
+		float: left;
+	}
+	
+	/* footer */
+	.footer{
+		height: 60px;
+		background: #333;
+		width: 100%;
+	}
+	
+	/* try some methods from http://ruseller.com/lessons.php?id=1248 , but only first worked well*/ 
+	.footer .soc{
+		width: 1024px;
+		margin: 0px auto;
+		text-align: center;
+		line-height: 60px;
+		
+	}
+	.footer .soc img{
+		display: inline-block;
+		vertical-align: middle;
+		margin: 0px 2px;
+
+	}
