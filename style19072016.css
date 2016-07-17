@@ -1,0 +1,170 @@
+
+body {
+	background-image: url(http://www.pinsho.com/wp-content/uploads/2013/11/telegram07.jpg);
+	margin: 0;
+	padding: 0;
+	font-family: helvetica;
+}
+
+/*работа над хидером*/
+.header {
+	height: 60px;
+	background-color: #000000;
+	width: 100%;
+	top: 0;
+	position: fixed;
+	z-index: 10;
+}
+
+.header .menu {
+	width: 1024 px;
+	margin: 0 auto;
+}
+
+.header .menu ul:after {
+	content: '';
+	display: block;
+	clear: both;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.header .menu ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+
+.header .menu  li {
+	float: left;
+}
+
+
+.header .menu li a {
+	display: block;
+	color: white;
+	text-decoration: none;
+	padding: 21px 22px;
+	text-align: center;
+}
+
+.header .menu ul li a:hover {
+	background: #FA5882;
+}
+
+.header .menu li:last-child {
+	float: right;
+	background-color: #FA5882;
+}
+
+.header .menu li a.hover {
+	background-color: #FA5882;
+}
+
+
+
+/*галерея*/
+
+div.gallery {
+	width: 1024px;
+	margin: 80px auto 20 px;
+	position: absolute;
+	top: 15%;
+	left: 13.5%;
+	z-index: 8;
+}
+
+div.gallery:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+div.img-block {	
+	margin: 3px;
+	float: left;
+	background: #ccc;
+	outline: 1px solid black;
+	width: 250px;
+}
+
+div.img-block img {
+	width: 100%;
+}
+
+div.img-block div {
+	text-align:center;
+	padding: 15px;
+	font-family: arial;
+}
+
+div.img-block:hover {
+
+}
+
+
+div.text {
+	text-decoration: underline;
+}
+
+/*основная часть*/
+
+div.img-block1 {
+	float: left;
+	margin: 30px 20px 30px auto;
+	z-index: 6;
+}
+
+div.img-block1 img {
+	width: 250px;
+	outline: 1px solid black;
+}
+
+span.Text1 {
+	color: black;
+	margin: 30px;
+	text-align: justify;
+	text-align-last: left;
+	text-indent: 2px;
+	text-shadow: 1px 1px 2px gray;
+	font-family: helvetica;
+	z-index: 4;
+}
+
+div.img-block2 {
+	float: right;
+	margin: 30px auto 30px 20px;
+	z-index: 2;
+}
+
+div.img-block2 img {
+	width: 250px;
+	outline: 1px solid black;
+}
+
+/*футер*/
+
+.footer {
+	height: 60px;
+	background-color: #000000;
+	background-size: cover;
+	margin: auto;
+}
+
+.footer .inst {
+	width: 1024px;
+	margin: 0 auto;
+	line-height: 50px;
+	text-align: center;
+}
+
+.footer .inst img {
+	display: inline-block;
+    vertical-align: middle;
+    margin: 0 5px;
+}
+
+
