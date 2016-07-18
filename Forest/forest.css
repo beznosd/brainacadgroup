@@ -1,0 +1,159 @@
+body{
+	margin: 0;
+	padding: 0;
+	font-family: helvetica;
+	background: url('back.jpg');
+}
+
+/* Header */
+	
+.header{
+	margin: 0;
+	padding: 0;
+	height: 60px;
+	background: #333;
+}
+	
+.header .menu{
+	width: 1024px;
+	margin: 0 auto;
+}
+	
+	.header .menu ul{
+		list-style-type: none;
+		margin: 0;
+		padding: 0;	
+	}
+	
+	.header .menu li float:right{
+       background-color: #4CAF50;
+}
+	
+	.header .menu ul:alter{
+			content: '';
+			display: block;
+			clear: both;	
+	}
+	.header .menu ul li{
+		float: left;
+	}
+	.header .menu ul li a{
+			display: block;
+			color: white;
+			text-decoration: none;
+			padding: 21px 22px;	
+	}
+	
+	.header .menu ul li a:hover{
+			background: #4CAF50;
+			
+	}
+	
+	/* Header */
+	
+	/* Галерея */
+	
+div.gallery {
+	width: 1024px;
+	margin: 20px auto 20px;
+}
+
+div.gallery:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+
+div.img-block{
+	float: left;
+	margin: 3px;
+	background: #ccc;
+	outline: 1px soling black;
+	width: 250px;
+}
+
+div.img-block img{
+	width: 100%;
+}
+
+div.img-block div{
+	text-align: center;
+	padding: 13px;
+}
+
+div.img-block:hover{
+	background: #fff;
+	outline: 1px soling black;
+}
+
+div.img-block:hover{
+	opacity: 0.7;
+}
+
+	/* Галерея */
+
+	/* Текстовый блок */
+ 
+
+div.img-text-block{
+	width: 1024px;
+	margin: 20px auto 20px;
+	padding-bottom: 40px 0;
+}
+
+div.img-text-block h2{
+	padding: 25px 0;
+	text-align: center;
+}
+
+.leftimg{
+	float:left; /* Выравнивание по левому краю */
+	margin: 20px 20px 20px 0; /* Отступы вокруг картинки */
+}
+.rightimg{
+	float: right; /* Выравнивание по правому краю  */ 
+	margin: 0px 0 20px 20px; /* Отступы вокруг картинки */
+}
+div.img-text-block p{
+    text-align: width;
+	padding: 15px 0;
+}
+
+	/* Текстовый блок */
+	
+	/* Footer */
+
+.footer{
+	/*position: absolute; /* Фиксированное положение */
+	height: 70px;
+	background: #333; /* Цвет фона */
+	width: 100%; /* Ширина слоя */
+	margin-top: 100px;
+	bottom:0;
+}
+
+.footer .social{
+	display: table;
+	margin: 0 auto;
+	padding-top: 5px;
+}
+
+.footer .facebook{
+    float: left;
+	text-align: center;
+    margin:15px 5px;
+}
+
+.footer .instagram{
+	float: left;
+	text-align: center;
+    margin: 15px 5px;
+}
+	
+.footer .facebook:hover{
+    opacity: 0.7;
+}
+
+.footer .instagram:hover{
+	opacity: 0.7;
+}
