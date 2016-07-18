@@ -1,12 +1,17 @@
 <h1>This our remote repository.</h1>
 
-Исходники нашей странички c верхним меню, галереей и остальной частью вашего домашнего задания находятся в папке <b>second_work</b>
+Итак, для начала читаем по БЭМ эти две статьи, читается быстро и легко )
+https://ru.bem.info/methodology/key-concepts/
+https://ru.bem.info/methodology/naming-convention/
 
-Обратите внимание как окнтент центрируется и как испольщуется свойство float.
+Идем дальше и верстаем следующий блок (см. картинка) по методологии БЭМ, когда доходим до треугольничка, вспоминаем про css triangle generator
 
-Также домашнее задание разобраться со свойством `position`
+http://apps.eky.hk/css-triangle-generator/
 
-Не забываем про наши сайты где можно найти всю необходимую инфу
+Также читаем про свойство position отличную статью
+https://learn.javascript.ru/position
+и про вертикальное-горизонтальное центрирование тоже
+https://learn.javascript.ru/css-center
 
-http://www.w3schools.com/css/default.asp
-https://webref.ru/
+и вот моя песочница, что б поиграться со стилями
+https://jsfiddle.net/a9x28Lbk/4/
