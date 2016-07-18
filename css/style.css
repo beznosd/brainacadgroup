@@ -1,0 +1,145 @@
+body {
+	margin:0;
+	padding: 0;
+	font-family: helvetica;
+	background: url(../images/back.jpg);
+}
+
+/*Header*/
+.header {
+	height: 60px;
+	background-color: #333;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1;
+
+}
+
+.header .menu{
+	width: 1024px;
+	margin: 0 auto;
+}
+
+.header .menu ul{
+	list-style-type: none;
+	margin:0;
+	padding: 0;
+}
+
+/*clearfix - LIFEHACK*/
+.header .menu ul:after{
+	content:'';
+	display: block;
+	clear: both;
+}
+/*END of clearfix*/
+.header .menu ul li{
+	float: left;
+}
+
+.header .menu ul li a{
+	display: block;
+	color: white;
+	text-decoration: none;
+	padding: 21px 22px;
+}
+
+.header .menu ul li a:hover{
+	background: #4CAF50;
+}
+
+.header .menu ul li:last-child{
+	background-color: green;
+	float: right;
+	margin-right: 1px;
+}
+
+/*galery*/
+.galery{
+	width: 1024px;
+	margin:70px auto 10px;
+}
+
+div.galery:after{
+	content:'';
+	display: block;
+	clear: both;
+}
+
+div.img-block{
+	float: left;
+	width: 250px;
+	margin: 20px 3px;
+	outline: 1px solid black;
+	height: 310px;
+	background-color: lightgrey;
+}
+
+div.img-block img {
+	width: 100%;
+}
+
+div.img-block a:hover img {
+	opacity: 0.8;
+}
+
+div.text-block{
+	width: 230px;
+	height: 50px;
+	text-align: center;
+	margin: auto;
+	padding-top: 10px;
+}
+
+div.img-block:hover {
+	background-color: #fff;
+	outline-color: grey;
+}
+
+/*Beautiful forest.Text*/
+div.forest{
+	text-align: center;
+	width: 1024px;
+	margin: auto;
+	text-align: justify;
+}
+h1#beautiful_forest{
+	text-align: center;
+}
+
+/*Beautiful forest.Images*/
+div img {
+	width: 300px;
+}
+
+div img.img1{
+	float:right;
+	margin: 0 0 10px 15px;
+}
+
+div	img.img2{
+	float: left;
+	margin: 0 15px 5px 0;
+}
+
+/*footer*/
+
+div.footer{
+	height: 50px;
+	background-color: #333;
+}
+
+div.footer_images{
+	text-align: center;
+	width: 1024px;
+	margin: 0 auto;
+	line-height: 50px;
+}
+
+div.footer_images img{
+	width: 30px;
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 5px;
+}
