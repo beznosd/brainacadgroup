@@ -2,99 +2,113 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/0/01/MaverickEyes_Favicon_Image.gif" type="image/x-icon">
+<link rel="shortcut icon" href="http://www.primarygames.com/favicon.ico" type="image/x-icon">
 <title>Doc</title>
   </head>
 <style>
 body {
-    margin: 0;
-    padding="0";
-    font-family: helvetica;
-    background: url('http://images.ipac.caltech.edu/spitzer/ssc2012-02a/spitzer_ssc2012-02a_6000.jpg');
-    width: 100%;
-    height: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: Helvetica;
+	background: url("http://дкгк.рф/wp-content/uploads/2015/01/low-poly-texture-2.png") repeat;
 }
 
+/* Header */
 
-.header {
-        height: 60px;
-        background-color: #333;
-    }
+.header{
+	height: 60px;
+	background: #333;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 10;
+}
 
-    .menu {
-        width: 1024px;
-        margin: 0 auto;
-    }
-
-    .header .menu ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-    }
+.header .menu {
+	width: 1024px;
+	margin: 0 auto;
+	background-color: #333;
+}
 
 .header .menu ul {
-    content: '';
-    display: block;
-    clear: both;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+} 
+
+.header .menu li {
+    float: left;
 }
 
-    .header .menu ul li {
-        float: left;
-    }
-
-.header .menu ul li a {
+.header .menu li a {
     display: block;
     color: white;
-    text-decoration: none;
-    padding: 21px 22px;
-}
-
-    .header ul li a:hover {
-        background: #4CAF50;
-    }
-
-.gallery {
-    width: 1024px;
-    margin: 0px auto;
-}
-
-.image-block {
-    float: left;
-    width: 250px;
-    height: 500px;
-    margin: 3px;
-    outline: 1px solid black;
-    background: #ccc;
-}
-
-.image-block div {
     text-align: center;
-    padding: 30px;
+    padding: 21px 22px;
+    text-decoration: none;
 }
 
-.img {
-    width: 250px;
-    height: 400px;
-}
-
-    .image-block:hover {
-        opacity: 0.8;
-    }
-	
 .header .menu li:last-child {
 	float: right;
 	background: #4CAF50;
 }
 
+.header .menu li a:hover {
+    background-color: #4CAF50;
+}
+
+/* Galery */
+
+div.gallery {
+	width: 1024px;
+	margin: 80px auto 20px;
+}
+
+div.gallery:after { 
+	content: "";
+	display: block;
+	clear: both;
+}
+
+div.img-block {
+	float: left;
+	margin: 3px;
+	background: #ccc;
+	outline: 1px solid black;
+	width: 250px;
+}
+
+div.img-block:hover{
+	background: #fff;
+	outline: 1px solid grey;
+}
+
+div.img-block:hover img {
+	opacity: 0.8;
+}
+
+div.img-block img{
+	width: 100%;
+	height: 300px;
+}
+
+div.img-block div {
+	text-align: center;
+	padding: 15px;
+}
+
+/* Text with image */
+
 .text {
 	margin: 0 auto;
 	width: 1024px;
-	color: white;
+	text-align: justify;
 }
 
 .text h1 {
-		text-align: center;
-		margin-top: 530px;
+	text-align: center;
+	margin-top: 30px;
 }
 
 .text img.right-img {
@@ -108,6 +122,8 @@ body {
 	float: left;
 	width: 300px;
 }
+
+/* Footer */
 
 .footer {
 	height: 50px;
@@ -140,27 +156,27 @@ body {
  </div>
    </div>
   <div class="gallery">
-      <div class="image-block">
+      <div class="img-block">
           <a href="http://eco-turizm.net/uploads/2013/02/YAlta-s-vyisotyi.jpg">
-              <img class="img" src="http://eco-turizm.net/uploads/2013/02/YAlta-s-vyisotyi.jpg">
+              <img src="http://eco-turizm.net/uploads/2013/02/YAlta-s-vyisotyi.jpg">
           </a>
           <div>Click the picture to see another one</div>
       </div>
-      <div class="image-block">
+      <div class="img-block">
           <a href="http://i.wp-b.com/media/2015-10-20/1MXlCc9hsJ.jpg">
-              <img class="img" src="http://www.fonstola.ru/pic/201310/1600x900/fonstola.ru-134182.jpg">
+              <img src="http://www.fonstola.ru/pic/201310/1600x900/fonstola.ru-134182.jpg">
           </a>
           <div>Click the picture to see another one</div>
       </div>
-      <div class="image-block">
+      <div class="img-block">
           <a href="http://mrbhuvaneshwar.weebly.com/uploads/5/4/1/2/5412543/lamborghini_murcielago_lp_670_4_superveloce_china-wide.jpg">
-              <img class="img" src="http://www.motto.net.ua/pic/201310/2560x1600/motto.net.ua-60421.jpg">
+              <img src="http://www.motto.net.ua/pic/201310/2560x1600/motto.net.ua-60421.jpg">
           </a>
           <div>Click the picture to see another one</div>
       </div>
-      <div class="image-block">
+      <div class="img-block">
           <a href="http://www.hdcarwallpapers.com/walls/ferrari_599_gtb-wide.jpg">
-              <img class="img" src="http://data.whicdn.com/images/171186410/original.jpg">
+              <img src="http://data.whicdn.com/images/171186410/original.jpg">
           </a>
           <div>Click the picture to see another one</div>
       </div>
