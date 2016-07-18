@@ -1,74 +1,132 @@
 body {
-	background-color: #fff2aa;
-	font-family: sans-serif;
 	margin: 0px;
+	padding: 0px;
+	font-family: helvetica;
+	background-image: url(images/back.jpg);
 }
 
-.headr {
-	color: grey;
- 	text-align: center;
+/*header*/
+.header {
+	height: 60px;
+	background: #333;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 10;
+	}
+
+.header .menu {
+	width: 1024px;
+	margin: 0 auto;
 }
 
-.headertwo {
-	color: red;
-	text-align: center;
+.header .menu ul {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
 }
 
-.image {
-	height: 800px;
-	background-image: url(../images/new_york.jpg);
-	background-attachment: fixed;
-	background-size: cover; 
+/*clearfix*/
+.header .menu ul:after {
+	content: '';
+	display: block;
+	clear: both;
 }
 
-.abutton-b {
-	text-align: center;
+.header .menu ul li {
+	float: left;
 }
-.button {
-	padding: 15px 20px;
-	color: black;
-	background: #5e7191;
-	border: 5px outset black;
-	font-size: 18px;
-	font-weight: bold;
+
+.header .menu li:last-child{
+	float: right;
+	background: green;
+}
+
+.header .menu ul li a {
+	display: block;
+	color: white;
 	text-decoration: none;
-	text-transform: uppercase;
+	padding: 21px 22px;
 }
 
-.button:hover {
-	background: white;	
+.header .menu ul li a:hover {
+	background: #4CAF50;
 }
 
-.content {
-	font-size: 18px;
-	font-weight: bold;
+/*gallery*/
+.gallery {
+	width: 1024px;
+	margin: 80px auto 20px;
 }
 
-.content p {
-	padding-left: 30px;
+.gallery:after {
+	content: '';
+	display: block;
+	clear: both;
 }
 
-ul {
-	background: #5e7191;
-	padding: 20px;
+.image_1 {
+	float: left;
+	margin: 3px;
+	background: #ccc;
+	outline: 1px solid black;
+	width: 250px;
 }
 
-ul li {
-	background: #5e7191;
-	margin: 5px;
-    padding: 5px;
-    margin-left: 30px;
-}	
-
-.one:hover {
-	background: #bec2c7;
+.image_1 img { 
+	width: 100%;
 }
 
-.footer {
-	background: grey url(../images/BMW.jpg) no-repeat top;
-	padding: 30px;
+.image_1 div {
 	text-align: center;
-	font-weight: bold;
-	font-size: 18px;
-	color: #ecd0cf;
+	padding: 15px;
+}
+
+.image_1:hover {
+	background: #fff;
+	outline: 1px solid grey;
+}
+
+.image_1:hover img {
+	opacity: 0.8 ;
+}
+
+/*content*/ 
+.content {
+	width: 1024px;
+	margin: auto;
+	text-align: justify;
+}
+
+h1 {
+	text-align: center;
+}
+
+.content .rightimg {
+	padding-left: 15px;
+	width: 300px;
+	float: right;
+}
+
+.content .leftimg {
+	padding-right: 15px;
+	width: 300px;
+	float: left;
+}
+
+/*footer*/
+.footer {
+	height: 60px;
+	background: #333;
+	position: relative bottom;
+}
+
+.footer .logo {
+	width: 1024px;
+	margin: auto;
+	text-align: center;
+}
+
+.logo img {
+	padding: 10px 7px ;
 }
