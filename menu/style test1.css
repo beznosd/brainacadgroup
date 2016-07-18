@@ -1,0 +1,374 @@
+		body {
+		margin: 0px;
+		padding: 0px;
+		font-family: helvetica;
+		background: url('back.jpg'); 
+	}
+
+	/*header*/
+
+	.header {
+		height: 60px;
+		background-color: #333;
+	}
+	.header .menu {
+		width: 1024px;
+		margin: 0 auto;
+	}
+	.header .menu ul {
+		list-style-type: none; /*убрать точку*/
+		margin: 0 60px;
+		padding: 0;
+	}
+
+	/*clear fix*/
+
+	.header .menu ul:after {
+		content:'';
+		display:block;
+		clear:both;
+	}	
+	.header .menu ul li {
+		float: left;
+		padding: 0;
+	}
+	.header .menu ul li a {
+		display: block;
+		color: white;
+		text-decoration: none;
+		padding: 21px 22px;
+	}
+	.header .menu ul li a:hover {
+		background: #4CAF50;
+	}
+	.header .menu ul .active {
+		background:#4CAF50; 
+		float: right;
+	}
+
+	/*gallery*/
+
+	.gallery {
+		padding-top: 5px;
+		padding-bottom: 50px;
+		display: inline-block;
+		margin-bottom: 50px;
+	}
+	
+	/*gallery1*/
+
+	.gallery1 {
+		display: block;
+		margin-top: 0px;
+		float: left;
+		margin-right: 3px;
+		margin-left: 20px;
+		outline: 2px solid black;
+
+	}
+	.gallery1 .picture1 .picture11 {
+		width: 300px;
+		height: 350px;
+		float: top;
+		}
+	.gallery1 .par1 {
+		display: block;
+		float: bottom
+	}
+	.gallery1 .par1 p{
+		text-align: center;
+		}
+	.gallery1:hover {
+		opacity: 0.8;
+	}
+
+	/*gallery2*/
+
+	.gallery2 {
+		display: block;
+		outline: 2px solid black;
+	}
+	.gallery2 .picture2 .picture22 {
+		width: 300px;
+		height: 350px;
+		float: top;
+	}
+	.gallery2 .par2 {
+		display: block;
+		float: bottom
+	}
+	.gallery2 .par2 p{
+		text-align: center;
+	}
+	.gallery2 {
+		float: left;
+	}
+	.gallery2:hover {
+		opacity: 0.8;
+	}
+
+	/*gallery3*/
+
+		.gallery3 {
+		display: block;
+		outline: 2px solid black;
+	}
+	.gallery3 .picture3 .picture33 {
+		width: 300px;
+		height: 350px;
+		float: top;
+	}
+	.gallery3 .par3 {
+		display: block;
+		float: bottom
+	}
+	.gallery3 .par3 p{
+		text-align: center;
+	}
+	.gallery3 {
+		float: left;
+	}
+	.gallery3:hover {
+		opacity: 0.8;
+	}
+
+	/*gallery3*/
+
+		.gallery4 {
+		display: block;
+		outline: 2px solid black;
+	}
+	.gallery4 .picture4 .picture44 {
+		width: 300px;
+		height: 350px;
+		float: top;
+	}
+	.gallery4 .par4 {
+		display: block;
+		float: bottom
+	}
+	.gallery4 .par4 p{
+		text-align: center;
+	}
+	.gallery4 {
+		float: left;
+	}
+	.gallery4:hover {
+		opacity: 0.8;
+	}
+
+	/*clear fix*/
+
+	.gallery:after {
+		content:'';
+		display:block;
+		clear:both;
+	}
+	.gallery p img:hover {
+		opacity: 0.8;
+	}
+	.p {
+		float: left;
+	}
+	.title {
+		font-weight: bold;
+		padding-left: 25px;
+		padding-top: 20px;
+		margin-top: 20px;
+	}
+
+	/*Paragraph*/
+
+	.image51 {
+		background-repeat: no-repeat;
+		width: 200px;
+		position: static;
+		display: block;
+		float: left;
+		padding: 10px;
+	}
+	.paragraph1 {
+		margin-left: 10px;
+	}
+	.image71 {
+		background-repeat: no-repeat;
+		width: 200px;
+		position: static;
+		display: block;
+		float: right;
+		padding: 10px;
+	}
+
+	/*footer*/
+
+	.footer {
+		height: 50px;
+		background-color: #4CAF50;
+	}
+	.footer p {
+		display: inline-block;
+		margin-right: 3px;
+		margin: 0 auto;
+		padding-top: 8px;
+	}
+	.footer .footer11 {
+		float: right;
+		margin-left: 600px;	
+	}
+	.footer .footer21 {
+		float: right;	
+	}
+
+	.footer .footer31 {
+		float: right;
+	}
+
+/*Tooltips*/
+
+a.tooltips {
+  position: relative;
+  display: inline;
+}
+a.tooltips span {
+  position: absolute;
+  width:140px;
+  color: #333333;
+  background: #FBFFFA;
+  border: 2px solid #6D6D6D;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  visibility: hidden;
+  border-radius: 6px;
+
+}
+a.tooltips span:before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -12px;
+  width: 0; height: 0;
+  border-top: 12px solid #6D6D6D;
+  border-right: 12px solid transparent;
+  border-left: 12px solid transparent;
+}
+a.tooltips span:after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -8px;
+  width: 0; height: 0;
+  border-top: 8px solid #FBFFFA;
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
+}
+a:hover.tooltips span {
+  visibility: visible;
+  opacity: 0.8;
+  bottom: 30px;
+  left: 50%;
+  margin-left: 545px;
+  z-index: 999;
+}
+
+/*Tooltips1*/
+
+a.tooltips1 {
+  position: relative;
+  display: inline;
+}
+a.tooltips1 span {
+  position: absolute;
+  width:140px;
+  color: #333333;
+  background: #FBFFFA;
+  border: 2px solid #6D6D6D;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  visibility: hidden;
+  border-radius: 6px;
+
+}
+a.tooltips1 span:before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -12px;
+  width: 0; height: 0;
+  border-top: 12px solid #6D6D6D;
+  border-right: 12px solid transparent;
+  border-left: 12px solid transparent;
+}
+a.tooltips1 span:after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -8px;
+  width: 0; height: 0;
+  border-top: 8px solid #FBFFFA;
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
+}
+a:hover.tooltips1 span {
+  visibility: visible;
+  opacity: 0.8;
+  bottom: 30px;
+  left: 50%;
+  margin-left: -55px;
+  z-index: 999;
+}
+
+/*Tooltips2*/
+
+a.tooltips2 {
+  position: relative;
+  display: inline;
+}
+a.tooltips2 span {
+  position: absolute;
+  width:140px;
+  color: #333333;
+  background: #FBFFFA;
+  border: 2px solid #6D6D6D;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  visibility: hidden;
+  border-radius: 6px;
+
+}
+a.tooltips2 span:before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -12px;
+  width: 0; height: 0;
+  border-top: 12px solid #6D6D6D;
+  border-right: 12px solid transparent;
+  border-left: 12px solid transparent;
+}
+a.tooltips2 span:after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -8px;
+  width: 0; height: 0;
+  border-top: 8px solid #FBFFFA;
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
+}
+a:hover.tooltips2 span {
+  visibility: visible;
+  opacity: 0.8;
+  bottom: 30px;
+  left: 50%;
+  margin-left: -55px;
+  z-index: 999;
+}
