@@ -1,0 +1,124 @@
+body{
+	margin: 0;
+	padding: 0;
+	background-image: url("../images/back.jpg");
+	font-family: Helvetica;
+}
+/*Центровщик*/
+.layout-positioner{
+	width: 1024px;
+    margin: 0 auto;
+ }
+
+.layout-positioner::after {
+    display: table;
+    content: "";
+    clear: both;
+}
+
+/*Хедер*/
+
+.header{
+	background: #333333;
+	margin-bottom: 20px;
+	height: 60px;
+}
+
+.header .main-menu{
+	background: #333333;
+	width: 1024px;
+	margin: 0;
+    padding: 0;
+    list-style: none; 
+}
+
+.header .main-menu li{
+	display: inline-block;
+	font-size: 16px;
+	text-align: center;
+	padding: 21px 22px;
+}
+
+.header .main-menu li a{
+	text-decoration: none;
+	color: #ffffff;
+}
+
+.header .main-menu li:hover {
+	background-color: #4caf50;
+}
+
+.header .main-menu li:last-child {
+	float: right;
+	background-color: #4caf50;
+}
+
+/*Галерея*/
+
+.gallery .item {
+	float: left;
+	background-color: #cccccc;
+	border: 1px solid #000000;
+	Width: 250px;
+	margin-right: 4px;
+}
+
+.gallery .item:last-child{
+	margin-right: 0;
+}
+
+.gallery .item img{
+	width: 100%;
+}
+
+.gallery .item  .description{
+	text-align: center;
+	padding: 15px;
+}
+
+.gallery .item  .description:hover{
+	background: #fff;
+	outline: 1px solid grey;
+}
+
+.gallery .item:hover img {
+	opacity: 0.8;
+}
+
+/*Текстовый блок*/
+
+.info{
+	 text-align: justify;
+	 margin-top: 30px;
+	
+}
+.info h1 {
+	text-align:center;
+}
+.info .photo1 {
+	float: right;
+	padding-left: 15px;
+}
+.info .photo2 {
+	float: left;
+	padding-right: 15px;
+}
+
+.info img{
+	Width: 300px;
+}
+
+/*Футер*/
+.footer {
+	background-color: #333333;
+	text-align: center;
+}
+
+
+.footer .ikon img{
+	vertical-align: middle;
+	margin: 10px 5px 8px;
+}
+
+
+
