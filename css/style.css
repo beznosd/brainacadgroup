@@ -1,0 +1,34 @@
+
+/******MAIN UNITS******/
+
+@font-face {
+	src: url('../fonts/Nexa Light.otf');
+	font-family: NexaRegular, Arial, serif;
+	font-size: 18px;
+}
+
+@font-face {
+	src: url('../fonts/Nexa Bold.otf');
+	font-family: NexaBold, Arial, serif;
+	font-size: 26px;
+}
+
+.container {
+	width: 940px;
+	margin: 0 auto;
+}
+
+.clear-fix:after {
+	content: '';
+
+	display: block;
+	clear: both;
+}
+
+.b-body {
+	margin: 0;
+	padding: 0;
+	background-color: #ebebeb;
+	font-family: NexaRegular, Arial, serif;
+	font-size: 14px;
+}
