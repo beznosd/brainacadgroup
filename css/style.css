@@ -179,7 +179,91 @@
 	font-family: Arial;
 }
 
-/********top-article section*********/
+/**********headMaininfo bloc************/
+
+.headMaininfo {
+	height: 390px;
+	margin-top: 10px;
+	background: #f26c4f;
+}
+
+.headMaininfo__img-bloc,
+.headMaininfo__article-bloc {
+	float: left;
+	position: relative;
+}
+
+.headMaininfo__img {
+	height: 390px;
+	width: 630px;
+	background: #f26c4f;
+}
+
+/*bottom text with dark bg */
+.headMaininfo__img-bloc:after {
+	position: absolute;
+	height: 40px;
+	width: 360px;
+	content: "Good Inc. image caption to go here";
+	top: 328px;
+	left: 250px;
+	padding-top: 20px;
+	padding-left: 20px;
+	background: #1f2129;
+	opacity: 0.5;
+	color: #fff;
+	font-size: 16px;
+	font-family: Arial;
+}
+
+/*triangle*/
+.headMaininfo__article-bloc:before{
+	position: absolute;
+	content: '';
+	top: 40px;
+	left: 0;
+
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 9px 0 9px 18px;
+	border-color: transparent transparent transparent #f26c4f;
+}
+
+.headMaininfo__article-bloc {
+	position: relative;
+	height: 390px;
+	width: 300px;
+	margin-left: 10px;
+	background: #373737;
+	color: #fff;
+}
+
+.headMaininfo__article-h1 {
+	padding: 40px 50px 0 35px;
+	font-size: 19px;
+	font-family: Arial;
+	font-weight: bold;
+	text-align: left;
+	line-height: 24px;
+}
+
+.headMaininfo__article-parah {
+	padding: 0 35px 0 35px;
+	font-size: 12px;
+	font-family: Arial;
+	line-height: 23px;
+	color: #a7a7a7;
+}
+
+.article-parah__date {
+	float: right;
+	display: inline-block;
+	margin: 0 45px;
+	color: #a1a1a1;
+}
+
+/********top-article bloc*********/
 
 .top-articles {
 	margin-top: 15px;
