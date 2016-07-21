@@ -105,6 +105,80 @@
 	bottom: -23px;
 }
 
+/*************search-social section*****************/
+
+.search-social {
+	margin: 15px auto 10px auto: ;
+}
+
+.search__bloc {
+	float: left;
+}
+
+.search-bloc__input {
+	height: 45px;
+	width: 300px;
+	padding: 0 40px 0 20px;
+	background: #fff url('../images/sprite-icons/trash/Clock-icon.png') no-repeat 97% 50%;
+	border: none;
+}
+/*Style placeholder*/
+
+.search-bloc__input:focus::-webkit-input-placeholder {color: transparent}
+.search-bloc__input:focus::-moz-placeholder          {color: transparent}
+.search-bloc__input:focus:-moz-placeholder           {color: transparent}
+.search-bloc__input:focus:-ms-input-placeholder      {color: transparent}
+
+.search-bloc__input::-webkit-input-placeholder {color:#959595;font-size: 12px;font-weight: bold; font-family: Arial;}
+.search-bloc__input::-moz-placeholder          {color:#959595;font-size: 12px;font-weight: bold; font-family: Arial;}/* Firefox 19+ */
+.search-bloc__input:-moz-placeholder           {color:#959595;font-size: 12px;font-weight: bold; font-family: Arial;}/* Firefox 18- */
+.search-bloc__input:-ms-input-placeholder      {color:#959595;font-size: 12px;font-weight: bold; font-family: Arial;}
+
+/*Social right group styles*/
+
+.social__right-group {
+	float: right;
+}
+
+.social-group {
+	list-style-type: none;
+}
+
+.social-group__item {
+	display: inline-block;
+	padding-left: 30px;
+}
+
+.social-group__icone {
+	float: left;
+	height: 15px;
+	width: 15px;
+}
+
+.icon_twitter {
+	background: url('../images/sprite-icons/sotials-sprite/result.png') no-repeat 0 0;
+}
+
+.icon_facebook {
+	background: url('../images/sprite-icons/sotials-sprite/result.png') no-repeat -23px 0;
+}
+
+.icon_rss {
+	background: url('../images/sprite-icons/sotials-sprite/result.png') no-repeat -39px 0;
+}
+
+.icon_mail {
+	background: url('../images/sprite-icons/sotials-sprite/result.png') no-repeat -58px 0;
+}
+
+.social-group__link {
+	display: inline-block;
+	text-decoration: none;
+	color: #8f8f8f;
+	font-size: 12px;
+	font-family: Arial;
+}
+
 /********top-article section*********/
 
 .top-articles {
