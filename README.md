@@ -1,1 +1,1 @@
-<h1>QQ :)</h1>
+<h1>Good Incorp</h1>
