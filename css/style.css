@@ -393,6 +393,10 @@
 	padding-left: 5px;
 }
 
+.link-wrapper_last_middle-step {
+	padding-left: 35px;
+}
+
 .article__status-img_star-place {
 	padding-left: 15px;
 	vertical-align: middle;
@@ -413,7 +417,21 @@
 	color: #fff !important;
 }
 
+.article__link_small-size {
+	font-size: 18px;
+}
 
+.article__content_middle {
+	padding: 25px 25px 25px 30px;
+}
+
+.article__content_below-header {
+	margin-bottom: 10px;
+}
+
+.article__content_small {
+	padding: 15px 25px 15px 30px;
+}
 
 
 /*sidebar bloc onto main content*/
