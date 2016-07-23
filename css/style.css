@@ -29,7 +29,7 @@
 	margin: 0;
 	padding: 0;
 	background-color: #ebebeb;
-	font-family: NexaRegular, Arial, serif;
+	font-family: Arial, serif;
 	font-size: 14px;
 }
 
@@ -267,6 +267,7 @@
 
 .top-articles {
 	margin-top: 15px;
+	margin-bottom: 20px;
 }
 
 .article {
@@ -323,4 +324,150 @@
 	right: 13px;
 	cursor: pointer;
 	z-index: 20;
+}
+
+/**********main-content left bloc**********/
+
+.main-content__articles {
+	float: left;
+}
+
+.content__article {
+	width: 620px;
+	margin-bottom: 10px;
+	padding: 30px 50px 35px 30px;
+	background: #fff;
+	border-left: 4px solid #f26c4f;
+	box-sizing: border-box;
+	color: white;
+}
+
+
+.content__article_theme-cherry {
+	background: #f26c4f;
+	border-left: 4px solid #ce4e32;
+}
+
+.article__link {
+	font-size: 24px;
+	color: #474747;
+	text-decoration: none;
+}
+
+.content__article_active-link {
+	color: #fff !important;
+}
+
+.content__article_active-link:hover {
+	color: #000 !important;
+	padding-bottom: 2px;
+	border-bottom: 1px dotted #fff !important;
+}
+
+.article__link:hover {
+	color: #000;
+	padding-bottom: 2px;
+	border-bottom: 1px dotted #f26c4f;
+}
+
+.article__link_small {
+	font-size: 10px;
+	color: #8f8f8f;
+}
+
+.article__link-wrapper {
+	display: inline-block;
+	padding: 0 35px;
+	border-right: 1px solid #dfdfdf;
+	height: 21px;
+	line-height: 21px;
+}
+
+.link-wrapper_first {
+	padding-left: 0;
+	padding-right: 35px;
+}
+
+.link-wrapper_last {
+	border: none;
+	padding-left: 5px;
+}
+
+.article__status-img_star-place {
+	padding-left: 15px;
+	vertical-align: middle;
+}
+
+.article__img_opacity:hover {
+	opacity: 0.5;
+	cursor: pointer;
+}
+
+.content__article__desc {
+	font-size: 14px;
+	line-height: 21px;
+	color: #707070;
+}
+
+.content__article_active-desc {
+	color: #fff !important;
+}
+
+
+
+
+/*sidebar bloc onto main content*/
+.sidebar {
+	display: block;
+	float: right;
+	width: 300px;
+	background: #fff;
+}
+
+.pic-widget {
+	width: 300px;
+	background: #373737;
+	position: relative;
+}
+
+.pic-widget__img {
+	width: 100%;
+}
+
+.pic-widget__text {
+	padding: 25px 25px 50px;
+	color: #fff;
+}
+
+.pic-widget__header {
+	font-size: 25px;
+	margin-bottom: 20px;
+}
+
+.pic-widget__link {
+	color: #fff;
+	text-decoration: none;
+}
+
+.pic-widget__link:hover {
+	color: #ccc;
+}
+.pic-widget__desc {
+
+}
+
+/*text-widget*/
+
+.text-widget {
+	line-height: 25px;
+}
+
+.text-widget__header {
+
+}
+
+.delewiry-widget {
+	margin: 0 15px;
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #ccc;
 }
