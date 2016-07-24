@@ -9,11 +9,19 @@
 	src: url("../fonts/Nexa-Light.otf");
 }
 
+html{
+	height: 100%;
+}
 
 body{
 	background: #EBEBEB;
 	font-family: Arial;
+	min-height: 100%;
+	position: relative;
+	padding-bottom: 140px;
 }
+
+
 .clear-fix:after{
 	content: "";
 	display: block;
@@ -31,7 +39,7 @@ body{
 	width: 13px;
 	height: 13px;
 	margin: 0 5px;
-	vertical-align: bottom;
+	vertical-align: middle;
     background: url("../images/icons-sprite.png") no-repeat; 
 }
 
@@ -45,10 +53,12 @@ body{
 
 .icon13-rss {
 	background-position: -16px -2px;
+	vertical-align: bottom;
 }
 
 .icon13-mail {
 	background-position: -15px -16px;
+	vertical-align: bottom;
 }
 
 .icon14 {
@@ -83,7 +93,7 @@ body{
 
 
 .header{
-/*	position: fixed;*/
+	position: fixed;
 	z-index: 99;
 	top: 0;
 	width: 100%;
@@ -180,7 +190,7 @@ body{
 /* Search and Social nav*/
 .search-n-social{
 	height: 70px;
-/*	margin-top: 123px;*/
+	margin-top: 135px;
 }
 
 /* search form */
@@ -214,6 +224,7 @@ body{
 	width: 200px;
 	font-size: 12pt;
 	color: #BABABA;
+	outline: none;
 }
 
 .search-form__query:hover{
@@ -257,8 +268,8 @@ body{
 
 
 .social-nav__link-wrapper{
-	line-height: 14px;
-	height: 14px;
+	line-height: 22px;
+	height: 22px;
 }
 
 .social-nav__link{
@@ -268,8 +279,10 @@ body{
 	font-family: Arial;
 	font-size: 12px;
 	font-stretch: condensed;
-	vertical-align: middle;
 	letter-spacing: -1px;
+	line-height: 22px;
+	height: 22px;
+	vertical-align: middle;
 }
 
 .social-nav__link-image{
@@ -279,13 +292,13 @@ body{
 }
 
 .social-nav__link-wrapper_twitter{
-	margin-right: 30px;
+	margin-right: 39px;
 }
 .social-nav__link-wrapper_facebook{
-	margin-right: 30px;
+	margin-right: 25px;
 }
 .social-nav__link-wrapper_rss{
-	margin-right: 20px;
+	margin-right: 25px;
 }
 
 /* Big block */
@@ -336,6 +349,16 @@ body{
 	letter-spacing: -1px;
 	text-align: left;
 	color: white;
+}
+
+.big-block-right-side__link{
+	text-decoration: none;
+	color: white;
+}
+
+.big-block-right-side__link:hover{
+	color: #7b7b7b;
+	cursor: pointer;
 }
 
 .big-block-right-side__text{
@@ -466,6 +489,7 @@ body{
 .main-block{
 	display: block;
 	margin-top: 10px;
+	margin-bottom: 120px;
 }
 
 .content-block{
@@ -511,6 +535,15 @@ body{
 	color: #4f4f4f;
 }
 
+.text-block__link:hover{
+	color: #7b7b7b;
+}
+
+.text-block:hover .text-block__movie-tape{
+	visibility: visible;
+}
+
+
 .text-block-votes{
 	font-size: 10px;
 	color: #cfcfcf;
@@ -533,6 +566,19 @@ body{
 	height: 0px;
 
 }
+
+.text-block__movie-tape{
+	position: absolute;
+	display: block;
+	left: -50px;
+	top: 50%;
+	margin-top: -11px;
+}
+
+.text-block__movie-tape_invsible{
+	visibility: hidden;
+}
+
 
 .text-block-votes__part:after{
 	position: absolute;
@@ -656,7 +702,6 @@ body{
 /* read more */
 .read-more{
 	font-size: 14px;
-	color: #bdbdbd;
 	margin-bottom: 10px;
 	width: 100%;
 	height: 75px;
@@ -669,6 +714,14 @@ body{
 	background: url("../images/plus_in_circle.png") bottom center no-repeat;
 }
 
+.read-more__link{
+	text-decoration: none;
+	color: #bdbdbd;
+}
+
+.read-more__link:hover{
+	color: #7b7b7b;
+}
 
 .text-block_nice{
 	padding: 36px;
@@ -750,7 +803,14 @@ body{
 	border-right: 1px solid #e6e6e6;
 	border-bottom: 1px solid #e6e6e6;
 	margin-bottom: 30px;
+	padding: 0px;
 }
+
+.text-block-with-image:before{
+	width: 0;
+	height: 0;
+}
+
 
 .text-block-with-image__image{
 	width: 100%;
@@ -775,6 +835,21 @@ body{
 	background: #373737;
 	position: relative;
 }
+
+.pic-widget:after{
+	position: absolute;
+	top: 0;
+	right: 0;
+	content: "";
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: 0 70px 70px 0;
+	border-color: transparent #f26c4f transparent transparent;
+	cursor: pointer;
+	z-index: 10;
+}
+
 
 .pic-widget__img{
 	width: 100%;
@@ -850,7 +925,7 @@ body{
 	font: bold 16px; 
 	text-decoration: none;
 	color: #474747;
-	box-shadow: 0 1px 1px 0 rgba(0,0,0,0,0.15);
+	box-shadow: 0 1px 1px 0 rgba(0,0,0,0.15);
 }
 
 .nav-widget__thin-text{
@@ -863,4 +938,38 @@ body{
 	font-weight: normal;
 	padding-left: 7px;
 	color: #7a7a7a;
+}
+
+.footer-block{
+	height: 140px;
+	background: #373737;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+}
+
+.footer-nav{
+	height: 40px;
+	padding: 32px 0 10px;
+
+}
+
+.footer-nav__item{
+	display: inline-block;
+	text-decoration: none;
+	font-size: 12px;
+	color: white;
+	line-height: 40px;
+	height: 40px;
+	margin-right: 20px;
+}
+
+.footer-nav__item:hover{
+	text-decoration: underline;
+}
+
+.footer-info__text{
+	line-height: 21px;
+	font-size: 11px;
+	color: #7e7e7e;
 }
