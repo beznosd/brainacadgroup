@@ -1,0 +1,183 @@
+
+/****************MAIN STYLE************************8**/
+
+body {
+	/*width: 1280px;*/
+	background: rgb(4, 62, 98);
+	font-family: Raleway, monospace, serif, Arial;
+	font-size: 16px;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	font-size: 1em;
+	text-decoration: none;
+	color: #000;
+}
+
+a:hover {
+	border-bottom: 2px dotted #fff;
+}
+
+/***************HEADER STYLE********************/
+
+header {
+	background: rgb(26, 26, 26);
+	height: 110px;
+	margin-top: -23px;
+}
+
+header h1 {
+	padding-top: 20px;
+	text-align: center;
+	font-size: 35px;
+	color: rgb(4, 62, 98);
+}
+
+header h2 {
+	padding-right: 7px;
+	text-align: right;
+	color: rgb(4, 62, 98);
+}
+
+/******************IMAGE STYLE*****************************/
+
+.main_img {
+	/*Text style*/
+	color: #fff;
+	text-align: right;
+	font-size: 24px;
+	font-weight: 700;
+	padding: 20px 40px 0;
+	/*img style*/
+	height: 600px;
+	background: url("../img/Sky.jpg") no-repeat fixed 70% 100%;
+	background-size: cover;
+	margin-bottom: 40px;
+}
+
+/***********************BYTTON STYLE****************************/
+
+.main_button {
+	width: 150px;
+	margin: 0 auto 40px;
+	padding: 10px 10px 10px 17px;
+	background: rgb(0, 128, 0);
+	border: 1px solid rgb(242, 242, 242);
+	border-radius: 5px;
+}
+
+.main_button a {
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: 700;
+	color: #fff;
+	border: none;
+}
+
+.main_button a:hover {
+	text-decoration: underline;
+}
+
+.main_button:hover {
+	cursor: pointer;
+	background: rgb(0, 153, 0);
+}
+
+.main_button:active {
+	border: 1px solid rgb(4, 62, 98);
+}
+
+.main_button a:active {
+	color: rgb(4, 62, 98);
+}
+
+/******************List style**********************/
+
+main .question {
+	padding-left: 30px;
+	margin-bottom: 20px;
+	font-size: 20px;
+	color: #fff;
+}
+
+main ul {
+	margin-bottom: 0;
+}
+
+main ul,
+main ul:first-child {
+	list-style-type: none;
+	background: url("../img/space.png") no-repeat;
+	opacity: 0.9;
+	color: #fff;
+
+}
+
+main ul:first-child {
+	padding-left: 70px;
+	padding-bottom: 10px;
+	list-style-type: square;
+	font-size: 18px;
+	opacity: 0.7;
+	background: none;
+}
+
+main ul li .list_article {
+	width: 650px;
+	line-height: 1.4em;
+}
+
+.stars_item,
+.planet_item,
+.universe_item {
+	padding-left: 270px;
+	font-size: 20px;
+}
+
+.stars_item {
+	color: rgb(255, 255, 26);
+}
+
+.planet_item {
+	color: rgb(0, 230, 230);
+}
+
+.universe_item {
+	color: #BC734C;
+}
+
+/*****************FRAME SECTION*************************/
+
+.frame div {
+	margin-top: -310px;
+	margin-left: 50%;
+	padding:  40px 0;
+}
+
+.frame_parah {
+	margin: 50px 0 auto 20px;
+	width: 450px;
+	color: #fff;
+	line-height: 1.4em;
+	font-size: 18px;
+}
+
+/****************FOOTER STYLE**************************/
+
+footer {
+	margin-bottom: -10px;
+	padding-top: 10px;
+	text-align: left;
+	color: #fff;
+	background: #000;
+}
+
+.footer_img {
+	margin-left: 1220px;
+	padding-bottom: 50px;
+	background: url("../img/small-star.png") no-repeat;
+	opacity: 0.7;
+}
