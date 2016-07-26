@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Mario and Luigi</title>
+</head>
+<!-- http://cubic-bezier.com/ -->
+<style>
+	body, html {
+		margin: 0;
+		height: 100%;
+		overflow-x: hidden;
+	}
+
+	.sky {
+		background: lightblue;
+		height: 40%;
+		text-align: center;		
+		position: relative;
+	}
+
+	.grass {
+		height: 30%;
+		background: seagreen;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.road {
+		height: 30%;
+		background: dimgrey;
+		box-sizing: border-box;
+		border-top: 10px solid grey;
+		border-bottom: 10px solid grey;
+		width: 100%;
+		position: relative;
+	}
+
+	.lines {
+		box-sizing: border-box;
+		border: 5px dashed #fff;
+		height: 0;
+		width: 100%;
+		position: absolute;
+		top: 50%;
+	}
+
+	/* Elements to animate */
+
+	.mario {
+		position: absolute;
+		top: -40px;
+		left: 0;
+		z-index: 99;
+		animation-name: drive;
+		animation-duration: 2s;
+		animation-fill-mode: both;
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;
+	}
+
+
+	.luigi {
+		position: absolute;
+		top: 60px;
+		left: 0;
+		animation-name: luigi-drive;
+		animation-duration: 12s;
+		animation-fill-mode: both;
+		animation-timing-function: linear;
+		z-index: 100;
+	}
+
+
+	/* Keyframes */
+
+	@keyframes drive {
+		0% {
+			transform: translateX(-100px) skewY(45deg) rotateZ(-45deg);
+		}
+		100% {
+			transform: translateX(2000px) skewY(45deg) rotateZ(-45deg); 
+		}
+	}
+
+	@keyframes luigi-drive{
+		0% {
+			left: -100px; top: 60px;
+		}
+		30% {
+			left:2000px; transform: scale(1); top: 60px;
+		}
+		30.1%	{
+			transform: scale(0);left: -100px; top: 60px;
+		}
+		32%	{
+			left: -100px;transform: scale(1); top: 60px;
+		}
+
+		60% {
+			left:2000px; transform: scale(1); top: 60px;
+		}
+
+		60.1%	{
+			transform: scale(0);left: -100px; top: 60px;
+		}
+		62%	{
+			left: -100px;transform: scale(1); top: 60px;
+		}
+
+		80% {
+			left: 790px; top: 60px; transform: rotateX(0deg);
+		}
+		100% {
+			transform-origin: right bottom;
+			transform: rotateZ(145deg); 
+			left:1000px;
+			top: 0px;
+		}
+	}
+
+	.fl1{
+		position: absolute;
+		width: 150px;
+		height: 150px;
+		left: 100px;
+		top: 70px;
+		transform: scale(0);
+		animation-name: flower;
+		animation-duration: 4s;
+		animation-fill-mode: both;
+		animation-timing-function: linear;
+		animation-delay: 5.5s;
+	}
+
+	.fl2{
+		position: absolute;
+		width: 150px;
+		height: 150px;
+		left: 300px;
+		top: 70px;
+		transform: scale(0);
+		animation-name: flower;
+		animation-duration: 4s;
+		animation-fill-mode: both;
+		animation-timing-function: linear;
+		animation-delay: 5s;
+
+	}
+
+	.fl3{
+		position: absolute;
+		width: 150px;
+		height: 150px;
+		left: 500px;
+		top: 70px;
+		transform: scale(0);
+		animation-name: flower;
+		animation-duration: 4s;
+		animation-fill-mode: both;
+		animation-timing-function: linear;
+		animation-delay: 4.5s;
+	}
+	.fl4{
+		position: absolute;
+		width: 150px;
+		height: 150px;
+		left: 700px;
+		top: 70px;
+		transform: scale(0);
+		animation-name: flower;
+		animation-duration: 4s;
+		animation-fill-mode: both;
+		animation-timing-function: linear;
+		animation-delay: 4s;
+	}
+	.fl5{
+		position: absolute;
+		width: 150px;
+		height: 150px;
+		left: 900px;
+		top: 70px;
+		transform: scale(0);
+		animation-name: flower;
+		animation-duration: 4s;
+		animation-fill-mode: both;
+		animation-timing-function: linear;
+		animation-delay: 3.7s;
+	}
+
+
+	@keyframes flower{
+		0% {
+			transform: scale(0);
+		}
+		100% {
+			transform: scale(1);
+		}
+	}
+
+
+	.cloud{
+		position: absolute;
+		width: 250px;
+		height: 250px;
+		left: -300px;
+		top: 70px;
+		animation-name: cloud-move;
+		animation-duration: 7s;
+		animation-fill-mode: both;
+		animation-timing-function: linear;
+		animation-direction: reverse;
+		animation-delay: 1s;
+	}
+	
+	@keyframes cloud-move{
+		from {
+			transform: translateX(-200px);
+		}
+		to {
+			transform: translateX(2000px);
+		}
+	}
+
+	.bee{
+		position: absolute;
+		width: 30px;
+		z-index: 99;
+		left: -40px;
+		top: 30px;
+		animation-name: bee-move;
+		animation-duration: 7s;
+		animation-fill-mode: both;
+		animation-timing-function: linear;
+		animation-delay: 7s;
+	}
+
+	@keyframes bee-move{
+		0% {
+			left: -40px; top: 30px;
+		}
+		5% {
+			left: 150px;
+		}
+		10% {
+			top: 100px;
+		}
+		17% {
+			left: 150px; top: 100px;
+		}
+		20% {
+			left: 350px; top: 30px;
+		}
+		30% {
+			left: 350px; top: 100px;
+		}
+		40% {
+			left: 550px; top: 30px;
+		}
+		55% {
+			left: 550px; top: 100px;
+		}
+		60% {
+			left: 750px; top: 30px;
+		}
+		75% {
+			left: 750px; top: 100px;
+		}
+		80% {
+			left: 950px; top: 30px;
+		}
+		95% {
+			left: 950px; top: 100px;
+		}
+		100% {
+			left: 2000px;
+		}
+	}
+	
+	.hole{
+		position: absolute;
+		width: 30px;
+		height: 60px;
+		background: black;
+		border-radius: 50%;
+		transform: skewY(-60deg);
+		top: 140px;
+		left:900px;
+		animation-delay: 6s;
+		transform: scale(0);
+		animation-name: hole-transform;
+		animation-duration: 2s;
+		animation-fill-mode: both;
+		animation-timing-function: linear;
+	}
+
+	@keyframes hole-transform{
+		from { 
+			transform: scale(0) skewY(-60deg); 
+		}
+		to { 
+			transform: scale(1) skewY(-60deg); 
+		}
+	}
+
+
+
+</style>
+<body>
+	<div class="sky">
+		<img class="cloud" src="images/cloud1.png"></img>
+	</div>
+	<div class="grass">
+		<img class="fl1" src="images/f1.png" alt="flower1">
+		<img class="fl2" src="images/f2.png" alt="flower2">
+		<img class="fl3" src="images/f3.png" alt="flower3">
+		<img class="fl4" src="images/f4.png" alt="flower4">
+		<img class="fl5" src="images/f5.png" alt="flower5"> 
+		<img class="bee" src="images/bee.png" alt="bee">
+		
+	</div>
+	<div class="road">
+		<div class="lines"></div>
+		<img class="mario" src="images/mario.png" alt="mario">
+		<img class="luigi" src="images/luigi.png" alt="luigi"> 
+		<div class="hole"></div>
+	</div>
+</body>
+</html>

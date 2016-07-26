@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+button {
+	position: absolute;
+	left: calc(50% - 100px);
+	top: 100px;
+	width: 200px;
+	height: 100px;
+    background-color: white;
+    color: green;
+    border: 2px solid green;
+    font-size: 1.5rem;
+    transition: 1s;
+}
+
+button:hover {
+	background-color: green;
+	color: white;
+}
+
+button:focus {
+	animation: jump .5s linear infinite alternate;
+	background-color: green;
+}
+
+@keyframes jump {
+
+	from {
+		top: 100px;
+		box-shadow: 0 0 5px rgba(0,0,0,0.5);
+	}
+
+	to {
+		top: 50px;
+		box-shadow: 0 50px 50px rgba(0,0,0,0.5);
+	}
+
+}
+
+div {
+	position: absolute;
+	left: calc(50% - 100px);
+	top: 300px;
+	width: 200px;
+	height: 200px;
+    background-color: lightblue;
+    animation: move 5s linear infinite;
+}
+
+@keyframes move {
+	0%   {background-color:lightgreen; left:calc(50% - 200px); top: 300px;}
+    25%  {background-color:lightpink; left:50%; top:300px;}
+    50%  {background-color:lightseagreen; left:50%; top:500px;}
+    75%  {background-color:lightskyblue; left:calc(50% - 200px); top:500px;}
+    100% {background-color:lightgreen; left:calc(50% - 200px); top: 300px;}
+}
+
+</style>
+<body>
+	<button>Нажми меня</button>
+	<div></div>
+</body>
+</html>
