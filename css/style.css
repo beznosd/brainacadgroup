@@ -1,0 +1,200 @@
+html {
+	height: 100%;
+}
+
+body {
+	min-height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+/********************CLOUDS*******************************/
+
+.clouds-bloc {
+	margin: 0;
+	height: 400px;
+	width: 100%;
+	position: relative;
+	top: 0;
+	background: lightblue;
+	background: -webkit-linear-gradient(#002e4d, #99d6ff); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#002e4d, #99d6ff); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#002e4d, #99d6ff); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#002e4d, #99d6ff);
+}
+
+.Cloud_one,
+.Cloud_two {
+	width: 150px;
+	position: absolute;
+	top: calc(20% - 70px);
+	left: 0;
+}
+
+.Cloud_one {
+	animation: Cloud_one 7s 0s infinite ease-in;
+}
+
+.Cloud_two  {
+	animation: Cloud_two 7s 1.5s infinite ease-in;
+}
+
+@keyframes Cloud_one {
+	0% {
+		transform: translate(-500px, 0);
+	}
+	100%{
+		transform: translate(3500px, 0);
+	}
+}
+
+@keyframes Cloud_two {
+	0% {
+		transform: translate(-500px, 0);
+	}
+	100%{
+		transform: translate(3500px, 0);
+	}
+}
+
+/********************PLACE*******************************/
+
+.place-bloc {
+	position: relative;
+	height: 150px;
+	width: 100%;
+	background: green;
+	background: -webkit-linear-gradient(left, #004d00, #00cc00); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, #004d00, #00cc00); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, #004d00, #00cc00); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #004d00, #00cc00);
+}
+
+/*TREE*/
+
+.tree_one,
+.tree_two {
+	height: 360px;
+	position: absolute;
+	top: -305px;
+	animation: tree 9s 0s infinite ease-in;
+}
+
+.tree_two {
+	top: -220px;
+	left: 800px;
+	z-index: 5;
+}
+
+@keyframes tree {
+	0% {
+		transform: translate(-1400px, 0);
+	}
+	100%{
+		transform: translate(3500px, 0);
+	}
+}
+
+/*I */
+
+.Am_i {
+	height: 200px;
+	position: absolute;
+	top: -100px;
+	left: calc(50% - 100px);
+	z-index: 4;
+}
+
+@keyframes Am_i {
+	0% {
+		transform: translate(-1400px, 0);
+	}
+	100%{
+		transform: translate(3500px, 0);
+	}
+}
+
+/*FLOWERS*/
+
+.flower_one,
+.flower_two,
+.flower_three {
+	position: absolute;
+	height: 80px;
+	z-index: 4;
+	animation: flower 15s 1s 1 ease-in;
+}
+
+.flower_one {
+	top: 10%;
+	left: 30%;
+}
+
+.flower_two {
+	top: 15%;
+	left: 65%;
+}
+
+.flower_three {
+	top: 25%;
+	left: 55%;
+}
+
+@keyframes flower {
+	0% {
+		transform: scale(0);
+	}
+	100%{
+		transform: scale(1);
+	}
+}
+
+
+/********************STORY*******************************/
+
+.story-bloc {
+	margin: 0;
+	position: relative;
+	height: 350px;
+	width: 100%;
+	background: #ccc;
+}
+
+.Story_one,
+.Story_two {
+	height: 300px;
+}
+
+.Story_one {
+	position: absolute;
+	top: -15%;
+	left: 0%;
+	animation: ppl_one 15s 0s infinite cubic-bezier(.58,.31,.45,.63);
+	z-index: 6;
+}
+
+.Story_two {
+	position: absolute;
+	top: 10%;
+	left: 0%;
+	animation: ppl_two 15s 1.2s infinite cubic-bezier(.58,.31,.45,.63);
+	z-index: 7;
+}
+
+@keyframes ppl_one {
+	0% {
+		transform: translate(3000px, 0);
+	}
+	100% {
+		transform: translate(-500px, 0);
+	}
+}
+
+@keyframes ppl_two {
+	0% {
+		transform: translate(3000px, 0);
+	}
+	100% {
+		transform: translate(-500px, 0);
+	}
+}
