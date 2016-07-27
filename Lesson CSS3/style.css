@@ -1,0 +1,147 @@
+body, html {
+	margin: 0;
+	height: 100%;
+	}
+
+.sky {
+	background: lightblue;
+	height: 40%;
+	text-align: center;	
+	position: relative;	
+}
+
+.grass {
+	background: darkgreen;
+	height: 30%;
+	text-align: center;	
+	position: relative;
+}
+.line {
+	border: 5px dotted white;
+}
+.road {
+	background: grey;
+	height: 30%;
+	text-align: center;
+	border-top: 10px solid lightgrey;
+	border-bottom: 10px solid lightgrey;	
+}
+.line {
+	margin-top: 100px;
+	border: 5px dotted white;
+}
+.cloud {
+	position: absolute;
+	top: 30px;
+	animation-name: cloud;
+	transition-timing-function: ease-in-out ;
+	animation-fill-mode:both;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+	animation-duration: 3s;
+}
+@keyframes cloud {
+   0% {left:-300px; top:30px; opacity: 1;}
+   10% {left:-0%; top:30px; opacity: 1;}
+   25% {left:25%; top:30px; opacity: 0.3;}
+   50% {left:50%; top:30px; opacity: 1;}
+   75% {left:60%; top:30px; opacity: 1;}
+   100% {left:74%; top:30px; opacity: 1;}
+}
+.road {
+	position: relative;
+}
+
+/*mario*/
+
+.mario {
+	position: absolute;
+	top: -50px;
+	animation: mario 3s 1s;
+	animation-fill-mode: both;
+	-webkit-animation: mario 3s 1s;
+	-webkit-animation-fill-mode: both;
+	animation-timing-function:linear;
+	animation-iteration-count: infinite
+}
+
+@keyframes mario {
+    from { transform: translateX(0) rotate(0);}				
+    to { transform: translateX(1000px) rotate(10turn); }
+   }
+   @-webkit-keyframes mario {
+    from { transform: translateX(-200) rotate(1);}				
+    to { transform: translateX(2000) rotate(8turn); }
+   }
+
+/*luigi*/
+
+   .luigi {
+   	position: absolute;
+	top: 40px;
+	animation-name: luigi;
+	animation-fill-mode: both;
+	animation-duration: 7s; 
+	animation-iteration-count: infinite;
+	animation-timing-function:;
+	transition-delay:2s;
+   }
+
+@keyframes luigi {
+    from { transform: translateX(0) }				
+    to { transform: translateX(1000px)  }
+   }
+   @-webkit-keyframes luigi {
+    from { transform: translateX(-200) }				
+    to { transform: translateX(2500)  }
+   }
+
+   /* flowers */
+
+   .f1 {
+   	display: block;
+   	height: 150px;
+   	width: auto;
+   	position: absolute;
+   	left: 100px;
+   	top: 20px;
+   }
+    .f2 {
+   	display: block;
+   	height: 150px;
+   	width: auto;
+   	position: absolute;
+   	left: 350px;
+   	top: 20px;
+   }
+    .f3 {
+   	display: block;
+   	height: 150px;
+   	width: auto;
+   	position: absolute;
+   	left: 600px;
+   	top: 20px;
+   }
+    .f4 {
+   	display: block;
+   	height: 150px;
+   	width: auto;
+   	position: absolute;
+   	left: 850px;
+   	top: 20px;
+   }
+    .f5 {
+   	display: block;
+   	height: 150px;
+   	width: auto;
+   	position: absolute;
+   	left: 1100px;
+   	top: 20px;
+   }
+
+/* animation */
+
+.f1 {
+	animation-name: f1;
+
+}
