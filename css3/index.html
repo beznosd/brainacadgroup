@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Animation</title>
+	</head>
+	<style>
+	body, html {
+		height:100%;
+		margin:0;
+		padding:0;
+	}
+	
+	clearfix{
+		content:'';
+		clear:both;
+		display:block;
+	}
+	
+	.sky{
+		background:lightblue;
+		height:50%;
+		position: relative;
+	}
+	
+	.grass{
+		height:50%;
+		background:lightgreen;
+		position: relative;
+	}
+	
+	.dragon1{
+	}
+	
+	.fireball{
+		position:absolute;
+		top:100px;
+		animation-name: fire;
+		animation-duration:2s;
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;
+	}
+	
+	.dragon2{
+		float:right;
+	}
+	
+	.dance{
+		left:50px;
+		animation-name: dance;
+		animation-duration:15s;
+		animation-iteration-count: infinite;
+		position:absolute;
+	}
+	
+	.tent{
+		height:45%;
+		top:50px;
+		position:relative;
+		left:200px;
+	}
+		
+	@keyframes fire{
+		to {
+				transform: translateX(850px); 
+			}
+	}
+	
+	@keyframes dance{
+			0%   {left:50px; top:0px;}
+			25%  {left:50px; top:185px;}
+			50%  {left:375px; top:185px;}
+			75%  {left:375px; top:0px;}
+			100% {left:50px; top:0px;}
+	}
+	
+	</style>
+	<body>
+		<div class="sky">
+			<img class="dragon1" src="dragon1.gif" alt="dragon1">
+			<img class="fireball" src="fireball.gif" alt="fireball">
+			<img class="dragon2 clearfix" src="dragon2.gif" alt="dragon2">
+		</div>
+		<div class="grass">
+			<img class="dance" src="dance1.gif" alt="dance">
+			<img class="tent" src="tent.png" alt="tent">
+		</div>
+	</body>
+	</html>
