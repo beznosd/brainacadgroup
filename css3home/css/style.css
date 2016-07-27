@@ -1,0 +1,166 @@
+body, html {
+    margin: 0;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.sky {
+    background-color: lightblue;
+    height: 30%;
+    position: relative;
+}
+
+.grass {
+    background-color: green;
+    height: 30%;
+    position: relative;
+}
+
+.road {
+    background-color: grey;
+    box-sizing: border-box;
+    height: 40%;
+    border-top: 10px solid dimgray;
+    border-bottom: 10px solid dimgray;
+    position: relative;
+}
+
+.lines {
+	box-sizing: border-box;
+	border: 5px dashed #fff;
+	width: 100%;
+	position: absolute;
+	top: 50%;
+}
+        /* Elements to animate */
+.mario {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    animation-name: mario-drive;
+    animation-duration: 4s;
+    animation-timing-function: cubic-bezier(1,1.26,.53,-0.32);
+    animation-iteration-count: infinite;
+}
+
+.luigi {
+    position: absolute;
+    animation-name: luigi-drive;
+    animation-duration: 2.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.cloud-one {
+    position: absolute;
+    animation-name: cloud-first;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.cloud-two {
+    position: absolute;
+    animation-name: cloud-second;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.f1 {
+    opacity: 0;
+    position: absolute;
+    animation-name: flowers;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    top: 35%;
+    left: 20%;
+    animation-fill-mode: both;
+}
+
+.f2 {
+    opacity: 0;
+    position: absolute;
+    animation-name: flowers;
+    animation-duration: 3s;
+    animation-delay: 3s;
+    animation-timing-function: linear;
+    top: 35%;
+    left: 40%;
+    animation-fill-mode: both;
+}
+
+.f3 {
+    opacity: 0;
+    position: absolute;
+    animation-name: flowers;
+    animation-duration: 3s;
+    animation-delay: 6s;
+    animation-timing-function: linear;
+    top: 35%;
+    left: 60%;
+    animation-fill-mode: both;
+}
+
+.sun {
+    animation-name: spin;
+    animation-duration: 600ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+        /* Keyframes */
+@keyframes mario-drive {
+	from {
+		transform: translateX(-100px);
+	}
+	to {
+		transform: translateX(2000px); 
+	}
+}
+
+@keyframes luigi-drive {
+    from {
+        transform: translateX(-100px);
+    }
+    to {
+        transform: translateX(2000px);
+    }
+}
+
+@keyframes cloud-first {
+    from {
+        transform: translateX(-100px);
+    }
+    to {
+        transform: translateX(2100px);
+    }
+}
+
+@keyframes cloud-second {
+    from {
+        transform: translateX(-300px);
+    }
+    to {
+        transform: translateX(2100px);
+    }
+}
+
+@keyframes flowers {
+    from {
+        opacity: 1;
+        transform: scale(0);
+        }
+    to {
+        opacity:1;
+        transform: scale(1);
+        }
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
