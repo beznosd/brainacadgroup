@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Transform</title>
+</head>
+<!-- http://cubic-bezier.com/ -->
+<style>
+	body, html {
+		margin: 0;
+		height: 100%;
+		overflow-x: hidden;
+	}
+
+	.sky {
+		background: lightblue;
+		height: 40%;
+		text-align: center;		
+		position: relative;
+	}
+
+	.grass {
+		height: 30%;
+		background: seagreen;
+		position: relative;
+	}
+
+	.road {
+		height: 30%;
+		background: dimgrey;
+		box-sizing: border-box;
+		border-top: 10px solid grey;
+		border-bottom: 10px solid grey;
+		width: 100%;
+		position: relative;
+	}
+
+	.lines {
+		box-sizing: border-box;
+		border: 5px dashed #fff;
+		height: 0;
+		width: 100%;
+		position: absolute;
+		top: 50%;
+	}
+
+	/* Elements to animate */
+
+	.mario {
+		position: absolute;
+		top: -40px;
+		left: -50px;
+		animation: drive 3s linear infinite;
+		z-index: 30;
+	}
+
+	/* Keyframes */
+
+	@keyframes drive {
+		0%   {left: -50px; top: -40px;}
+		25%  {left: 300px; top: -40px;}
+		50%  {left: 650px; top: 40px;}
+		75%  {left: 1000px; top: -40px;}
+		100% {left: 1350px; top: -40px;}
+	}
+	.luigi {
+		position: absolute;
+		top: -100px;
+		left: 650px;
+		z-index: 20;
+	}
+	.lights {
+		height: 7px;
+		width: 7px;
+		position: absolute;
+		top: -10px;
+		left: 655px;
+		background-color: yellow;
+		z-index: 25;
+		animation: blink 1s linear infinite;
+	}
+	@keyframes blink {
+		from: {
+			opacity: 1;
+		}
+		to {
+			opacity: 0;
+		}
+	}
+
+</style>
+<body>
+	<div class="sky"></div>
+	<div class="grass"></div>
+	<div class="road">
+		<div class="lines"></div>
+		<img class="mario" src="images/mario.png" alt="mario">
+		<img class="luigi" src="images/luigi.png" alt="luigi">
+		<div class="lights"></div>
+	</div>
+</body>
+</html>
