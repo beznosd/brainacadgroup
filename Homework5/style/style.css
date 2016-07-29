@@ -1,0 +1,41 @@
+body {
+	margin: 0;
+}
+.header {
+	display: flex;
+	height: 50px;
+	background-color: darkgrey;
+}
+.content-top {
+	display: flex;
+	flex-flow: row wrap;
+	height: 350px;
+}
+.content-top__left {
+	height: 350px;
+	order: 1;
+	width: 70%;
+	background-color: green;
+}
+.content-top__right {
+	height: 350px;
+	order: 2;
+	width: 30%;
+	background-color: yellow;
+}
+.content-bottom {
+	height: 200px;
+	display: flex;
+	justify-content: space-between;
+}
+.content-bottom__item {
+	height: 200px;
+	width: 30%;
+	background-color: blue;
+}
+.footer {
+	height: 50px;
+	display: flex;
+	background-color: grey;
+}
+
