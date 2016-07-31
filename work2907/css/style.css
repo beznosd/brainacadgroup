@@ -1,0 +1,295 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body, h1, h2, h3, ul, li{
+	margin: 0px;
+	padding: 0px;
+	font-size: 100%;
+}
+
+html{
+	height: 100%;
+}
+
+body{
+	min-height: 100%;
+	position: relative;
+	font-size: 10px;
+	padding-bottom: 50px;
+	background: #293d3d;
+	font-family: Arial;
+}
+
+.spacehack{
+	/* margin-left: -0.26em; */
+	font-size: 0px;
+}
+
+@media only screen and (min-width: 768px) {
+	body{ font-size: 12px; }
+}
+
+@media only screen and (min-width: 1024px){
+	body{ font-size: 16px; }
+}
+
+.main-block{
+	/* padding-bottom: 40px; */
+	margin: 0px;
+}
+
+.clearfix:after{
+	content: "";
+	clear: both;
+	display: block;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+/* Mobile first */
+[class*="col-"] {
+	width: 100%;
+}
+
+/* For tablets: */
+@media only screen and (min-width: 768px) {
+    .col-t-1 {width: 8.33%;}
+    .col-t-2 {width: 16.66%;}
+    .col-t-3 {width: 25%;}
+    .col-t-4 {width: 33.33%;}
+    .col-t-5 {width: 41.66%;}
+    .col-t-6 {width: 50%;}
+    .col-t-7 {width: 58.33%;}
+    .col-t-8 {width: 66.66%;}
+    .col-t-9 {width: 75%;}
+    .col-t-10 {width: 83.33%;}
+    .col-t-11 {width: 91.66%;}
+    .col-t-12 {width: 100%;}
+}
+
+
+/* Desktop */
+@media only screen and (min-width: 1024px){
+	.col-1 {width: 8.33%;}
+	.col-2 {width: 16.66%;}
+	.col-3 {width: 25%;}
+	.col-4 {width: 33.33%;}
+	.col-5 {width: 41.66%;}
+	.col-6 {width: 50%;}
+	.col-7 {width: 58.33%;}
+	.col-8 {width: 66.66%;}
+	.col-9 {width: 75%;}
+	.col-10 {width: 83.33%;}
+	.col-11 {width: 91.66%;}
+	.col-12 {width: 100%;}
+}
+
+header{
+	height: 40px;
+	background: #94b8b8;
+	text-align: center;
+	line-height: 40px;
+}
+
+header h1{
+	font-size: 130%;
+	color: #3d5c5c;
+}
+
+.nav-block{
+	height: 43px;
+	background: #d1e0e0;
+	width: 100%;
+}
+
+/* Navigation menu */
+.nav-menu{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	background: #669999;
+	height: 100%;
+	/* font-size: 16px; */
+}
+
+/* mobile menu */
+.nav-menu{
+	width: 100%;
+	min-width: 200px;
+}
+
+@media only screen and (min-width: 768px){
+	.nav-menu{ 
+		width: 70%;
+		margin: 0 auto;
+		min-width: 200px;
+	}	
+}
+
+@media only screen and (min-width: 1024px){
+	.nav-menu{
+		width: 50%;
+		margin: 0 auto 0 0;
+	}
+
+}
+
+
+.nav-menu__item{
+	display: inline-block;
+	width: 33.33%;
+	/* margin-left: -5px;  */
+	height: 100%;
+	line-height: 43px;
+	text-align: center;
+	/* outline: 1px solid black; */
+	font-size: 110%;
+	font-weight: bold;
+}
+.nav-menu__item:first-child{
+	margin-left: 0px;
+}
+
+.nav-menu__link{
+	text-decoration: none;
+	display: block;
+	color: #f0f5f5;
+}
+.nav-menu__link:hover{
+	color: #669999;
+	background: #f0f5f5;
+}
+
+
+.center-block{
+	/* height: 400px;  */
+	background: #c2d6d6;
+	width: calc(100% - 20px);
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+/* Left section */
+.chat-block{
+	background: #334d4d;
+	display: none;
+	height: 400px;
+	overflow: auto;
+}
+
+.chat__header{
+	color: #94b8b8;
+	text-align: center;
+}
+.chat__text{
+	text-align: justify;
+	color: #75a3a3;
+}
+
+@media only screen and (min-width: 768px){
+	.chat-block{ 
+		display: none;
+	}	
+}
+
+@media only screen and (min-width: 1024px){
+	.chat-block{ 
+		display: block;
+	}	
+}
+
+/* Article Section */
+
+.article-block{
+	background: #c2d6d6;
+	color: #3d5c5c;
+	height: 100%;
+	position: relative;
+	/* border-left: 10px solid #293d3d;; */
+}
+
+
+.main-article{
+	margin-bottom: 30px;
+}
+
+.main-aticle__header{
+	color: #3d5c5c;
+}
+
+.main-article__text{
+	text-align: justify;
+	margin: 5px 0;
+}
+
+
+/* Gallery block */
+
+.gallery-block{
+	margin: 10px auto 0;
+	padding: 0px 10px;
+}
+
+.gallery__figure{
+	margin: 0px;
+	padding: 20px;
+	background: #527a7a;
+	outline: 2px dotted white;
+	text-align: center;
+}
+.gallery__img{
+	display: block;
+	width: 100%; 
+	height: auto;
+	margin: 0 auto;
+}
+.gallery__caption{
+	line-height: 1;
+	display: inline-block;
+	/* height: 40px; */
+	color: #94b8b8;
+	text-align: center;
+	/* vertical-align: bottom; */
+}
+
+.tablet-space{
+	display: none;
+}
+
+@media only screen and (min-width: 768px){
+	.tablet-space{
+		display: block;
+	}
+	.gallery__figure{
+		padding: 10px;
+	}
+}
+
+@media only screen and (min-width: 1024px){
+	.tablet-space{
+		display: none;
+	}
+	.gallery__figure{
+		padding: 20px;
+	}
+
+}
+
+
+
+footer{
+	height: 40px;
+	background: #94b8b8;
+	position:absolute;
+	bottom: 0;
+	padding: 0;
+	width: 100%;
+	color: white;
+	text-align: center;
+	line-height: 40px;
+}
