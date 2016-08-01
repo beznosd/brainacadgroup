@@ -1,0 +1,161 @@
+body{
+	margin: 0;
+	background-image: url('2EcKw0kgrP0-1.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover; 
+}
+
+/*header*/
+header {
+	height: 50px;
+	background-image: url('2EcKw0kgrP0-1.jpg');
+	background-size: cover;
+	text-align: center;
+}
+
+h1 {
+	margin: 0;
+}
+
+/*Navigation*/
+nav {
+	float: left;
+	background-color: rgba(144, 233, 130, 0.5);
+}
+
+button {
+	float: left;
+	margin: 0 1.96%;
+	padding: 1%;
+	background: rgba(0, 0, 0, 0);
+	border: none;
+}
+
+.AboutUs {
+	float: right;
+	margin-right: 4%; 
+}
+
+button:hover {
+	background: rgba(255, 255, 255, 0.5);
+}
+
+.nav__item {
+	color: black;
+	text-decoration: none;
+}
+
+/*side-bar*/
+aside {
+	float: left;
+	background-image: url('0-TVFSmbNKM.jpg');
+	background-position: center;
+	text-align: center;
+	color: red;
+	line-height: 140%;
+}
+
+h3 {
+	margin: 4.6% 0 0;
+	background: rgba(120, 90, 40, 0.4);
+}
+
+.first {
+	margin-top: 0%;
+}
+
+.side__item {
+	color: white;
+	text-decoration: none;
+}
+
+.side__text {
+	margin: 0;
+	padding: 2% 5%;
+	color: white;
+	background: rgba(0, 0, 0, 0.4);
+}
+
+/*section*/
+section {
+	width: 70%;
+	float: right;
+	background-image: url('1FvOAjqc2ck.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+article {
+	margin: 0 5% 2.5%;
+	background-color: rgba(0, 0, 0, 0.7);
+	line-height: 150%;
+}
+
+h2 {
+	padding-top: 2.5%;
+	color: white;
+	text-align: center;
+}
+
+.article__text {
+	padding: 0 2.5% 3%;
+	text-align: left;
+	color: white;
+	font-weight: bold;
+}
+
+/*gallery*/
+figure {
+	width: 25%;
+	margin: 10% 4%;
+	float: left;
+	text-align: center;
+	background-color: rgba(120, 90, 40, 0.5);
+}
+
+figure img {
+	margin-top: -20%;
+	width: 100%;
+}
+
+figcaption {
+	color: white;
+	padding: 0 0 4%;
+}
+
+/*footer*/
+footer {
+	margin-top: 5%; 
+	float: left;
+	background-color: rgba(144, 233, 130, 0.5);
+}
+
+/*colums*/
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-8_5 {width: 70%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+/*media*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+	aside {display: none;}
+	section {width: 100%;}
+}
+
+@media screen and (max-width: 768px) {
+	aside {display: none;}
+	section {width: 100%;}
+	figure { width: 70%; margin-left: 15%;}
+	button {text-align: center;}
+}
