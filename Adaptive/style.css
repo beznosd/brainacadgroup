@@ -156,6 +156,6 @@ footer {
 @media screen and (max-width: 768px) {
 	aside {display: none;}
 	section {width: 100%;}
-	figure { width: 70%; margin-left: 15%;}
+	figure { width: 70%; margin-left: 15%; margin-top: 15%;}
 	button {text-align: center;}
 }
