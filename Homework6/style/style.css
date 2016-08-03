@@ -1,0 +1,110 @@
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+}
+aside {display: none;}
+@media only screen and (min-width: 768px) {
+    /* For tablets: */
+    .col-m-1 {width: 8.33%;}
+    .col-m-2 {width: 16.66%;}
+    .col-m-3 {width: 25%;}
+    .col-m-4 {width: 33.33%;}
+    .col-m-5 {width: 41.66%;}
+    .col-m-6 {width: 50%;}
+    .col-m-7 {width: 58.33%;}
+    .col-m-8 {width: 66.66%;}
+    .col-m-9 {width: 75%;}
+    .col-m-10 {width: 83.33%;}
+    .col-m-11 {width: 91.66%;}
+    .col-m-12 {width: 100%;}
+	aside {display: none;}
+}
+@media only screen and (min-width: 1024px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+	aside {display: block;}
+}
+
+.clearfix:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+body {
+	margin: 0;
+}
+
+
+header {
+	box-sizing: border-box;
+	margin: 0 0 5px 0;
+	height: 3em;
+	background-color: grey;
+}
+nav {
+	box-sizing: border-box;
+	margin: 0 0 5px 0;
+	min-height: 4em;
+	background-color: red;
+}
+.nav {
+	box-sizing: border-box;
+	list-style-type: none;
+	padding: 0 4%;
+}
+a {
+	text-decoration: none;
+}
+.nav_item {
+	box-sizing: border-box;
+	display: inline-block;
+	height: 2em;
+	margin: 1em;
+	background-color: pink;
+}
+aside {
+	float: left;
+	background-color: yellow;
+	box-sizing: border-box;
+}
+.main-content {
+	box-sizing: border-box;
+	padding: 1em 4%;
+	float: right;
+	background-color: yellow;
+}
+.main-content_article {
+	box-sizing: border-box;
+	margin: 1em 0;
+	background-color: #fff;
+}
+gallery {
+	margin: 1em 0;
+}
+.gallery__proto {
+	display: inline-block;
+	box-sizing: border-box;
+	margin: 1em 4%;
+}
+.photo_image {
+	width: 100%;
+	height: auto;
+}
+footer {
+	margin-top: 1em;
+	background-color: grey;
+	height: 3em;
+}
+
