@@ -1,0 +1,44 @@
+1. section - большой контент
+2. hgroup - 
+3. figcaption потом картинка потом figire - это описание картинки
+4. header
+main
+footer
+Can I use - сайт.
+datalist - значени€ дл€ автозаполнени€
+keygen - при отправки формы прописываетс€
+output - выводит информацию после конвертации
+условные комментарии
+rel - делает указани€
+canvas - задаем выс и ширину - на нем можно рисовать
+SVG - в середине задаем элемент calable vector graphic не тер€етс€ качество дл€ D3js
+audio
+
+video прописываем кодеки дл€ всех варинтов браузера
+audio - тоже прописываем кодеки
+ƒ/« - до пункта "вы здесь"
+RWD - responsive
+Ladsgcape and portrait
+ќ–иентир на разрешение экрана
+meta name - viewport, initial scale (in head)
+Grid-view - bootstrap - 12 vertical columns
+box-sizeng - border-box
+все делам в %
+
+@media - all/ screen - задаем условие
+Mobile first - do this layout at first
+Semantic UI - CSS framework
+google/com.resizer
+320-768; 768-1024; выше 1024-desktop
+
+
+
+
+
+
+
+
+
+
+
+
