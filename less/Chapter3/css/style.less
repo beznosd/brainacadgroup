@@ -1,0 +1,72 @@
+@background-default: #e0e0e0;
+@background-info: #3b83c0;
+@background-secondary: #404245;
+
+@background-hover-default: #e8e8e8;
+@background-hover-info: #458ac6;
+@background-hover-secondary: #1b1c1d;
+
+@color-default: #333;
+@color-info: #fff;
+@color-secondary: #fff;
+
+@color-hover-default: #333;
+@color-hover-info: #fff;
+@color-hover-secondary: #fff;
+
+@font-size-xs: 10px;
+@font-size-default: 14px;
+@font-size-xl: 18px;
+
+@line-height-xs: 20px;
+@line-height-default: 20px;
+@line-height-xl: 20px;
+
+@padding-xs: 2px 4px;
+@padding-default: 6px 12px;
+@padding-xl: 10px 16px;
+
+.button-default(@background:@background-default,@color:@color-default,@font-size:@font-size-default,@line-height:@line-height-default,@padding:@padding-default){
+	background: @background;
+	color: @color;
+	font-size: @font-size;
+	line-height: @line-height;
+	padding: @padding;
+	border: none;
+}
+
+.button{
+	.button-default();
+}
+
+.button_info{
+	.button-default(@background-info,@color-hover-info);
+}
+
+.button_secondary{
+	.button-default(@background-secondary,@color-secondary);
+}
+
+.button_clicked{
+	.button-default(@background-hover-default,@color-hover-default);
+}
+
+.button_info_clicked{
+	.button-default(@background-hover-info,@color-hover-info);
+}
+
+.button_secondary_clicked{
+	.button-default(@background-hover-secondary,@color-hover-secondary);
+}
+
+
+.button_xs-size{
+	.button-default(@font-size:@font-size-xs,@line-height:@line-height-xs,@padding:@padding-xs);
+}
+
+.button_xl-size{
+	.button-default(@font-size:@font-size-xl,@line-height:@line-height-xl,@padding:@padding-xl);
+}
+div{
+	margin: 20px 0;
+}
