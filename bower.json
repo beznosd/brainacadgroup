@@ -1,0 +1,23 @@
+{
+  "name": "folder_1",
+  "authors": [
+    "Serhii <SendOflike@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "normalize.css#^4.2.0",
+    "font-roboto": "^0.0.2",
+    "minimal-bootstrap-grid": "*"
+  }
+}
