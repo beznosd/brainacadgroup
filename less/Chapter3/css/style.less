@@ -26,46 +26,54 @@
 @padding-default: 6px 12px;
 @padding-xl: 10px 16px;
 
-.button-default(@background:@background-default,@color:@color-default,@font-size:@font-size-default,@line-height:@line-height-default,@padding:@padding-default){
+.button-init(){
+	border: none;
+}
+.button-color(@background,@color){
 	background: @background;
 	color: @color;
+}
+
+.button-size(@font-size,@line-height,@padding){
 	font-size: @font-size;
 	line-height: @line-height;
 	padding: @padding;
-	border: none;
 }
 
+
 .button{
-	.button-default();
+	.button-init();
+	.button-color(@background-default,@color-default);
+	.button-size(@font-size-default,@line-height-default,@padding-default);
 }
 
 .button_info{
-	.button-default(@background-info,@color-hover-info);
+	.button-color(@background-info,@color-hover-info);
 }
 
 .button_secondary{
-	.button-default(@background-secondary,@color-secondary);
+	.button-color(@background-secondary,@color-secondary);
 }
 
 .button_clicked{
-	.button-default(@background-hover-default,@color-hover-default);
+	.button-color(@background-hover-default,@color-hover-default);
 }
 
 .button_info_clicked{
-	.button-default(@background-hover-info,@color-hover-info);
+	.button-color(@background-hover-info,@color-hover-info);
 }
 
 .button_secondary_clicked{
-	.button-default(@background-hover-secondary,@color-hover-secondary);
+	.button-color(@background-hover-secondary,@color-hover-secondary);
 }
 
 
 .button_xs-size{
-	.button-default(@font-size:@font-size-xs,@line-height:@line-height-xs,@padding:@padding-xs);
+	.button-size(@font-size-xs,@line-height-xs,@padding-xs);
 }
 
 .button_xl-size{
-	.button-default(@font-size:@font-size-xl,@line-height:@line-height-xl,@padding:@padding-xl);
+	.button-size(@font-size-xl,@line-height-xl,@padding-xl);
 }
 div{
 	margin: 20px 0;
