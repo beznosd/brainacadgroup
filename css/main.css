@@ -135,7 +135,7 @@
   padding: 50px 30px;
 }
 .present__article {
-  margin-bottom: 35px;
+  margin-bottom: 2.813em;
   text-align: center;
   cursor: pointer;
 }
@@ -156,6 +156,9 @@
 }
 .row-line_bottom {
   border-bottom: 2px solid #dcdcdc;
+}
+.our-works {
+  margin-bottom: 2.813em;
 }
 .our-works__main-link {
   text-decoration: none;
@@ -213,5 +216,20 @@
 .works__desc {
   font-size: 0.875em;
   color: #5c5c5c;
+}
+.quote-block {
+  padding: 45px 0;
+  text-align: center;
+  background: #efefef;
+}
+.quote-block__doble-coma {
+  font-size: 100px;
+  color: #dcdcdc;
+}
+.quote-block__desc {
+  margin-top: -45px;
+  font-size: 1.250em;
+  line-height: 1.875em;
+  color: #a1a1a1;
 }
 /*# sourceMappingURL=main.css.map */
