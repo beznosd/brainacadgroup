@@ -2,17 +2,167 @@
 
 //var
 
-
-
+@main-text-color: #4e4e4e;
+@head-link-color: #1abb9c;
+@button-transition: 0.4s;
+@button-bg: rgb(63,141,191);
 // mixins
 
+.link-decor {
+  text-decoration: none;
+}
+
+.button-gradient {
+  background: @button-bg; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(@button-bg, rgb(120,175,210)); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(@button-bg, rgb(120,175,210)); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(@button-bg, rgb(120,175,210)); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(@button-bg, rgb(120,175,210)); /* Standard syntax */
+}
+
+.animate-mix {
+  transform: rotate(180deg);
+  transition: 0.8s;
+}
 
 
+// MAIN style
+
+.body-style {
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+  background: #f7f7f7;
+}
 
 
+// HEADER
 
+.header {
+  width: 100%;
+  background: #e3e3e3;
+  padding: 40px 0;
+}
 
+.site-logo {
+  float: left;
+  font-size: 2.500em;
+  font-weight: bold;
+  color: @main-text-color;
+  letter-spacing: -2.5px;
+  text-transform: uppercase;
+}
 
+.site-logo_hover:hover {
+  color: @head-link-color;
+  transition: 0.6s;
+}
 
+.header__button {
+  padding: 0;
+  margin-top: 14px;
+  float: right;
+  width: 25px;
+  height: 25px;
+  background: url('../images/burger.png')no-repeat;
+  border: none;
+}
+
+.nav {
+  float: right;
+
+  &__link {
+    .link-decor;
+    display: inline-block;
+    margin-top: 17px;
+    margin-right: 15px;
+    font-size: 1.000em;
+    color: @main-text-color;
+    text-transform: uppercase;
+  }
+  &__link_active,
+  &__link_active:hover {
+    .link-decor;
+    color: @head-link-color;
+  }
+
+  &__link_hover:hover {
+    .link-decor;
+    color: @head-link-color;
+    transition: @button-transition;
+  }
+}
+
+// top block
+
+.top-block {
+  width: 100%;
+  min-height: 600px;
+  background: url("../images/banner.jpg")no-repeat 50% 50%;
+  background-size: cover;
+
+  &__head {
+    padding: 190px 0;
+    text-align: center;
+  }
+
+  &__head_one {
+    font-size: 2.500em;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  &__head_two {
+    font-size: 2.000em;
+    font-weight: bold;
+    color: #a8a8a8;
+  }
+
+  &__button {
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-size: 0.875em;
+    color: #fff;
+    background: @button-bg;
+    border: none;
+    border-radius: 3px;
+  }
+
+  &__button_hover:hover {
+    .button-gradient; //mixin
+  }
+}
+
+// MAIN block - Present
+
+.present {
+  padding: 50px 30px;
+
+  &__article {
+  margin-bottom: 35px;
+  text-align: center;
+  cursor: pointer;
+ }
+
+  &__article_hover:hover .article__img_hover {
+    .animate-mix; //mixin
+  }
+}
+
+.article__head {
+  font-weight: bold;
+  font-size: 1.125em;
+  color: @main-text-color;
+}
+
+.article__desc {
+  font-size: 0.875em;
+  line-height: 1.500em;
+  color: #616161;
+  text-overflow: clip;
+}
+
+.row-line_bottom {
+  border-bottom: 2px solid #dcdcdc;
+}
 
 /*# sourceMappingURL=main.css.map */
