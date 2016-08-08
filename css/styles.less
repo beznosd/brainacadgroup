@@ -1,11 +1,13 @@
 // out: ../css/main.css, sourcemap: true
 
+
 //var
 
 @main-text-color: #4e4e4e;
 @head-link-color: #1abb9c;
 @button-transition: 0.4s;
 @button-bg: rgb(63,141,191);
+
 // mixins
 
 .link-decor {
@@ -44,6 +46,16 @@
   font-family: 'Roboto', sans-serif;
   font-weight: normal;
   background: #f7f7f7;
+}
+
+.link_hover:hover {
+    color: @head-link-color;
+    transition: @button-transition;
+  }
+
+.fa {
+  margin-right: 10px;
+  color: #a89574;
 }
 
 
@@ -184,18 +196,17 @@
 }
 
 .our-works__main-link {
-  text-decoration: none;
+  .link-decor;
   font-size: 1.125em;
   font-weight: bold;
   color: @main-text-color;
 }
 
 .our-works__main-link_hover:hover {
-    text-decoration: none;
+    .link-decor;
     color: @head-link-color;
     transition: @button-transition;
   }
-
 
 .works {
 
@@ -216,11 +227,6 @@
     font-size: 1.125em;
     font-weight: bold;
     color: @main-text-color;
-  }
-
-  &__head-link_hover:hover {
-    color: @head-link-color;
-    transition: @button-transition;
   }
 
   &__little-head {
@@ -253,6 +259,62 @@
     font-size: 1.250em;
     line-height: 1.875em;
     color: #a1a1a1;
+  }
+}
+
+//Footer block
+
+.footer {
+  background: #1f1f1f;
+}
+
+.footer-block {
+  padding: 45px 0;
+  color: #cacaca;
+  line-height: 1.500em;
+
+
+  &__head-link {
+    font-size: 1.125em;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #6c6c6c;
+  }
+
+  &__address {
+    padding-right: 50px;
+    margin-top: 30px;
+  }
+
+  &__link_hover:hover {
+    .link-decor
+  }
+
+  &__post-link {
+    color: @button-bg;
+  }
+
+  &__link-date {
+    display: block;
+    margin-top: -10px;
+    font-size: 0.750em;
+    color: #cacaca;
+  }
+
+  &__post-link_hover:hover {
+    .link-decor;
+    color: @head-link-color;
+  }
+
+  &_top-line {
+    border-top: 2px solid;
+  }
+
+  &__copyright {
+    display: block;
+    margin: 45px 0;
+    font-size: 0.875em;
+    color: #cacaca;
   }
 }
 
