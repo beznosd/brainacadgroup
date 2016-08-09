@@ -19,6 +19,7 @@
     "normalize-css": "normalize.css#^4.2.0",
     "font-roboto": "^0.0.2",
     "minimal-bootstrap-grid": "*",
-    "font-awesome": "Font-Awesome#^4.6.3"
+    "font-awesome": "Font-Awesome#^4.6.3",
+    "html5shiv": "^3.7.3"
   }
 }
