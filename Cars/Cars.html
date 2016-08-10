@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Car</title>
+</head>
+<style>
+body, html {
+	margin: 0;
+	height: 100%;
+	overflow-x: hidden;/*управляет отображением содержания блочного элемента по горизонтали. Отображается только область внутри элемента, остальное будет скрыто*/
+}
+
+	/*небо*/
+
+.sky {                 
+	height: 50%;   /*% заполнения цветом блока на экран по вертик*/
+	background: #b3d9ff; /*цвет блока*/
+	position: relative;/*Положение элемента устанавливается относительно его исходного места. Добавление свойств left, top, right и bottom изменяет позицию элемента и сдвигает его в ту или иную сторону от первоначального расположения.*/
+}
+
+	/*птицы*/
+
+.bird {
+	position: absolute;/*Относительное позиционирование */
+	top: 60px;/*Отступ от верха*/
+	left: 0;
+	height: auto;/*высота картинки авто автоматически выст. от шир.*/
+	width: 10%;/*ширина картинки*/
+	animation-name: flight;/*имя анимац.*/
+	animation-duration: 7s;/*время анимац.*/
+	animation-fill-mode: flight; /*Анимация будет следовать правилам для обоих вперед и назад. То есть, он будет простираться свойства анимации в обоих направлениях*/
+	animation-timing-function: linear;/*Анимация имеет ту же скорость от начала до конца*/
+	animation-iteration-count: infinite;/*Указывает, что анимация должна быть воспроизведен бесконечное число раз (навсегда)*/
+}
+
+@keyframes flight {
+	from {
+		transform: translateX(1000px);
+ }
+	to {
+		transform: translateX(0px); 
+ }
+}
+
+	/*трава*/
+
+.grass {
+	height:20%;   /*% заполнения цветом экран по вертик*/
+	background: #47d147;/*цвет блока*/
+	position: relative;/*Положение элемента устанавливается относительно его исходного места*/
+}
+
+	/*Дерево*/
+
+.tree {
+	position: absolute;/*Относительное позиционирование */
+	bottom: 20%;/*Отступ от верха*/
+	left: 0;
+	height: auto;/*высота картинки авто автоматически выст. от шир.*/
+	width: 25%;/*ширина картинки*/
+	animation-name: grows;/*имя анимац.*/
+	animation-duration: 3s;/*время анимац.*/
+	animation-fill-mode: flight; /*Анимация будет следовать правилам для обоих вперед и назад. То есть, он будет простираться свойства анимации в обоих направлениях*/
+	animation-timing-function: linear;/*Анимация имеет ту же скорость от начала до конца*/
+	animation-iteration-count: infinite;/*Указывает, что анимация должна быть воспроизведен бесконечное число раз (навсегда)*/
+}
+
+@keyframes grows {
+	from {
+		transform: translateX(1000px);
+ }
+	to {
+		transform: translateX(0px); 
+ }
+}
+
+	/*дорога*/
+
+.road {
+	height: 30%;  /*% заполнения цветом блока на экран*/
+	background: dimgrey; /*цвет блока*/
+	box-sizing: border-box;/*Свойства width и height включают в себя значения полей и границ, но не отступов (margin)*/
+	border-top: 10px solid grey; /*толщина и цвет верхней полосы*/ /*solid твердый*/
+	border-bottom: 10px solid grey;/*толщина и цвет нижней полосы*/ /*solid твердый*/
+	width: 100%;  /*% заполнения цветом экран по шир.*/
+	position: relative;/*Положение элемента устанавливается относительно его исходного места*/
+	}
+
+	/*линии*/
+
+.lines {
+	box-sizing: border-box;/*Свойства width и height включают в себя значения полей и границ, но не отступов (margin)*/
+	border: 3px dashed #fff;/*толщина и цвет пунк. полосы*/ /*dashed пунктирная*/
+	height: 0;
+	width: 100%;  /*% заполнения цветом экран по шир.*/
+	position: absolute;
+	top: 50%; /*% рассполож. относительно дороги*/
+	}
+
+	/*авто*/
+
+.cars {
+	position: absolute;/*Относительное позиционирование*/
+	bottom: 12/13/16/tree-146725_960_7200px;/*Отступ от верха*/
+	bottom: 120px;/*Отступ от низа*/
+	left: 0;
+	height: auto;
+	width: 30%;/*ширина картинки*/
+	animation-name: drive;/*имя анимац.*/
+	animation-duration: 2s;/*время анимац.*/
+	animation-fill-mode: both; /*Анимация будет следовать правилам для обоих вперед и назад. То есть, он будет простираться свойства анимации в обоих направлениях*/
+	animation-timing-function: linear;/*Анимация имеет ту же скорость от начала до конца*/
+	animation-iteration-count: infinite;/*Указывает, что анимация должна быть воспроизведен бесконечное число раз (навсегда)*/
+}
+
+@keyframes drive {
+		from {
+		transform: translateX(100px);
+ }
+		to {
+		transform: translateX(1000px); 
+ }
+}
+
+</style>
+<body>
+	<div class="sky">
+		<img class="bird" src="http://coollib.net/i/59/282859/img030.png" alt="bird">
+	</div>
+	<div class="grass">
+		<img class="tree" src="https://pixabay.com/static/uploads/photo/2013/07/12/13/16/tree-146725_960_720.png" alt="tree">
+	</div>
+	<div class="road">
+	<div class="lines"></div>
+		<img class="cars" src="images/car.png" alt="cars">
+	 </div>
+</body>
+</html>
+
+

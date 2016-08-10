@@ -1,0 +1,420 @@
+MARBLE/css/normilize.css
+
+/*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css * /
+/ **
+  * 1. Изменить семейство шрифтов по умолчанию во всех браузерах (упрямый).
+  * 2. Предотвращение корректировки размера шрифта после изменения ориентации в IE и IOS.
+ */
+
+html {
+	font-family: sans-serif; /* 1 */
+	-ms-text-size-adjust: 100%; /* 2 */
+	-webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/**
+ * Удалить запас во всех браузерах (упрямый).
+ */
+
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+
+/**
+ * Добавьте правильное отображение в IE 9-.
+  * 1. Добавьте корректное отображение в IE Edge, и Firefox.
+  * 2. Добавьте правильное отображение в IE.
+ */
+
+article,
+aside,
+details, /* 1 */
+figcaption,
+figure,
+footer,
+header,
+main, /* 2 */
+menu,
+nav,
+section,
+summary { /* 1 */
+	display: block;
+}
+
+/**
+ * Добавьте правильное отображение в IE9-.
+ */
+
+audio,
+canvas,
+progress,
+video {
+	display: inline-block;
+}
+
+/**
+ * Добавить корректное отображение в iOS 4-7.
+ */
+
+audio:not([controls]) {
+	display: none;
+	height: 0;
+}
+
+/**
+ * Добавьте правильное вертикальное выравнивание в Chrome, Firefox и Opera.
+ */
+
+progress {
+	vertical-align: baseline;
+}
+
+/**
+	*Добавьте правильное отображение в IE 10-.
+	* 1. Добавьте правильное отображение в IE.
+ */
+
+template, /* 1 */
+[hidden] {
+	display: none;
+}
+
+/* Links
+   ========================================================================== */
+
+/**
+	* 1. Удалите серый фон на активных ссылок в IE 10.
+	* 2. Удалите пробелы в ссылках подчеркнуты прошивкой 8 и Safari 8.
+ */
+
+a {
+	background-color: transparent; /* 1 */
+		-webkit-text-decoration-skip: objects; /* 2 */
+}
+
+/**
+	* Удалить контур на сфокусированных ссылки, когда они также активны или зависать
+	* во всех браузерах (упрямый).
+ */
+
+a:active,
+a:hover {
+	outline-width: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+	* 1. Снимите нижнюю границу в Firefox 39-.
+	* 2. Добавьте правильное текстовое оформление в Chrome, Edge, IE, Opera и Safari.
+ */
+
+abbr[title] {
+	border-bottom: none; /* 1 */
+	text-decoration: underline; /* 2 */
+	text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Предотвращение дублирования применения `bolder` по следующему правилу в Safari 6.
+ */
+
+b,
+strong {
+	font-weight: inherit;
+}
+
+/**
+ * Добавьте правильный вес шрифта в Chrome, Edge, и Safari.
+ */
+
+b,
+strong {
+	font-weight: bolder;
+}
+
+/**
+ * Добавьте правильный стиль шрифта в Android 4.3-.
+ */
+
+dfn {
+	font-style: italic;
+}
+
+/**
+ * Исправьте размер шрифта и поля на `h1` элементов в` section` и
+  * `article` контексты в Chrome, Firefox и Safari.
+ */
+
+h1 {
+	font-size: 2em;
+	margin: 0.67em 0;
+}
+
+/**
+ * Добавьте правильный фон и цвет в IE9-.
+ */
+
+mark {
+	background-color: #ff0;
+	color: #000;
+}
+
+/**
+ * Добавьте правильный размер шрифта во всех браузерах.
+ */
+
+small {
+	font-size: 80%;
+}
+
+/**
+ * Предотвратить `` sub` и sub` элементы влияющие на высоту строки в
+ * всех браузерах.
+ */
+
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+sup {
+	top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * Удалите границу изображений внутри ссылки в IE 10-.
+ */
+
+img {
+	border-style: none;
+}
+
+/**
+ * Скрыть переполнения в IE.
+ */
+
+svg:not(:root) {
+	overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+	* 1. Исправить наследование и масштабирование размера шрифта во всех браузерах.
+	* 2. Исправьте нечетные `em` размера шрифта во всех браузерах.
+ */
+
+code,
+kbd,
+pre,
+samp {
+	font-family: monospace, monospace; /* 1 */
+	font-size: 1em; /* 2 */
+}
+
+/**
+ * Добавьте правильный запас в IE 8.
+ */
+
+figure {
+	margin: 1em 40px;
+}
+
+/**
+ * 
+1. Добавьте правильную форму проклейки в Firefox.
+  * 2. Покажите переполнение в крае и IE.
+ */
+
+hr {
+	box-sizing: content-box; /* 1 */
+	height: 0; /* 1 */
+	overflow: visible; /* 2 */
+}
+
+/* Forms
+   ========================================================================== */
+
+/**
+	* 1. Изменение свойств шрифта в `inherit` во всех браузерах (упрямый).
+	* 2. Снимите запас в Firefox и Safari.
+ */
+
+button,
+input,
+select,
+textarea {
+	font: inherit; /* 1 */
+	margin: 0; /* 2 */
+}
+
+/**
+ * Восстановить вес шрифта отключенное предыдущим правилом.
+ */
+
+optgroup {
+	font-weight: bold;
+}
+
+/**
+ *Показать переполнения в IE.
+  * 1. Покажите переполнение в крае.
+ */
+
+button,
+input { /* 1 */
+	overflow: visible;
+}
+
+/**
+ * Удалить наследование текста преобразования в Edge, Firefox, and IE.
+ * 1. Удалить наследование текста преобразования в Firefox.
+ */
+
+button,
+select { /* 1 */
+	text-transform: none;
+}
+
+/**
+	* 1. Предотвращение WebKit ошибка, где (2) уничтожает родное `audio` и` video`
+	* Управления в Android 4.
+	* 2. Исправьте неспособность стиле интерактивными типов в ИО и Safari.
+ */
+
+button,
+html [type="button"], /* 1 */
+[type="reset"],
+[type="submit"] {
+	-webkit-appearance: button; /* 2 */
+}
+
+/**
+ * Удалите внутреннюю границу и отступы в Firefox.
+ */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+	border-style: none;
+	padding: 0;
+}
+
+/**
+ * Восстановить стили фокусировки UNSET предыдущим правилом.
+ */
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+	outline: 1px dotted ButtonText;
+}
+
+/**
+ * Изменение границы, поля и отступы во всех браузерах (упрямый).
+ */
+
+fieldset {
+	border: 1px solid #c0c0c0;
+	margin: 0 2px;
+	padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+	* 1. Исправьте перенос текста в крае и IE.
+	* 2. Исправьте цвет наследство от `fieldset` элементов в IE.
+	* 3. Снимите прокладку, так что разработчики не ловятся, когда они обнуляют
+	* `Fieldset` элементы во всех браузерах.
+ */
+
+legend {
+	box-sizing: border-box; /* 1 */
+	color: inherit; /* 2 */
+	display: table; /* 1 */
+	max-width: 100%; /* 1 */
+	padding: 0; /* 3 */
+	white-space: normal; /* 1 */
+}
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+
+textarea {
+	overflow: auto;
+}
+
+/**
+ * 1. Добавьте правильную форму проклейки в IE 10-.
+ * 2. Удалите отступы в IE 10-.
+ */
+
+[type="checkbox"],
+[type="radio"] {
+	box-sizing: border-box; /* 1 */
+	padding: 0; /* 2 */
+}
+
+/**
+ * Исправьте стиль курсора увеличивающие и уменьшающие кнопок в Chrome.
+ */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+	height: auto;
+}
+
+/**
+ * 1. Исправьте странное появление в Chrome и Safari.
+ * 2. Исправьте стиль контура в Safari.
+ */
+
+[type="search"] {
+	-webkit-appearance: textfield; /* 1 */
+	outline-offset: -2px; /* 2 */
+}
+
+ * Снимите внутреннюю прокладку и отменить кнопки в Chrome и Safari на OS X.
+ */
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+/**
+ * Исправьте стиль текста заполнителей в Chrome, Edge, и Safari.
+ */
+
+::-webkit-input-placeholder {
+	color: inherit;
+	opacity: 0.54;
+}
+
+/**
+ * 1. Исправьте неспособность стиле интерактивными типов в iOS и Safari.
+ * 2. Изменить свойства шрифта в `inherit` в Safari.
+ */
+
+::-webkit-file-upload-button {
+	-webkit-appearance: button; /* 1 */
+	font: inherit; /* 2 */
+} 
