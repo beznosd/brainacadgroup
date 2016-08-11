@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Test file</title>
+</head>
+<script>
+
+	var num1 = prompt('Type first value', '');
+	var operator = prompt('Type operator', '');
+	var num2 = prompt('Type second value', '');
+
+	switch( operator ) {
+		case '+':
+			alert( +num1 + +num2 );
+			break;
+		case '-':
+			alert( +num1 - +num2 );
+			break;
+		case '*':
+			alert( +num1 * +num2 );
+			break;
+		case '/':
+			alert( +num1 / +num2 );
+			break;
+		default:
+			alert('Incorrect operator, type only: \'+\' \'-\' \'/\' \'*\'');
+	}
+
+</script>
+<body>
+	
+</body>
+</html>
