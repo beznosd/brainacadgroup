@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang=ru>
+<head>
+	<meta charset="UTF-8">
+	<title>Functions in JS</title>
+</head>
+<body>
+	<script>
+	
+	
+	// function age
+//		function checkAge(age) {
+//			if ((age > 18) || confirm('Родители разрешили?')) {
+//				return true;
+//			} else {
+//				return false;
+//			}
+//		}
+		
+//		function checkAge1(age) {
+//			return  (age > 18) ? true :  confirm('Родители разрешили?');
+//		}
+	
+	
+	
+//		var age=0;
+		
+//		age = prompt('Enter your age','');
+		
+//		console.log(checkAge(age)); // First 
+//		console.log(checkAge1(age));  // Second
+
+	// function min
+//		function min(a, b) {
+//			return ((a <= b) ? a : b);
+//		}
+
+//		console.log(min(2, 5));
+//		console.log(min(3, -1));
+//		console.log(min(1, 1));
+		
+	// function pow
+
+//		function pow(x, n) {
+//			if (n > 0) 
+//				return (n==1) ? x : x*pow(x, n-1);
+//			else
+//				return 1;
+//		}
+	
+//		console.log(pow(3, 2));
+//		console.log(pow(3, 3));
+//		console.log(pow(1, 100));
+	
+	// SumTo
+//		function SumTo(n) {
+//			var res = 0;
+//			for (var i=1; i<=n; i++) {
+//				res += i;
+//			}
+//			return res;
+//		}
+	
+//		console.log(SumTo(100));
+	
+	// Factorial
+//		function Factorial(n) {
+//			var res = n;
+//			for (var i = 1; i< n; i++) {
+//				res *= n-i;
+//			}
+//			return res;
+//		}
+//		console.log(Factorial(5));
+	
+	// Fibonachi
+		// function Fib(n) {
+		// 	var f1 = 1 , f2 = 1; f = 0;
+		// 	if (n>2) {
+		// 		for ( i=3; i<=n; i++ ) {
+		// 			f = f1+f2;
+		// 			f1 = f2;
+		// 			f2 = f;
+		// 		}
+		// 		return f;
+		// 	}  else {
+		// 		return f1;
+		// 	}
+			
+		// }
+		
+		// console.log(Fib(3));
+		// console.log(Fib(7));
+		// console.log(Fib(77));
+		
+		
+	// Интерфейс суммы
+		// var num1 = num2 = 0;
+
+		// num1 = +prompt('Введите число 1','');
+		// num2 = +prompt('Введите число 1','');
+		// alert(num1+num2);
+
+	// Дробная часть числа
+		// var num = prompt('Введите число с дробной частью');
+
+		// alert(getDecimal(num));
+
+		// function getDecimal(inNum) {
+		// 	var decimalPos = inNum.indexOf('.');
+		// 	var decimalCount = inNum.length - decimalPos-1;
+
+		// 	return Math.abs((+inNum - (+inNum^0)).toFixed(decimalCount));
+		// }
+
+
+	// Формула Бине.
+		// alert(Bine(77));
+
+
+		// function Bine(n) {
+		// 	var resBine =0;
+
+		// 	res_Bine = Math.pow((1 + Math.sqrt(5))/2, n)/Math.sqrt(5);
+			
+		// 	return res_Bine.toFixed(0);
+		// }
+
+
+	// Случайное число от min=0 до max
+		// var min = +prompt('Введите минимальное значение',0),
+		// 	max = +prompt('Введите максимальное значение','');
+
+		// alert(randomNum(min, max));
+
+		// function randomNum(min, max){
+		// 	var res = 0;
+
+		// 	res = min + Math.random()*(max-min);
+
+		// 	return res;
+		// }
+
+
+    // Первый символ заглавный
+	    // function ucFirst(inStr) {
+     //  	var res = "";
+     //  	if (inStr.length > 0) {
+	    //     res = (inStr.charAt(0)).toUpperCase()+inStr.substring(1);
+     //  	}
+      
+	    //   return res;
+    	// }
+    
+	    // alert(ucFirst("sdfsfddfsdf"));
+
+	// checkSPAM
+
+		// alert(checkSPAM('buy ViAgRA now'));
+		// alert(checkSPAM('free xxxxx'));
+		// alert(checkSPAM("innocent rabbit"));
+
+
+		// function checkSPAM(instr) {
+		// 	var spam = ['VIAGRA','XXX'];
+
+		// 	instr = instr.toUpperCase();
+		// 	for (var i = 0; i < spam.length; i++) {
+		// 		if (instr.indexOf(spam[i]) > 0) return true;
+		// 	}
+		// 	return false;
+		// }
+	
+
+	// усечение строки
+
+		// alert(truncate("Вот, что мне хотелось бы сказать на эту тему:", 20));
+		// alert(truncate("Всем привет!", 20));
+
+		// function truncate(instr, len) {
+		// 	var truncstr = "";
+
+		// 	if (instr.length > len) {
+		// 		truncstr = instr.substring(0,len-3)+ "...";
+		// 		return truncstr;
+
+		// 	} else return instr;
+
+		// }
+
+	// выделение числа
+		
+		alert(extractCurrenyValue('$200'));
+
+		function extractCurrenyValue(value) {
+			var result = value.substr(1);
+
+			return result;
+		}
+
+	
+	</script>
+</body>
+</html>
