@@ -1,0 +1,202 @@
+﻿<head>
+<html>
+    <title>Arrays methods</title>
+</head>
+<script type="text/javascript">
+
+    /*
+    * Join => concat to string with separator
+    */
+
+    var arr = ["September", "October", "November", "December", "January", "Fabruary", "March", "April", "May", "June", "Jull", "August"];
+
+    document.write(arr);
+
+    document.write("<p><b>Method join(' | ')</b></p>");
+
+    var res = arr.join(" | ");
+    document.write("<p>" + res + "</p>");
+
+    document.write("<p><b>Method join(< br/ >);</b></p>");
+
+    res = arr.join("<br/>");
+    document.write("<p>" + res + "</p>");
+
+    // alert( new Array(4).join("lala") );
+
+    document.write("<hr />");
+
+    /*
+    * Concat => concat arrays
+    */
+
+
+    var a = [1, 2, 3];
+
+    a = a.concat(4, 5);
+    document.write("<p>" + a + "</p>");  // 1,2,3,4,5
+
+
+    a = a.concat(6, 7, [8, 9]);
+    document.write("<p>" + a + "</p>");  // 1,2,3,4,5,6,7,8,9
+
+    document.write("<hr />");
+
+    /*
+    * Reverse
+    */
+
+    var a = new Array(1, 2, 3, 4, 5, 6, 7);
+
+    a.reverse(); 
+
+    document.write(a.join("<br/>"));
+
+    document.write("<hr />");
+
+    /*
+    * Slice => copy array and don't touch initial
+    */
+
+    var a = [1, 2, 3, 4, 5, 6, 7];
+
+    // slice(first index, last index);
+    var temp = a.slice(0, 3); // return 1, 2, 3
+    document.write("<p>" + temp + "</p>");
+
+    // slice(first index); -  from first index to end
+    temp = a.slice(3); // 4, 5, 6, 7
+    document.write("<p>" + temp + "</p>");
+
+    // from first to 1 from end
+    temp = a.slice(1, -1); // 2, 3, 4, 5, 6
+    document.write("<p>" + temp + "</p>");
+
+    var fullCopy = arr.slice();
+
+    document.write("<hr />");
+
+    /*
+    * Splice => copy array and touch initial
+    */
+
+    var a = [1, 2, 3, 4, 5, 6, 7];
+    document.write("<p>Inittal array: " + a + "</p>");
+
+    // Removing
+
+    // splice (начальный индекс, сколько элементов удалить);
+    var d = a.splice(1, 3);   // Будут удалены: 2, 3, 4
+    document.write("<p>Removed: " + d + "</p>");
+    document.write("<p>Leaved: " + a + "</p>");
+
+    // Insertion       
+
+    // splice (first index = 1, how much to remove = 0, from first index insert = 2, 3, 4);
+    a.splice(1, 0, 2, 3, 4);
+    document.write("<p>After insertin: " + a + "</p>");
+
+    document.write("<hr />");
+
+    /*
+    * Sort => sorting of the arrays
+    */
+
+    var a = [1, 4, 11, 2, 9, 99, 5];
+
+    // var compare = function(a, b){
+    //     return a - b;
+    // }
+
+    // a.sort(function(a, b){
+    //     if (a > b) {
+    //         return 1;
+    //     } else {
+    //         return -1;
+    //     }
+    // })
+
+    a.sort(function(a, b){
+        return a - b;
+    });
+
+    document.write(a.join("<p>"));
+
+    document.write("<hr/>");
+
+    var s = ["January", "February", "March", "April", "May"];
+
+    s.sort();
+    document.write(s.join("<p>"));
+
+    document.write("<hr/>");
+
+    /*
+    * Push => add to the end of array
+    * Pop  => remover from the end of array
+    * Unshift => add to the beginning of array
+    * Shift => remove from the beginning of array
+    */
+
+    var array = [1, 2, 3, 4, 5];
+
+    array.push(6);
+    array.push(7);
+    document.write('<p> After push: ' + array + '</p>');
+
+    var lastEl = array.pop();
+    document.write('<p> After pop: ' + array + '</p>');
+
+    array.unshift(0);
+    array.unshift(-1);
+    document.write('<p> After unshift: ' + array + '</p>');
+
+    var firstEl = array.shift();
+    document.write('<p> After shift: ' + array + '</p>');
+
+
+    // Есть массив ['elephant', 'cat', 'dog']
+    // 1. Добавляем в конец 'parrot'
+    // 2. Добавляем в начало 'eagle'
+    // 3. Объединяем с ['bat', 'fox', 'dog', 'elephant']
+    // 4. Пишем функцию которая вернет наш массив без повторяющихся элементов
+    // 5. Сортируем
+    // 6. Удаляыем последние два элемента
+    // 7. Выводим строкой через дефис
+    // 8. Объединить с массивами 
+    //    [1, 3, 'pinguin', 4], [3, ['kitten']
+    // 9. Подсчитать сумму числовых значений
+
+    animals.indexOf('babay'); // -1
+    animals.sort();
+
+    var animals = ['elephant', 'cat', 'dog'];
+
+    animals.push('parrot');
+
+    animals.unshift('eagle');
+
+    var animals2 = ['bat', 'fox', 'dog', 'elephant'];
+    animals = animals.concat(animals2);
+
+    function clearArrRepeats(arr) {
+        var result = [];
+        for( var i = 0; i < arr.length; i++ ) {
+            if (result.indexOf(arr[i]) === -1) {
+                result.push(arr[i]);
+            }
+        }
+        return result;
+    }
+
+    animals = clearArrRepeats(animals);
+    animals.sort();
+
+    // animals.splice(-2);
+    animals.length = animals.length - 2;
+
+    console.log(animals.join(' - '));
+</script>
+<body>
+</body>
+</html>
