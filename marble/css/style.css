@@ -191,6 +191,9 @@ body {
   padding-right: 40px;
   padding-bottom: 25px;
 }
+.footer__column:last-child {
+  padding-right: 0;
+}
 .footer__header {
   margin: 0 0 25px;
   text-transform: uppercase;
