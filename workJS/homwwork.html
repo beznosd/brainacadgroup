@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script>
+'use strict'
+
+// var value = 0;
+
+// function f() {
+//   if (1) {
+//     value = true;
+//   } else {
+//     var value = false;
+//   }
+
+//   alert( value );
+// }
+
+// f();
+// console.log(value);
+
+
+// function test() {
+
+//   alert( window );
+
+//   var window = 5;
+
+//   alert( window );
+// }
+
+// test();
+
+// var a = 5;
+
+// (function() {
+//   alert(a)
+// })()
+
+//sum(a)(b)
+function sum(a) {
+	var p1 = a;
+	return function (b) {return p1+b}
+}
+
+console.log(sum(2)(3));
+console.log(sum(5)(-1));
+
+//buffer
+function makeBuffer() {
+	var buf = [];
+
+	function buffer(value) {
+		if (value == undefined) return buf.join('');
+		else buf.push(value.toString());
+	}
+
+	buffer.clear = function() {
+		buf.length = 0;
+	}
+
+	return buffer;
+}
+
+var buffer = makeBuffer();
+buffer('Mother');
+buffer(' Soap');
+buffer(' Frame');
+
+console.log(buffer());
+
+
+var buffer1 = makeBuffer();
+buffer1(0);
+buffer1(1);
+buffer1(2);
+
+console.log(buffer1());
+buffer1.clear();
+console.log(buffer1());
+
+
+//sort
+
+var users = [{
+  name: "Вася",
+  surname: 'Иванов',
+  age: 20
+}, {
+  name: "Петя",
+  surname: 'Чапаев',
+  age: 25
+}, {
+  name: "Маша",
+  surname: 'Медведева',
+  age: 30
+}];
+
+
+function byField(fieldName) {  // подсмотрел решение. не понял как передаются значения а и b
+	return function(a,b) { 
+		return a[fieldName] > b[fieldName] ? 1 : -1;
+	}
+} 
+
+users.sort(byField('name'));
+users.forEach(function(user) {
+  console.log( user.name );
+});
+
+users.sort(byField('age'));
+users.forEach(function(user) {
+  console.log( user.name );
+});
+
+//filter
+
+var arr = [1, 2, 3, 4, 5, 6, 7];
+
+function filter( arr, func) {
+	var res = [];
+	for ( var i = 0; i < arr.length; i++ ) {
+		if (func(arr[i])) {
+		  res.push(arr[i]);
+		}
+	};
+
+	return res;
+
+}
+
+function inBetween(a,b) {
+	return function (v) { return ( v >= a && v <= b ) ?  true : false; 
+	};
+}
+
+function inArray(arr) {
+	return function (v) { return arr.indexOf(v) >= 0 ?  true : false; 
+	};
+}
+
+
+
+console.log(filter(arr, function(a) {
+  return a % 2 == 0
+})); // 2,4,6
+
+console.log( filter(arr, inBetween(3, 6)) ); // 3,4,5,6
+
+console.log( filter(arr, inArray([1, 2, 10])) ); // 1,2
+
+
+
+// army
+
+function makeArmy() {
+
+  var shooters = [];
+
+  for (var i = 0; i < 10; i++) {
+
+    var shooter = function foo() { // функция-стрелок
+    	 console.log( foo.number ); // выводит свой номер
+    };
+
+    shooter.number = i;
+
+    shooters.push(shooter);
+  }
+
+  return shooters;
+}
+
+var army = makeArmy();
+
+army[0](); // стрелок выводит 10, а должен 0
+army[5](); // стрелок выводит 10...
+
+
+
+//
+var arr = ["a", "b"];
+
+arr.push(function() {
+  console.log( this );
+})
+
+arr[2](); // ?
+
+//
+
+var obj = {
+  go: function() { console.log(this); }
+};
+
+(obj.go)();
+
+//
+
+var name = "";
+
+var user = {
+  name: "Василий",
+
+  export: function() {
+    return {
+      value: this
+    };
+  }
+
+};
+
+console.log( user.export().value.name );
+
+
+//calculator
+
+var calculator = {
+	val1: 0,
+	val2: 0,
+
+	read: function() {
+		this.val1 = +prompt('Enter first value', 0);
+		this.val2 = +prompt('Enter second value', 0);
+	},
+
+	sum: function() {
+		return this.val1 + this.val2;
+	},
+
+	mul: function() {
+		return this.val1 * this.val2;
+	}
+
+};
+
+var calc = calculator;
+
+//calc.read();
+
+console.log('Sum = ' + calc.sum());
+console.log('Mul = ' + calc.mul());
+
+//ladder
+
+var ladder = {
+  step: 0,
+  up: function() { // вверх по лестнице
+    this.step++;
+    return this;
+  },
+  down: function() { // вниз по лестнице
+    this.step--;
+    return this;
+  },
+  showStep: function() { // вывести текущую ступеньку
+    console.log( this.step );
+    return this;
+  }
+};
+
+  ladder.up().up().down().up().down().showStep(); 
+
+//sum
+
+function sum1(a) {
+	var res = a;
+
+	function f(b) { 
+		res += b;
+		return f;
+	};
+
+	f.toString = function() {
+		return res;
+	}; 
+
+	return f;
+
+};
+
+//alert(sum1(1)(2));
+//alert(sum1(1)(2)(3));
+//console.log(sum1(1)(2));
+
+
+
+function sum2(a) {
+
+  var currentSum = a;
+
+  function f(b) {
+    currentSum += b;
+    return f;
+  }
+
+  f.toString = function() {
+    return currentSum;
+  };
+
+  return f;
+}
+
+console.log( sum2(1)(2) ); // 3
+console.log( sum2(5)(-1)(2) ); // 6
+console.log( sum2(6)(-1)(-2)(-3) ); // 0
+console.log( sum2(0)(1)(2)(3)(4)(5) ); // 15
+
+
+
+//Power Calculator
+
+function PowerCalc() {
+	var funcs = [];
+
+	this.addMethod = function(name, code){
+		funcs[name] = code;
+	};
+
+	this.calculate = function(str) {
+		var tmp = [];
+
+		tmp = str.split(" ");
+
+		if (tmp.length != 3) {
+			alert("Не правильная строка вызова: " + str);
+
+			return undefined;
+		};
+
+		if (tmp[1] in funcs) {
+			return funcs[tmp[1]](+tmp[0],+tmp[2]);
+		} else {
+			alert("Не задана функция: " + tmp[1]);
+
+			return undefined;
+		};
+	}
+}
+
+var pc = new PowerCalc();
+pc.addMethod("+", function(a, b) { return a + b;});
+
+console.log(pc.calculate("10 - 5"));
+
+
+</script>
+	
+</body>
+</html>
