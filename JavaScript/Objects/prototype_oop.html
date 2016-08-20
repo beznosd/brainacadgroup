@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Function OOP</title>
+</head>
+<script>
+
+	/*
+	* Prototype OOP
+	*/
+
+	function CoffeeMachine(power, capacity) {
+		this.power = power;
+		// Amount of water
+		this.waterAmount = 0;
+		// физическая константа - удельная теплоёмкость воды для getBoilTime
+		this._WATER_HEAT_CAPACITY = 4200;
+	}
+
+	// расчёт времени для кипячения
+	CoffeeMachine.prototype.getBoilTime = function() {
+		console.log(this.waterAmount * this._WATER_HEAT_CAPACITY * 80 / this.power);
+		return this.waterAmount * this._WATER_HEAT_CAPACITY * 80 / this.power;
+	}
+
+
+	CoffeeMachine.prototype.setWaterAmount = function(amount) {
+		if (amount < 0) {
+			console.log("Значение должно быть положительным");
+		}
+		if (amount > this.capacity) {
+			console.log("Нельзя залить воды больше, чем " + this.capacity);
+		}
+
+		this.waterAmount = amount;
+	}
+
+	// что делать по окончании процесса
+	CoffeeMachine.prototype.onReady = function() {
+		console.log( 'Кофе готово!' );
+	}
+
+	// Запустит onReady через getBoilTime() миллисекунд
+	CoffeeMachine.prototype.run = function() {
+		setTimeout(this.onReady, this.getBoilTime());
+	}
+
+	var coffeeMachine = new CoffeeMachine(1000, 20);
+	coffeeMachine.setWaterAmount(2);
+
+	coffeeMachine.run();
+
+	/*
+	* Prototype Inherited OOP
+	*/
+
+	// function Machine() {
+	// 	this._working = false;
+
+	// 	//...
+	// }
+
+	// Machine.prototype.isWorking = function() {
+	// 	if (this._working == true)
+	// 		return true;
+	// 	return false;
+	// }
+
+	// Machine.prototype.turnOn = function() {
+	// 	this._working = true;
+	// }
+
+	// Machine.prototype.turnOff = function() {
+	// 	this._working = false;
+	// }
+
+
+	// function CoffeeMachine(power, capacity) {
+	// 	// Наследовать свойства
+	// 	Machine.apply(this);
+
+	// 	this.power = power;
+	// 	// Amount of water
+	// 	this.waterAmount = 0;
+	// 	// физическая константа - удельная теплоёмкость воды для getBoilTime
+	// 	this._WATER_HEAT_CAPACITY = 4200;
+	// }
+
+	
+	// CoffeeMachine.prototype = Object.create(Machine.prototype);
+	// // CoffeeMachine.prototype.constructor = CoffeeMachine;
+	// // CoffeeMachine.prototype = new Machine(1000);
+
+	// // расчёт времени для кипячения
+	// CoffeeMachine.prototype.getBoilTime = function() {
+	// 	console.log(this.waterAmount * this._WATER_HEAT_CAPACITY * 80 / this.power);
+	// 	return this.waterAmount * this._WATER_HEAT_CAPACITY * 80 / this.power;
+	// }
+
+	// CoffeeMachine.prototype.setWaterAmount = function(amount) {
+	// 	if (amount < 0) {
+	// 		console.log("Значение должно быть положительным");
+	// 	}
+	// 	if (amount > this.capacity) {
+	// 		console.log("Нельзя залить воды больше, чем " + this.capacity);
+	// 	}
+
+	// 	this.waterAmount = amount;
+	// }
+
+	// // что делать по окончании процесса
+	// CoffeeMachine.prototype.onReady = function() {
+	// 	console.log( 'Кофе готово!' );
+	// }
+
+	// // Запустит onReady через getBoilTime() миллисекунд
+	// CoffeeMachine.prototype.run = function() {
+	// 	if (this.isWorking() == false) {
+	// 		console.log('Сначала нужно включить!');
+	// 		return;
+	// 	}
+	// 	setTimeout(this.onReady, this.getBoilTime());
+		
+	// }
+
+	// var coffeeMachine = new CoffeeMachine(1000, 20);
+	// coffeeMachine.setWaterAmount(2);
+	// coffeeMachine.turnOn();
+
+	// coffeeMachine.run();
+
+	// coffeeMachine.turnOff();
+
+	// coffeeMachine.run();
+
+</script>
+<body>
+	
+</body>
+</html>

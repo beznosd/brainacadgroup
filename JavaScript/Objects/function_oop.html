@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Function OOP</title>
+</head>
+<script>
+
+	/*
+	* Simple class
+	*/
+
+	function CoffeeMachine(power) {
+	  	this.waterAmount = 0; // количество воды в кофеварке
+
+	  	console.log( 'Создана кофеварка мощностью: ' + power + ' ватт' );
+	}
+
+	// создать кофеварку
+	var coffeeMachine = new CoffeeMachine(100);
+
+	// залить воды
+	coffeeMachine.waterAmount = 2;
+
+
+	/*
+	* Private methods
+	*/
+
+	// function CoffeeMachine(power) {
+
+	// 	this.waterAmount = 0;
+
+	// 	// расчёт времени для кипячения
+	// 	function getBoilTime() {
+	// 		return 1000;
+	// 	}
+
+	// 	// что делать по окончании процесса
+	// 	function onReady() {
+	// 		console.log( 'Кофе готово!' );
+	// 	}
+
+	// 	this.run = function() {
+	// 		// setTimeout - встроенная функция,
+	// 		// она запустит onReady через getBoilTime() миллисекунд
+	// 		setTimeout(onReady, getBoilTime());
+	// 	};
+	// }
+
+
+	// var coffeeMachine = new CoffeeMachine(100);
+	// coffeeMachine.waterAmount = 2;
+
+	// coffeeMachine.run();
+
+	/*
+	* Private property
+	*/
+
+	// function CoffeeMachine(power) {
+
+	// 	this.waterAmount = 0;
+
+	// 	// физическая константа - удельная теплоёмкость воды для getBoilTime
+	// 	var WATER_HEAT_CAPACITY = 4200;
+
+	// 	// var self = this;
+
+	// 	// расчёт времени для кипячения
+	// 	var getBoilTime = function() {
+	// 		console.log(this.waterAmount * WATER_HEAT_CAPACITY * 80 / power);
+	// 		return this.waterAmount * WATER_HEAT_CAPACITY * 80 / power;
+	// 	}.bind(this);
+
+	// 	// что делать по окончании процесса
+	// 	function onReady() {
+	// 		console.log( 'Кофе готово!' );
+	// 	}
+
+	// 	this.run = function() {
+	// 		// setTimeout - встроенная функция,
+	// 		// она запустит onReady через getBoilTime() миллисекунд
+	// 		setTimeout(onReady, getBoilTime());
+	// 	};
+	// }
+
+	// var coffeeMachine = new CoffeeMachine(1000);
+	// coffeeMachine.waterAmount = 2;
+
+	// coffeeMachine.run();
+
+	/*
+	* Getters and setters
+	*/
+
+	// function CoffeeMachine(power, capacity) {
+
+	// 	this._waterAmount = 0;
+
+	// 	// физическая константа - удельная теплоёмкость воды для getBoilTime
+	// 	var WATER_HEAT_CAPACITY = 4200;
+
+	// 	// расчёт времени для кипячения
+	// 	function getBoilTime() {
+	// 		// console.log(this._waterAmount * WATER_HEAT_CAPACITY * 80 / power);
+	// 		return this._waterAmount * WATER_HEAT_CAPACITY * 80 / power;
+	// 	};
+
+	// 	// что делать по окончании процесса
+	// 	function onReady() {
+	// 		// console.log( 'Кофе готово!' );
+	// 	}
+
+	// 	this.run = function() {
+	// 		// setTimeout - встроенная функция,
+	// 		// она запустит onReady через getBoilTime() миллисекунд
+	// 		setTimeout(onReady, getBoilTime.call(this));
+	// 	};
+
+	// 	this.setWaterAmount = function(amount) {
+	// 		if (amount < 0) {
+	// 			// console.log("Значение должно быть положительным");
+	// 			return false;
+	// 		}
+	// 		if (amount > capacity) {
+	// 			// console.log("Нельзя залить воды больше, чем " + capacity);
+	// 			return false;
+	// 		}
+
+	// 		this._waterAmount = amount;
+	// 		return true;
+	// 	};
+
+	// 	this.getWaterAmount = function() {
+	// 		return this._waterAmount;
+	// 	};
+	// }
+
+</script>
+<body>
+	
+</body>
+</html>

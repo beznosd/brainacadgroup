@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Bind</title>
+</head>
+<script>
+	/*
+	* Bind
+	*/
+
+	// var user = {
+	// 	firstName: "Вася",
+
+	// 	sayHi: function() {
+	// 		console.log( this.firstName );
+	// 	}
+	// };
+
+
+
+	// setTimeout(function(){
+	// 	user.sayHi();
+	// }, 1000); // undefined (не Вася!)
+
+	/*
+	* Bind resolve
+	*/
+
+	var user = {
+		firstName: "Вася 1",
+		sayHi: function() {
+			console.log( this.firstName );
+		}
+	};
+
+	setTimeout( user.sayHi.bind(user), 1000);
+</script>
+<body>
+	
+</body>
+</html>

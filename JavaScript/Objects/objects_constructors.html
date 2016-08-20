@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Objects functions</title>
+</head>
+<script>
+
+	/*
+	*	Simple object
+	*/
+
+
+	function Car(name, speed) {
+		// this = {};
+		this.name = name;
+		this.speed = speed + ' km/h';
+		// return this;
+	}
+
+	var car = new Car('Toyota', 200);
+	console.log(car);	
+
+
+	/*
+	* Object with methods
+	*/
+
+
+	// function Car(name, speed) {
+
+	// 	this.name = 'Zaporozhetz';
+
+	// 	this.go = function() {
+	// 		console.log(this.name + ' is going with speed ' + speed + ' km/h');
+	// 	};
+
+	// 	this.stop = function() {
+	// 		console.log('Stoped');
+	// 	};
+
+	// }
+
+	// var car = new Car('Toyota', 200);
+
+	// console.log(car);
+
+	// car.go();
+	// car.stop();
+
+	/*
+	* ЗАМЫКАНИЯ
+	* LexicalEnvironment
+	* [[Scope]]
+	*/
+
+	// function foo() {
+	// 	var counterValue = 0;
+
+	// 	function bar() {
+	// 		return counterValue++;
+	// 	}
+
+	// 	return bar;
+	// }
+
+	// var counter = foo();
+	// console.log( counter() );
+	// console.log( counter() );
+	// console.log( counter() );
+
+	// console.log('\n');
+
+	// var counter2 = foo();
+	// console.log( counter2() );
+	// console.log( counter2() );
+
+
+	/*
+		Simple calculator
+	*/
+
+
+	// function Calculator() {
+
+	//   this.getValues = function() {
+	// 		this.a = +prompt('type first num', 0);
+	// 		this.b = +prompt('type second num', 0);
+	//   };
+
+	//   this.sum = function() {
+	// 		return this.a + this.b;
+	//   };
+
+	//   this.sub = function() {
+	// 		return this.a - this.b;
+	//   };
+
+	// }
+
+	// var calculator = new Calculator();
+	// calculator.getValues();
+
+	// alert( "Sum is " + calculator.sum() );
+	// alert( "Sub is" + calculator.sub() );
+
+
+</script>
+<body>
+
+</body>
+</html>

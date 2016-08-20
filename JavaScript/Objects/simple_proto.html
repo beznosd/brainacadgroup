@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>__proto__ Prototype</title>
+</head>
+<script>
+
+	// var animal = {
+	// 	eats: true,
+	// };
+	// var rabbit = {
+ 	// 	jumps: true
+	// };
+
+	// rabbit.__proto__ = animal;
+
+	// var fox = Object.create(animal);
+	// fox.sweem = true;
+	// console.log(fox);
+
+	// в rabbit можно найти оба свойства
+	// alert( rabbit.jumps ); // true
+	// alert( rabbit.eats ); // true
+
+	// console.log( rabbit.hasOwnProperty('eats') );
+
+
+	// for (var key in rabbit) {
+	//   	console.log( key + " = " + rabbit[key] ); // выводит и "eats" и "jumps"
+	// }
+
+	/*
+	* Class inheritance via __proto__
+	*/
+
+	// var animal = {
+	//   	eats: 'true true'
+	// };
+
+	// function Rabbit(name) {
+	// 	this.name = name;
+	// 	this.__proto__ = animal;
+	// }
+
+	// var rabbit = new Rabbit("Кроль");
+
+	// console.log( rabbit.eats ); // true, из прототипа
+
+
+	// Чтобы новым объектам автоматически ставить прототип, конструктору ставится свойство prototype.
+	// При создании объекта через new, в его прототип __proto__ записывается ссылка из prototype функции-конструктора.	
+
+	/*
+	* Class inheritance via prototype
+	*/
+
+	// var animal = {
+	//   	eats: true
+	// };
+
+	// function Rabbit(name) {
+	//   	this.name = name;
+	// }
+
+	// Rabbit.prototype = animal;
+
+	// var rabbit = new Rabbit("Кроль"); //  rabbit.__proto__ == animal
+
+	// console.log( rabbit ); // true
+
+	// var car = {
+	// 	wheels: 4
+	// };
+
+	// function Zapor(model) {
+	// 	this.model = model;
+	// }
+
+
+	// Аналог Object.create кроссбраузерный
+
+	// function inherit(proto) {
+	// 	function F() {}
+	// 	F.prototype = proto;
+	// 	var object = new F;
+	// 	return object;
+	// }
+
+	// var animal = {
+	// 	eats: true
+	// };
+
+	// var rabbit = inherit(animal);
+
+	// alert( rabbit.eats ); // true
+
+	// // Кросбраузерный метод
+
+	// if (!Object.create) Object.create = inherit;
+
+</script>
+<body>
+	
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Call Apply</title>
+</head>
+<script>
+
+	/*
+	* Simple example of this
+	*/
+
+	// var human = {
+	// 	firstName: 'Vasya',
+	// 	lastName: 'Pupkin',
+
+	// 	showFullName: function() {
+	// 		alert( this.firstName + " " + this.lastName );
+	// 	}
+	// }
+	
+	// human.showFullName();
+
+	/*
+	* Function out of object, this depends on ibject which has fire it
+	*/
+
+	// var human = {
+	// 	firstName: 'Vasya1',
+	// 	lastName: 'Pupkin1',
+
+	// 	showFullName: function(){
+	// 		console.log(this.firstName + ' ' + this.lastName);
+	// 	}
+	// }
+	// // obj1.func.call(obj2);
+	// var human2 = {
+	// 	firstName: 'Ivan',
+	// 	lastName: 'Ivanov',
+
+	// 	showFullName: function() {
+	// 		console.log(this.firstName + ' ' + this.lastName);
+	// 	}
+	// }
+
+	// human.showFullName.call(human2);
+
+
+	// function foo() {
+	// 	alert( this.firstName + " " + this.lastName );
+	// }
+
+	// human2.showFullName();
+
+	/*
+	* Set context to the function via 'call()'
+	*/
+
+	// call(context, arg1, arg2, arg3, ...)
+
+	// var human = {
+	// 	firstName: 'Vasya',
+	// 	lastName: 'Pupkin',
+	// }
+
+	// function showFullName() {
+	// 	alert( this.firstName + " " + this.lastName );
+	// }
+
+	// showFullName.call(human);
+
+	/*
+	* Set context to the function via 'call()'
+	*/
+
+	// call(context, arg1, arg2, arg3, ...)
+
+	// var human = {
+	// 	firstName: 'Vasya',
+	// 	lastName: 'Pupkin',
+	// };
+
+	// function sayPhrase(phrase) {
+	// 	alert( phrase + " " + this.firstName + " " + this.lastName );
+	// }
+
+	// sayPhrase.call(human, 'Hello hello, ');
+
+	// var human = {
+	// 	firstName: 'Vasya1',
+	// 	lastName: 'Pupkin1',
+
+	// 	showFullName: foo
+	// }
+
+	// var human2 = {
+	// 	firstName: 'Ivan',
+	// 	lastName: 'Ivanov',
+
+	// 	showFullName: foo
+	// }
+
+	// function foo() {
+	// 	console.log( this.firstName + " " + this.lastName );
+	// }
+
+	// human.showFullName.call(human2);
+
+	/*
+	* Apply func
+	*/
+
+	// var obj = {
+	// 	phrase: 'Your sum is: '
+	// }
+
+	// var arr = [1, 2, 3, 4, 5];
+
+	// function showSum5(a, b, c, d, e) {
+	// 	var phrase = this.phrase;
+	// 	var sum = a + b + c + d + e;
+	// 	return phrase + sum;
+	// }
+
+	// console.log( showSum5.apply(obj, arr) );
+
+	/*
+	* Same results
+	*/
+
+	// func.call(context, arg1, arg2);
+	
+	// func.apply(context, [arg1, arg2]);
+
+
+	/*
+	* Math max with apply
+	*/
+
+	var nums = [10, 20 , 45, 89, 34, 67];
+
+	// console.log( Math.max() );
+
+	// console.log( Math.max.apply(Math, nums) );
+
+	/*
+	* Pseudo array arguments
+	*/
+
+	// function test(arg1, arg2, arg3) {
+	// 	// var args = [].slice.call(arguments);
+	// 	console.log([].join.call(arguments, ' - '));
+	// }
+
+	// test(10, 'Vasya', false);
+
+
+</script>
+<body>
+	
+</body>
+</html>

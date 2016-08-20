@@ -1,0 +1,356 @@
+<html>
+<head>
+    <title>Обьекты</title>
+
+    <script type="text/javascript">
+
+        /*
+            Objects
+        */
+
+        var object = {
+            'a': 1, 
+            b: 2 
+        };
+
+
+        object.a = 3;       
+        object["property"] = 4;   
+
+
+        var person = {
+            firstName: "Jim",
+            lastName: "Rainbow",
+            age: 30,
+            job: "Web Developer",
+        };
+
+        document.write("<p>" + person.firstName + " " + person.lastName);
+
+        person.age = 25;
+        document.write("<p>Age: " + person.age + " years old.");
+
+        // Создаем простой объект car
+        // В нем должны быть свойства
+        /*  количество колес 4, 
+            количество дверей 5, 
+            макс. скорость 220, 
+            корбка передачь ручная (gearbox: handle),
+        */
+        
+        var car  = {
+            wheels: 4,
+            doors: 5,
+            maxSpeed: 220,
+            gearbox: 'handle'
+        }
+
+        /*
+        * Constructor object
+        */
+
+        var point = new Object();
+
+        point.x = 10;
+        point.y = 25;
+
+
+        // Добавляем к объекту метод.
+        point.foo = function () {
+            console.log("x = " + point.x, "y = " + point.y);
+        };
+
+        point.foo();
+
+        car.ride = function() {
+            console.log('Car is riding!');
+        }
+
+        car.ride();
+
+        // person.ride();
+
+        // Делаем метод ride();
+
+        // вывод машина едет со скоростью + макс. скорость
+
+        /*
+            Добавляем метод 
+        */
+
+        /*
+        * Inline object
+        */
+
+        var human = {
+            firstName: "Alex",
+            secondName: "Jazun",
+            age: 27,
+
+            job: {
+                company: "Microsoft",
+                position: "Web Developer",
+            }
+        };
+
+        //human.firstName // "Alex"
+        console.log(human.job.position);
+
+        /*
+        * Add properties outside
+        */
+
+        var human = {};
+
+        human.firstName = "Alex";
+        human.secondName = "Jazun";
+        human.age = 27;
+
+        // Creating of inline object
+        human.job = {};
+
+        human.job.company = "Microsoft";
+        human.job.position = "Web Developer";
+
+
+        /*
+        * Methods
+        */
+
+        // Создаем калькулятор
+
+        var calc = {
+
+            a: 5,
+
+            b: 11,
+
+            sum: foo
+
+        }
+
+        function foo() {
+            return this.a + this.b;
+        }
+
+        console.log( calc.sum() ); // 7
+
+
+        /*
+        * this
+        */
+
+
+        // var user = {
+        //     name: 'Василий',
+
+        //     sayHi: function() {
+        //         return this;
+        //     }
+        // };
+
+        // console.log(user.sayHi());
+
+
+        var human = {
+            firstName: "Alex",
+            secondName: "Jazun",
+            age: 27,
+            job: "<img src='Images/Microsoft.jpg' width='152' height='38'/>",
+
+            show: function () {
+                document.write("<p>First name: " + this.firstName + '</p>');
+                document.write("<p>Second name: " + this.secondName + '</p>');
+                document.write("<p>Age: " + this.age + " years old<br/></p>");
+                document.write(this.job + "<hr/>");
+            },
+
+            changeWork: function(job) {
+                this.job = job;
+            }
+        }
+
+        // Run methods
+
+        human.show();
+
+        human.changeWork("<img src='Images/ibm.png'/>");
+
+        human.show();
+
+        function showName(namedObj) {
+            // alert( namedObj.name );
+        }
+
+        // user.sayHi(); // Василий
+
+
+        // ------------------
+
+        var user = { firstName: "Вася" };
+        var admin = { firstName: "Админ" };
+
+        function func() {
+            alert( this.firstName );
+        }
+
+        user.f = func;
+        admin.g = func;
+
+        // this равен объекту перед точкой:
+        // user.f(); // Вася
+        // admin.g(); // Админ
+
+        // Добавляем втроеный свойство число пи
+
+        var calc = {
+            sum: function(a, b) {
+                return a + b;
+            },
+
+            sub: function(a, b) {
+                return a - b;
+            }
+        }
+
+        /*
+        * Methods outside
+        */
+
+        var builder = {};
+
+        builder.createRoof = function () {
+            document.write("<img src='Images/Roof.gif'/><br/>");
+        };
+
+        builder.createFirstFloor = function () {
+            document.write("<img src='Images/FirstFloor.gif'/><br/>");
+        };
+
+        builder.createSecondFloor = function () {
+            document.write("<img src='Images/SecondFloor.gif'/><br/>");
+        };
+
+        builder.createBasement = function () {
+            document.write("<img src='Images/Basement.gif'/><br/>");
+        };
+
+        builder.createRoof();
+        builder.createSecondFloor();
+        builder.createFirstFloor();
+        builder.createBasement();
+
+        for (var i = 0; i < 7; i++) {
+            document.write('<hr/>');
+        }
+
+        /*
+        * For in
+        */
+
+        var house = {
+            roof: "<img src='Images/Roof.gif'/><br/>",
+            secondFloor: "<img src='Images/SecondFloor.gif'/><br/>",
+            'first Floor': "<img src='Images/FirstFloor.gif'/><br/>",
+            basement: "<img src='Images/Basement.gif'/><br/>",
+            address: "<p style='color:green'>UK. London. Muswell Hill. N10<hr/>"
+        }
+
+        // go through each property
+        // for (element in house) {
+        //     document.write(house[element]);
+        // }
+
+        // Выводим все свойста машины
+
+        var car  = {
+            wheels: 4,
+            doors: 5,
+            maxSpeed: 220,
+            gearbox: 'handle'
+        }
+
+        car['wheels'];
+        car['doors'];
+
+        for (var prop in car) {
+            console.log(prop + ' => ' + car[prop]);
+        }
+
+
+        // property => values
+
+        /*
+        * delete
+        */
+
+
+        // Удаляем все свойства объекта
+        // delete
+
+
+        // Проверяем пуст ли объект
+
+        var obj = {a: 'sdg'};
+
+        console.log(isEmpty(obj));
+
+
+        function isEmpty(obj) {
+            return Object.keys(obj).length === 0;
+        }
+
+        // считаем сумму свойств
+
+        var salaries = {
+            "Вася": 100,
+            "Петя": 300,
+            "Даша": 250
+        };
+
+
+
+
+
+
+
+
+
+
+
+        var sum = 0;
+        for (var name in salaries) {
+            sum += salaries[name];
+        }
+
+        // alert( sum );
+
+
+
+
+
+
+        var car  = {
+            wheels: 4,
+            doors: 5,
+            maxSpeed: 220,
+            gearbox: 'handle'
+        }
+
+        var car2 = {}; // new empty object
+
+        // copy
+        for (var key in car) {
+          car2[key] = car[key];
+        }
+
+        car2.wheels = 10;
+
+        // alert( car.wheels ); // по-прежнему "Вася"
+
+    </script>
+
+</head>
+<body>
+</body>
+</html>
