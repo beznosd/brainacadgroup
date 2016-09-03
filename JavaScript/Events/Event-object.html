@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Event object</title>
+</head>
+<body>
+	<h3>Event object</h3>
+	<div id='type'>event.type = <span></span></div>
+	<div id='currentTarget'>event.currentTarget = <span></span></div>
+	<div id='x'>event.clientX = <span></span></div>
+	<div id='y'>event.clientY = <span></span></div>
+</body>
+<script>
+	window.onmousemove = function(event) {
+		type.children[0].textContent = event.type;
+		currentTarget.children[0].textContent = event.currentTarget;
+		x.children[0].textContent = event.clientX;
+		y.children[0].textContent = event.clientY;
+		console.log(event);
+	}
+</script>
+</html>

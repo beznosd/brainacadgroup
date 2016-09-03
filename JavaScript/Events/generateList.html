@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Generate list</title>
+</head>
+<body>
+	<button>Generate list</button>
+</body>
+<script>
+
+	/*
+	* Methods for creating, adding, removing DOM nodes
+	*/
+
+	// document.createElement(tag)
+	// document.createTextNode(text)
+
+	// elem.appendChild(tag)
+	// elemParent.insertBefore(tag, nextSibling)
+
+	// elem.cloneNode(bool);
+
+	// div.parentNode.removeChild(div);
+
+
+	function generateList(argument) {
+		var i = 1;
+		var ol = document.createElement('ol');
+		while(true) {
+			var text = prompt(i + ' пункст списка.');
+			if (!text) break;
+			var li = document.createElement('li');
+			li.textContent = text;
+			ol.appendChild(li);
+			i++;
+		}
+		document.body.appendChild(ol);
+	}
+	
+
+	var button = document.getElementsByTagName('button')[0];
+	button.onclick = generateList;
+
+</script>
+</html>

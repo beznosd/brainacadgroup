@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>showNotification function</title>
+</head>
+<style>
+	body {
+		margin: 0;
+		bottom: 0;
+	}
+
+	.notification {
+		padding: 20px 15px;
+		text-align: center;
+		width: 100%;
+		color: white;
+		font-family: sans-serif;
+	}
+
+	.success {
+		background: green;
+	}
+
+	.error {
+		background: red;
+	}
+</style>
+<body>
+	<button id="success">Success notification!</button>
+	<button id="error">Error notification!</button>
+</body>
+<script>
+	function showNotification(options) {
+		var notification = document.createElement('div');
+		notification.style.position = 'absolute';
+		if (options.bottom) {
+			notification.style.bottom = '0';
+		} else {
+			notification.style.top = '0';
+		}
+		notification.textContent = options.text;
+		notification.className = 'notification ' + options.class;
+		document.body.appendChild(notification);
+		setTimeout(function(){
+			notification.parentNode.removeChild(notification);
+		}, options.time);
+	}
+
+	success.onclick = function(){
+		showNotification({
+			class: 'success',
+			bottom: false,
+			text: 'Text of our success',
+			time: 3000
+		});
+	};
+
+	error.onclick = function(){
+		showNotification({
+			class: 'error',
+			bottom: true,
+			text: 'Text of error',
+			time: 3000
+		});
+	};
+</script>
+</html>
