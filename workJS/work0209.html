@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="button" value= "Create List" name="Button">
+<script>
+	// var button = document.getElementsByTagName("input")[0];
+
+	// button.addEventListener("mouseover",onMouseOver);
+	// button.addEventListener("mouseout",onMouseOut);
+
+	// function onMouseOver(e) {
+	// 	console.log("mouse over");
+	// }
+
+	// function onMouseOut(e) {
+	// 	console.log("mouse out");
+	// }
+
+
+	// var div = document.createElement('div');
+	// div.innerHTML = '<strong>Ура!<strong>';
+	// document.body.appendChild(div);
+
+	// var strong = div.children[0];
+	// var textNode = document.createTextNode('Simple text');
+	// var someTag = document.createElement('i');
+	// someTag.textContent = textNode.data;
+	// div.insertBefore(someTag, strong);
+
+	// var div2 = div.cloneNode(true);
+	// div2.querySelector('strong').textContent = 'Ура еще раз!!';
+	// document.body.appendChild(div2);
+
+//+++++++++++++++++++++++++++++++++++
+	// var button = document.getElementsByTagName('input')[0];
+
+	// button.addEventListener('click',createList);
+
+	// function createList(e) {
+	// var val, olElem, ilElem;
+	
+	// olElem = document.createElement('ol');
+	
+	// while (true) {
+	// 	val = prompt('Enter value');
+	// 	if (val) {
+	// 		ilElem = document.createElement('li');
+	// 		ilElem.textContent = val;
+	// 		olElem.appendChild(ilElem);
+	// 	} else break;
+	// }
+
+	// document.body.appendChild(olElem);
+	// }
+
+
+// styles ++++++++++++++++++++++
+
+	var button = document.getElementsByTagName('input')[0];
+
+	button.addEventListener('click',changeStyle);
+	button.addEventListener('contextmenu',restoreStyle);
+
+
+	function changeStyle(e) {
+		this.style["color"] = 'blue';
+		this.style.border = "1px solid blue";
+		this.style.height = "200px";
+		this.style.width = "200px";
+
+	}
+
+	function restoreStyle(e) {
+		e.preventDefault();
+		this.style.cssText = "";
+	}
+
+</script>	
+</body>
+</html>

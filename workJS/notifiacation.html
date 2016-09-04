@@ -1,0 +1,100 @@
+<style>
+body {
+margin: 0;
+bottom: 0;
+color: red;
+background-color: #ccc;
+font-family: sans-serif;
+}
+
+.notification {
+padding: 20px 15px;
+text-align: center;
+width: 100%;
+color: white;
+}
+
+.success {
+background: green;
+}
+
+.error {
+background: red;
+}
+</style>
+<body>
+<button id="success">Success notification!</button>
+<button id="error">Error notification!</button>
+
+<script>
+	success.onclick = function(){
+		showNotification({
+			class: 'success',
+			bottom: false,
+			text: 'Text of our notification',
+			time: 3000
+		});
+	};
+
+	error.onclick = function(){
+		showNotification({
+			class: 'error',
+			bottom: true,
+			text: 'Text of our notification',
+			time: 3000
+		});
+	};
+
+
+	function showNotification(obj){
+		var div = document.createElement('div'),
+			defaultObj = {
+				class: 'error',
+				 bottom: false,
+				text: 'U must run function with {class:"value", bottom:true/false, text:"notification", time:time>0}',
+				time: 3000				
+			};
+
+		if (!(obj && validateParam(obj.class, 'string') && validateParam(obj.bottom, 'boolean') && validateParam(obj.text, 'string')  && validateParam(obj.time, 'number'))) obj = defaultObj;
+
+		div.className = "notification"+" " + obj.class;
+		div.textContent = obj.text;
+		div.style.position = "absolute";
+
+
+		if (obj.bottom) {
+			div.style.bottom = "0px";
+		} else {
+			div.style.top = "0px"
+		}
+
+		document.body.appendChild(div);
+		setTimeout(function(){div.parentNode.removeChild(div);},obj.time);
+	};
+
+	function validateParam(value, type) {
+		var result = false;
+
+		switch (type) {
+			case 'string':
+				if (value && value.length != 0 && typeof(value) == 'string')
+					result =  true;
+				break;
+			case 'boolean':
+				if (value && typeof(value) == 'boolean' )
+					result =  true;
+				break;
+			case 'number':
+				if (value && typeof(value) == 'number' )
+					result =  true;
+				break;
+			default:
+				result = false;
+		}
+
+		return result;
+	}
+
+
+</script>
+</body>

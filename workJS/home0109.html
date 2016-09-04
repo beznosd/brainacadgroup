@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+</head>
+
+<body>
+  <form name="search">
+    <label>Поиск по сайту:
+      <input type="text" name="search">
+    </label>
+    <input type="submit" value="Искать!">
+  </form>
+
+  <hr>
+
+  <form name="search-person">
+    Поиск по посетителям:
+    <table id="age-table">
+      <tr>
+        <td>Возраст:</td>
+        <td id="age-list">
+          <label>
+            <input type="radio" name="age" value="young">до 18</label>
+          <label>
+            <input type="radio" name="age" value="mature">18-50</label>
+          <label>
+            <input type="radio" name="age" value="senior">более 50</label>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Дополнительно:</td>
+        <td>
+          <input type="text" name="info[0]">
+          <input type="text" name="info[1]">
+          <input type="text" name="info[2]">
+        </td>
+      </tr>
+
+    </table>
+
+    <input type="submit" value="Искать!">
+  </form>
+
+<!--   Ниже находится документ с таблицей и формой.
+
+  Найдите (получите в переменную) в нём:
+
+  1.  Все элементы label внутри таблицы. Должно быть 3 элемента.
+  2.  Первую ячейку таблицы (со словом "Возраст").
+  3.  Вторую форму в документе.
+  4.  Форму с именем search, без использования её позиции в документе.
+  5.  Элемент input в форме с именем search. Если их несколько, то нужен первый.
+  6.  Элемент с именем info[0], без точного знания его позиции в документе.
+  7.  Элемент с именем info[0], внутри формы с именем search-person.
+ -->
+
+  <script>
+
+    1.
+    var tabl = document.getElementsByTagName('table')[0],
+        elem = tabl.getElementsByTagName('label'), 
+        i = 0, 
+        size = 0,
+        forms;
+
+    size = elem.length;
+    for ( i = 0; i < size; i++) {
+      console.log(elem[i].tagName);
+    }    
+
+    // 2.
+    elem = tabl.getElementsByTagName('td');
+    size = elem.length;
+    for ( i = 0; i < size; i++ ) {
+      for ( j = 0; elem[i].childNodes.length; j++) {
+      if (elem[i].childNodes[j].data.indexOf('Возраст') != -1 ) {
+        console.log("ячейка номер:" + i + " " + elem[i].childNodes[j].nodeName );
+        //console.dir(elem[i].childNodes[j]);
+        size = 0;
+        break;
+        }
+      }
+    }
+
+    // 3.
+    elem = document.getElementsByTagName('form');
+    console.log(elem[1]);
+    //console.dir(elem[1]);
+
+    // 4. 
+    elem = document.getElementsByTagName('form');
+    for ( i = 0; i < elem.length; i++) {
+      if (elem[i].name == 'search' ) {
+        console.log(elem[i]);
+        break;
+      }
+    }
+    // document.querySelector('form[name="search"]');
+
+    // 5.
+    elem = document.getElementsByTagName('form');
+    for ( i = 0; i < elem.length; i++) {
+      if (elem[i].name == 'search' ) {
+        console.log(elem[i].getElementsByTagName('input')[0]);
+        break;
+      }
+    }
+    // document.querySelector('form[name="search"] input')
+
+
+    // 6.
+    elem = document.getElementsByName('info[0]');
+    console.log(elem[0]);
+    //document.getElementsByName("info[0]")[0];
+
+
+
+    // 7.
+    console.log('Task 7')
+    elem = document.getElementsByTagName('form');
+    size = elem.length;
+    for ( i = 0; i < elem.length; i++) {
+      if (elem[i].name == 'search-person' ) {
+          console.log(findElement(elem[i],'info[0]'));        
+        }
+      }
+    
+
+    function findElement(elem, name) {
+      var result = -1;
+      if (elem.firstChild) {
+        for ( var i = 0; i < elem.children.length; i++) {
+          result = findElement(elem.children[i],name);
+          if (result != -1) return result;
+        }
+      } else {
+        if (elem.name == name) result = elem;
+      }
+      return result;
+    }
+
+    //document.querySelector('form[name="search-person"] [name="info[0]"]');
+
+
+
+  </script>
+
+</body>
+
+</html>
