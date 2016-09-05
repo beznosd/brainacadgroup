@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Task 2</title>
+</head>
+	<style>
+	body {
+	margin: 0;
+	bottom: 0;
+	color: red;
+	background-color: #ccc;
+	font-family: sans-serif;
+	}
+
+	.notification {
+	padding: 20px 15px;
+	text-align: center;
+	width: 100%;
+	color: white;
+	}
+
+	.success {
+	background: green;
+	}
+
+	.error {
+	background: red;
+	}
+
+	.default {
+		background: blue;
+	}
+
+	</style>
+<body>
+	<button id="success">Success notification!</button>
+	<button id="error">Error notification!</button>
+</body>
+	<body>
+
+	<button>Click ME!</button>
+	<script type="text/javascript">
+
+		success = document.getElementById('success');
+		error = document.getElementById('error');
+
+		function showNotification(options) {
+			var defaultOptions = {
+				class: 'default',
+				bottom: false,
+				text: 'Attention! Incorrect input parameters! All of the paremetrs restored to DEFAULTS',
+				time: 2000
+			}
+
+			if (((options.class == 'undefind') || (typeof(options.class) != 'string') || (options.class =='')) ||  
+				((options.bottom == 'undefind') || (typeof(options.bottom) != 'boolean')) ||
+				((options.bottom == 'text') || (typeof(options.text) != 'string') || (options.text =='')) || 
+				((options.time == 'undefind') || (typeof(options.time) != 'number') || (options.time ==''))) {
+					options = defaultOptions;
+				};
+			
+			var div  = document.createElement('div');
+			document.body.appendChild(div);
+			div.className = 'notification ' + options.class;
+			div.textContent = options.text;
+			div.style.position = 'absolute';
+			if (options.bottom) {
+				div.style.bottom = 0;
+			} else {
+				div.style.top = 0;
+			}
+
+			setTimeout(function(){div.parentNode.removeChild(div);}, options.time);
+		}
+
+		success.onclick = function() {
+			showNotification({
+				// class: 'success',
+				bottom: false,
+				text: 'Success!',
+				time: 3000
+			});
+		}
+		error.onclick = function() {
+			showNotification({
+				class: 'error',
+				bottom: true,
+				text: 'Error!',
+				time: 3000
+			});
+		};
+
+		// function mousovered() {
+		// 	console.log('mouse is over');
+		// };
+
+		// function mousouted() {
+		// 	console.log('mouse is out'); 
+		// };
+
+		// button = document.getElementById('button');
+		// button.addEventListener('mouseover', mousovered);
+		// button.addEventListener('mouseout', mousouted);
+
+		// function createList() {
+		// 	var i =1;
+		// 	var ol = document.createElement('ol');
+		// 	while (true) {
+		// 		var text = prompt(i + 'пункт списка.','');
+		// 		if(!text) break;
+		// 		var li  = document.createElement('li');
+		// 		li.textContent = text;
+		// 		ol.appendChild(li);
+		// 		i++;
+		// 	} 
+		// 	document.body.appendChild(ol);
+		// }
+
+		// button = document.getElementsByTagName('button');
+		// button.onclick = createList;
+
+		// document.getElementsByTagName('button')[0].onclick = function() {
+		// 	this.style.cssText = 
+		// 	"background-color: green;\
+		// 	 color: white;\
+		// 	font-size: 30px;\
+		// 	";
+		// }	
+
+			// this.style.backgroundColor = 'green';
+			// this.style.color = 'white';
+			// this.style.fontSize = '30px';
+			// this.style.border = '3px solid black';
+			// this.style.borderRadius = '20px';
+			// this.style.outLine = 'none';
+			// this.style.width = '300px';
+			// this.style.height = '100px';
+
+
+	</script>
+	</body>
+</html>
