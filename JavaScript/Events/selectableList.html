@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Mouse task</title>
+</head>
+<style>
+	li {
+		cursor: pointer;
+	}
+</style>
+<body>
+	<ul>
+		<li>Евразия</li>
+		<li>Африка</li>
+		<li>Австралия</li>
+		<li>Северная Америка</li>
+		<li>Южная Америка</li>
+		<li>Антарктида</li>
+	</ul>
+</body>
+
+<script>
+	var ul = document.body.children[0];
+
+	ul.addEventListener('click', function(e){
+		if (e.target.tagName == 'LI' && (e.ctrlKey || e.metaKey)) {
+			e.target.style.background = 'lime';
+		} else {
+			for (var i = 0; i < e.target.parentNode.children.length; i++) {
+				e.target.parentNode.children[i].style.background = '';
+			}
+			e.target.style.background = 'lime';
+		}
+	});
+</script>
+</html>
