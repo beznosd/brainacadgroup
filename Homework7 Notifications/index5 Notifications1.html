@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="utf-8">
+		<!-- <link type="text/css" rel="stylesheet" href="style/style.css"/> -->
+		<title>Task1</title>
+</head>
+<style>
+	body {
+		margin: 0;
+		bottom: 0;
+		color: red;
+		background-color: #ccc;
+		font-family: sans-serif;
+	}
+
+	.notification {
+		padding: 20px 15px;
+		text-align: center;
+		width: 100%;
+		color: white;
+	}
+
+	.success {
+		background: green;
+	}
+
+	.error {
+		background: red;
+	}
+	
+	.default {
+		background: orange;
+	}
+</style>
+	
+<body>
+<button id="success">Success notification!</button>
+<button id="error">Error notification!</button>
+</body>
+<script>
+
+	function showNotification(object) {
+		var def = {
+			class: 'default',
+			bottom: false,
+			text: 'Default text of notification',
+			time: 3000
+		}
+		var div = document.createElement('div');
+		
+		if ( object.class && object.class === "success" || object.class === "error" ) {
+			div.className = object.class + ' notification';
+		} else {
+			div.className = def.class + ' notification';
+		}
+		
+		if ( object.text ) {
+			div.textContent = object.text;
+		} else {
+			div.textContent = def.text;
+		}
+		
+		document.body.appendChild(div);
+		
+		div.style.position = 'absolute';
+		
+		if ( object.bottom == "true" ) {
+			div.style.bottom = 0;
+		} else {
+			div.style.top = 0;
+		}
+		
+		if ( typeof object.time == "number" ) {
+			setTimeout(function(){div.parentNode.removeChild(div)}, object.time);
+		} else {
+			setTimeout(function(){div.parentNode.removeChild(div)}, def.time);
+		}
+	}
+	
+	success.onclick = function (){
+		showNotification({
+			class: false,
+			bottom: "asdf",
+			text: 1,
+			time: "sdgkg"
+		})
+	};
+	
+	error.onclick = function (){
+		showNotification({
+			class: 'error',
+			bottom: true,
+			text: 'Text of our notification',
+			time: 3000
+		})
+	};
+		
+</script>		
+</html>	
+
