@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Forms</title>
+</head>
+<style>
+	div {
+		margin-top: 10px;
+	}
+</style>
+<body>
+	<form name="login">
+		<input name="username" value="username">
+		<input name="password" value="password">
+		<div>
+			<select name="payment" multiple>
+			    <option value="paypall" selected>Pay Pall</option>
+			    <option value="card">Plastic Card</option>
+			    <option value="americanexpress">American Express</option>
+			</select>
+		</div>
+		<div>
+			<textarea name="description" cols="30" rows="10">Some big text</textarea>
+		</div>
+		<label>I have read agreement <input name="agreement" type="checkbox" checked></label>
+	</form>
+
+
+	<script>
+
+		// console.log(document.forms);
+
+		var form = document.forms.login; // можно document.forms[0]
+
+		// var elem = form.elements.username; // можно form.elements[0]
+
+		// console.log( elem.value ); // username
+
+		// show with same input name
+
+
+
+
+		// console.log(form.elements.username.value);
+		// console.log(form.elements.description.value);
+		// console.log(form.elements.agreement.checked);
+		// // selected, index, text
+		console.log(form.elements.payment.options[0].selected);
+		console.log(form.elements.payment.options[0].text);
+
+		// document.createElement('option');
+
+		// new Option(text, value, defaultSelected, selected);
+
+		var option = new Option("Text text", "value", true, true);
+		form.elements.payment.appendChild(option);
+
+
+
+
+
+
+
+
+
+
+
+		// var form = document.forms.registration;
+		
+		// var inputName = form.elements.username;
+		// var selectPayment = form.elements.payment;
+
+		// console.log(inputName.value + '\'s payment methods: ');
+
+		// for (var i = 0; i < selectPayment.length; i++) {
+		// 	if (selectPayment[i].selected == true) {
+		// 		console.log(selectPayment[i].text);
+		// 	}
+		// }
+
+	</script>
+</body>
+</html>

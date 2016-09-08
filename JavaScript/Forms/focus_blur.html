@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Focus blur</title>
+</head>
+<body>
+	<style> 
+		.error { 
+			border-color: red;
+		} 
+
+		input:focus {
+			outline: none;
+		}
+	</style>
+
+	Введите ваш возраст: <input type="text" id="input" tabindex="3">
+	Введите ваше имя: <input type="text" tabindex="2">
+	Введите вашу фамилию: <input type="text" tabindex="1">
+
+	<div id="error"></div>
+
+	<script>
+		// document.getElementsByTagName('input')[0].focus();
+
+		input.onblur = function() {
+			console.log('blur');
+			if (isNaN(this.value)) { 
+				// введено не число
+				// показать ошибку
+				this.className = "error";
+				error.innerHTML = 'Вы ввели не число. Исправьте, пожалуйста.'
+			}
+		};
+
+		input.onfocus = function() {
+			if (this.className == 'error') { 
+				// сбросить состояние "ошибка", если оно есть
+				this.className = "";
+				error.innerHTML = "";
+			}
+		};
+
+		// document.activeElement
+
+	</script>
+</body>
+</html>

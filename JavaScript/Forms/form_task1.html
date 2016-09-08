@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Form task</title>
+</head>
+<style>
+	form {
+		margin-top: 40px;
+		margin-left: 100px;
+	}
+	.field {
+		margin-bottom: 10px;
+	}
+	.error {
+		border-color: red;
+	}
+	.success {
+		color: green;
+	}
+</style>
+<body>
+	<form name="registration" action="">
+		<h2>Registration</h2>
+		<div class="field">
+			<div>Username</div>
+			<input type="text" name="username">
+		</div>
+		<div class="field">
+			<div>Email</div>
+			<input type="email" name="email">
+		</div>
+		<div class="field">
+			<div>Password</div>
+			<input type="password" name="pass">
+		</div>
+		<div class="field">
+			<div>Repeat password</div>
+			<input type="password" name="repeatpass">
+		</div>
+		<div id="message"></div>
+		<button id="registr">Registration</button>
+	</form>
+</body>
+<script>
+	var elements = document.forms.registration.elements;
+
+	registr.onclick = function(e) {
+
+		
+
+		for (var i = 0; i < elements.length; i++) {
+			elements[i].className = '';
+		}
+
+		var error = '';
+
+		if ( elements.username.value.trim().length < 3 ) {
+			error += 'Username shold be at least from 3 symbols<br>';
+			elements.username.className = 'error';
+		}
+
+		if ( !elements.email.value || !isValidEmail(elements.email.value) ) {
+			error += 'Email is incorrect<br>';
+			elements.email.className = 'error';
+		}
+
+		if ( !elements.pass.value ) {
+			error += 'Password is required<br>';
+			elements.pass.className = 'error';
+		}
+
+		if ( elements.pass.value !== elements.repeatpass.value ) {
+			error += 'Passwords don\'t match';
+			elements.pass.className = 'error';
+			elements.repeatpass.className = 'error';
+		}
+
+		if ( error === '' ) {
+			showMessage('success', 'Success');
+		} else {
+			showMessage('error', error);
+		}
+
+		return false;
+
+	};
+
+	function isValidEmail(email) {
+	    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	    return re.test(email);
+	}
+
+	function showMessage(className, text) {
+		message.innerHTML = text;
+		message.className = className;
+	}
+</script>
+</html>

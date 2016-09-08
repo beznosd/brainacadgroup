@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Focus form</title>
+</head>
+<style> .focused { outline: 1px solid red; } </style>
+<body>
+	<!-- при фокусировке на форме ставим ей класс -->
+	<form>
+		<input type="text" name="name" placeholder="Ваше имя">
+		<input type="text" name="surname" placeholder="Ваша фамилия">
+	</form>
+</body>
+<script>
+	document.forms[0].onfocus = function() {
+		this.className = 'focused';
+	}
+
+	// ставим обработчики на фазе перехвата, последний аргумент true
+	document.forms[0].addEventListener("focus", function() {
+		this.classList.toggle('focused');
+	}, true);
+
+	document.forms[0].addEventListener("blur", function() {
+		this.classList.toggle('focused');
+	}, true);
+</script>
+</html>

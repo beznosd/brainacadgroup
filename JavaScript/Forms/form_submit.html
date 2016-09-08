@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Form Submit</title>
+</head>
+<style>
+	.error {
+		border-color: red;
+	}
+</style>
+<body>
+	<form name="simpleForm" action="#">
+		<input type="text" name="name">
+		<input type="email" name="email">
+		<input name="submit" type="submit">
+		<div id="message"></div>
+	</form>
+</body>
+<script>
+
+	var submit = document.forms.simpleForm.elements.submit;
+	var elements = document.forms.simpleForm.elements;
+	var form = document.forms.simpleForm;
+
+	form.onsubmit = function(e) {
+		console.log('submited');
+		if( !elements.email.value.trim() ) {
+			elements.email.className = 'error';
+			message.textContent = 'Email не может буть пустым!';
+			return false;
+		}
+	}
+</script>
+</html>

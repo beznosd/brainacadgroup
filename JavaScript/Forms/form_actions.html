@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>From Actions</title>
+</head>
+<body>
+	<input id="input1" type="text">
+	<input type="button" value="Submit">
+
+	<hr>
+
+	<input id="input2" type="text">
+	<br/><br/>
+	<div id="result1"></div>
+
+	<hr>
+
+	<input id="input3" type="text">
+	<br/><br/>
+	Event
+	<div id="result2"></div>
+</body>
+<script>
+	var input1 = document.getElementById('input1');
+	var input2 = document.getElementById('input2');
+	var input3 = document.getElementById('input3');
+
+	// Change event
+
+	input1.onchange = function() {
+		console.log(this.value);
+	}
+
+
+	// Input event
+
+	var result1 = document.getElementById('result1');
+
+	input2.oninput = function() {
+		result1.innerHTML = input2.value;
+	};
+
+
+	// Cut, copy, paste events
+
+	var result2 = document.getElementById('result2');
+
+
+	input3.oncut = function(event) {
+	    result2.textContent = event.type;
+	};
+
+	input3.oncopy = function(event) {
+	    result2.textContent = event.type;
+	};
+
+	input3.onpaste = function(event) {
+	    // result2.textContent = event.type + ' ' + input3.value;
+	    setTimeout(function(){
+	    	result2.textContent = event.type + ' ' + input3.value;
+	    }, 0);
+	};
+</script>
+</html>
