@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Client 3</title>
+</head>
+<body>
+	
+</body>
+<script>
+	var xhr = new XMLHttpRequest();
+
+	// xhr.open(method, URL, async, user, password)
+	xhr.open('POST', 'server.php', true);
+
+	// application/x-www-form-urlencoded
+	// multipart/form-data
+	// text-plain
+
+	xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+	var user = "firstname=Vasya&lastname=Pupkin";
+
+	xhr.send(user);
+
+	var img = document.createElement('img');
+	img.src = 'loading_icon.gif';
+
+	xhr.onreadystatechange = function() {
+
+		if (xhr.readyState != 4) return;
+
+		if (xhr.status == 200) {
+			console.log(xhr.status + ': ' + xhr.statusText);
+			console.log(xhr.responseText);
+			// console.log(xhr.getResponseHeader('Content-Type'));
+			// console.log(xhr.getAllResponseHeaders());
+		} else {
+			console.log('error');
+		}
+
+	}
+
+
+	// xhr.timeout = 10;
+
+	// xhr.ontimeout = function() {
+	// 	alert( 'Извините, запрос превысил максимальное время' );
+	// }
+
+	// status (200, 404, 403)
+	// statusText (OK, Not Found, Forbidden)
+	// responseText
+	
+</script>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JSON</title>
+</head>
+<body>
+	<script>
+		var numbers = "[0, 1, 2, 3]";
+
+		numbers = JSON.parse(numbers);
+
+		console.log( numbers[3] ); // 1
+
+		var user = '{ "name": "Вася", "age": 35, "isAdmin": false, "friends": [0,1,2,3] }';
+
+		user = JSON.parse(user);
+
+		console.log( user.name );
+
+		var event = {
+			title: "Конференция",
+			date: "сегодня",
+		};
+
+		var str = JSON.stringify(event);
+		console.log( str ); // {"title":"Конференция","date":"сегодня"}
+
+		// Обратное преобразование.
+		event = JSON.parse(str);
+		console.log(event);
+
+		// toJSON
+	</script>
+</body>
+</html>

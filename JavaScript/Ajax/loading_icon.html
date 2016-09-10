@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Client 4</title>
+</head>
+<body>
+	
+</body>
+<script>
+
+	var xhr = new XMLHttpRequest();
+
+	xhr.open('POST', 'server.php', true);
+
+	xhr.send();
+
+	var img = document.createElement('img');
+	img.src = 'loading_icon.gif';
+
+	xhr.onreadystatechange = function() {
+
+		if (xhr.readyState == 2) {
+			document.body.appendChild(img);
+		}
+
+		if (xhr.readyState != 4) return;
+
+		document.body.removeChild(img);
+
+		if (xhr.status == 200) {
+			console.log(xhr.status + ': ' + xhr.statusText);
+		} else {
+			console.log('error');
+		}
+
+	}	
+	
+</script>
+</html>

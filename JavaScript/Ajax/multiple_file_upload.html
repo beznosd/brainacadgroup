@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Client 5</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<style>
+	form, div.progress, h1 {
+		width: 50%;
+		margin: 50px auto;
+	}
+</style>
+<body>
+
+	<h1>Multiple files upload</h1>
+
+	<form name="upload" class="form-inline">
+		<div class="form-group">
+			<input type="file" name="myfile" multiple>
+		</div>
+	  	<button type="submit" class="btn btn-success">Submit</button>
+	</form>
+
+	<div class="progress">
+		<div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+		</div>
+	</div>
+</body>
+<script>
+
+	document.forms.upload.onsubmit = function() {
+		
+	    var input = this.elements.myfile;
+	    var files = input.files;
+
+	    if (files[0]) {
+
+	      	var xhr = new XMLHttpRequest();
+
+			// обработчик для закачки
+			xhr.upload.onprogress = function(event) {
+				var percentComplete = (event.loaded / event.total) * 100;
+				// console.log(event.loaded + ' / ' + event.total + ' = ' + percentComplete);
+				document.querySelector('.progress-bar').style.width = percentComplete + '%';
+			};
+
+			xhr.onload = function() {
+				if (this.status == 200) {
+					console.log("success");
+
+					//var resp = JSON.parse(this.response);
+					console.log(this.response);
+				}
+			};
+
+			xhr.onerror = function() {
+				console.log("error " + this.status);
+			};
+
+			
+			xhr.open('POST', 'file_upload.php', true);
+
+			var formData = new FormData();
+
+  			for (var i = 0; i < files.length; i++) {
+				 formData.append("uploads"+i, files[i])
+			}
+
+			xhr.send(formData);
+
+	    }
+
+	    return false;
+	}
+
+</script>
+</html>

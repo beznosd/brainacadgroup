@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Client</title>
+</head>
+<body>
+	
+</body>
+<script>
+	var xhr = new XMLHttpRequest();
+
+	// xhr.open(method, URL, async, user, password)
+	xhr.open('POST', 'server.php', true);
+
+	xhr.send();
+
+	if ( xhr.status == 200 ) {
+	  	console.log( xhr.status + ': ' + xhr.statusText );
+	  	console.log( xhr.responseText );
+	} else {
+		console.log('error')
+	}
+
+	// status
+	// statusText
+	// responseText
+	
+</script>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Client 2</title>
+</head>
+<body>
+	
+</body>
+<script>
+	var xhr = new XMLHttpRequest();
+
+	// xhr.open(method, URL, async, user, password)
+	xhr.open('POST', 'server.php', true);
+
+	xhr.send();
+
+	xhr.onreadystatechange = function() { // (3)
+
+		// const unsigned short UNSENT = 0; // начальное состояние
+		// const unsigned short OPENED = 1; // вызван open
+		// const unsigned short HEADERS_RECEIVED = 2; // получены заголовки
+		// const unsigned short LOADING = 3; // загружается тело (получен очередной пакет данных)
+		// const unsigned short DONE = 4; // запрос завершён
+
+		// стадия 3 при получении очередного пакета данных по сети
+		// 0 -> 1 -> 2 -> 3 -> ... -> 3 -> 4
+
+		var div = document.createElement('div');
+      	div.innerHTML = xhr.readyState;
+      	document.body.appendChild(div);
+
+		if (xhr.readyState != 4) return;
+
+		if (xhr.status == 200) {
+			console.log(xhr.status + ': ' + xhr.statusText);
+			console.log(xhr.responseText);
+		} else {
+			console.log('error');
+		}
+
+	}
+
+	// status
+	// statusText
+	// responseText
+	
+</script>
+</html>
