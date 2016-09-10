@@ -4,7 +4,7 @@
 
 В файлах <b>multiple_file_upload.js</b> и <b>single_file_upload.js</b> примеры для загрузки файлов на сервер.
 
-Примеру для загрузки файлов работают с PHP файлом <b>file_upload.php</b>
+Примеры для загрузки файлов работают с PHP файлом <b>file_upload.php</b>
 
 Остальные примеры работают с <b>server.php</b>
 
