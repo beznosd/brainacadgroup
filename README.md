@@ -11,8 +11,8 @@
 Для запуска примеров нужен локальный сервер, для его настройки есть несколько готовых решений, которые нужно просто установить следуя инструкциям.
 
 <ul>
-	<li>Denwer => <a href="http://www.denwer.ru/"></a></li>
-	<li>Open Server => <a href="http://open-server.ru/"></a></li>
+	<li>Denwer => http://www.denwer.ru/</li>
+	<li>Open Server => http://open-server.ru/</li>
 </ul>
 
 
