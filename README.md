@@ -1,6 +1,8 @@
-<h1>Добавлены примеры примеры c try catch, собсвенными классами ошибок, LocalStorage/SessionStorage и для работы с куками</h1>
+<h1>Добавлены новые примеры</h1>
 
-Примеры в папках <b>JavaScript/Errors</b>, <b>JavaScript/Errors</b> и <b>JavaScript/Cookies<b>
+<p>Добавлены примеры c try catch, собсвенными классами ошибок, LocalStorage/SessionStorage и для работы с куками</p>
+
+Примеры в папках <b>JavaScript/Errors</b>, <b>JavaScript/Errors</b> и <b>JavaScript/Cookies</b>
 
 Для запуска примера с куками, нужен локальный сервер, как его запустить, можно увидеть в инструкции к предыдущему коммиту, но в примере с куками смотреть особо нечего. Лучше использовать LocalStorage и SessionStorage. Это так, для ознакомления.
 
