@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Local Storage</title>
+</head>
+<script>
+
+	localStorage.colorSetting = '#a4509b';
+	localStorage['fontSetting'] = '2.5rem';
+	localStorage.setItem('heightSetting', '325px');
+
+	console.log(localStorage.colorSetting);
+	console.log(localStorage['fontSetting']);
+	console.log(localStorage.getItem('heightSetting'));
+
+	// localStorage.setItem('key', 'value');
+
+	// localStorage.removeItem("key");
+
+	// console.log(localStorage.getItem('key'));
+
+	/*
+	* ONLY STRINGS
+	*/
+
+	// создадим объект
+
+	// var obj = {
+	//     item1: 1,
+	//     item2: [123, "two", 3.0],
+	//     item3:"hello"
+	// };
+	 
+	// // //сериализуем его
+	// var serialObj = JSON.stringify(obj); 
+	 
+	// // //запишем его в хранилище по ключу "myKey"
+	// localStorage.setItem("key", obj); 
+	 
+	// // //спарсим его обратно объект
+	// var returnObj = JSON.parse(localStorage.getItem("key"));
+
+	// console.log(returnObj);
+
+	/*
+	* To local storage we can write only 5 megabytes of data
+	*/
+
+	// try {
+
+	//   	localStorage.setItem('key', 'value');
+
+	// } catch (e) {
+		
+	// 	// check, if error is linked with data space limit
+	// 	if (e == QUOTA_EXCEEDED_ERR) {
+	// 		alert('Limit is exceeded');
+	// 	} else {
+	// 		alert('LocalStorage is not supported by your browser!!!');
+	// 	}
+
+	// }
+
+</script>
+<body>
+	
+</body>
+</html>

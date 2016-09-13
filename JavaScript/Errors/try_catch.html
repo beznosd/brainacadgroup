@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	
+</body>
+<script>
+
+	/*
+	* Simle Example
+	*/
+
+	try {
+		console.log('try block');
+	} catch(err) {
+		console.log('catch block');
+	}
+
+
+
+
+	/*
+	* Simle error
+	*/
+
+
+	// try {
+	// 	console.log('begin try');
+	// 	errorvar111;
+	// 	console.log('end try')
+	// } catch(err) {
+	// 	console.log('Error name ' + err.name);
+	// 	console.log('Message ' + err.message);
+	// 	console.log('Call stak ' + err.stack);
+	// }
+
+	// catch onlyu semantic errors
+
+	/*
+	* Only for sinchronious code
+	*/
+
+	// try {
+	// 	setTimeout(function() {
+	// 	    throw new Error('message'); // вылетит в консоль
+	// 	}, 500);
+	// } catch(err) {
+	// 	console.log('Error name: ' + err.name);
+	// 	console.log('Message: ' + err.message);
+	// 	console.log('Call stak ' + err.stack);
+	// }
+
+
+	/*
+	* Example with JSON.parse
+	*/
+
+	// receive from server
+	// var data = '{"name":"Vasya", "age": 20}';
+
+	// try {
+
+	// 	// transform string to object
+	// 	var user = JSON.parse(data);
+
+	// 	console.log( user.name ); // Вася
+	// 	console.log( user.age ); // 20
+
+	// } catch(err) {
+
+	// 	console.log(err.name);
+	// 	console.log(err.message);
+	// 	console.log(err.stack);
+
+	// }
+
+	// end catch
+	// console.log('Code is keep going');
+
+
+	/*
+	* Throw
+	*/
+
+	// try {
+
+	// 	// receive from server
+	// 	var data = '{"name":"Vasya", "age": 20}';
+	// 	var user = JSON.parse(data);
+		
+	// 	if (!user.isAdmin) {
+	// 		throw new Error('Data is incorrect');
+	// 	}
+
+	// 	alert(user.isAdmin);
+
+
+	// } catch(err) {
+	// 	console.log('Error name: ' + err.name);
+	// 	console.log('Message: ' + err.message);
+	// 	console.log('Call stak ' + err.stack);
+	// }
+
+	// SyntaxError
+	// ReferenceError
+	// RangeError
+	// TypeError
+	// URIError
+
+	/*
+	* Проброс исключений
+	*/
+
+	// function readData() {
+	// 	var data = '{ "name": "Vasya", "age": 20 }';
+
+	// 	try {
+	// 		blabla(); // error!
+	// 	} catch (e) {
+	// 		if (e.name != 'ReferenceError') {
+	// 		  throw e; // пробрасываем
+	// 		}
+	// 	}
+	// }
+
+	// try {
+	// 	readData();
+	// } catch (e) {
+	// 	console.log( "Catch outside: " + e );
+	// }
+
+	/*
+	* Finally
+	*/
+
+
+	// try {
+	// 	errorvar;
+	// 	console.log('try block');
+	// } catch(err) {
+	// 	console.log('Error block');
+	// } finally {
+	// 	console.log('FINALLY BLOCK');
+	// }
+
+
+	// function func() {
+	// 	try {
+	// 		return 1;
+	// 	} catch (e) {
+	// 		console.log('error');
+	// 	} finally {
+	// 		console.log('FINALLY BLOCK');
+	// 	}
+	// }
+
+	// // first 'FINALLY BLOCK', then 1
+	// console.log( func() ); 
+
+	
+
+</script>
+</html>

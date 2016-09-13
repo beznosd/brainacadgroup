@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Client</title>
+</head>
+<body>
+	
+</body>
+<script>
+	var value = encodeURIComponent('Vasya Pupkin');
+	var name = 'username';
+	document.cookie = name + '=' + value;
+
+	var date = new Date(0);
+	console.log(date.toUTCString());
+	document.cookie = name + "=; expires=" + date.toUTCString();
+
+	var xhr = new XMLHttpRequest();
+	// xhr.open(method, URL, async, user, password)
+	xhr.open('POST', 'server.php', true);
+	xhr.send();
+
+	xhr.onload = function() {
+		if ( xhr.status == 200 ) {
+		  	console.log( xhr.status + ': ' + xhr.statusText );
+		  	console.log( xhr.responseText );
+		} else {
+			console.log('error')
+		}
+	}
+	
+	// status
+	// statusText
+	// responseText
+	
+</script>
+</html>

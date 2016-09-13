@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	
+</body>
+<script>
+
+	function PropertyError(property) {
+
+		Error.call(this, property);
+
+		this.name = "PropertyError";
+
+		this.property = property;
+		this.slonik = 'Vasya';
+
+		this.message = "Ошибка в свойстве " + property;
+
+		// in V8 (Chrome, Opera, Node.JS)
+		if (Error.captureStackTrace) {
+			Error.captureStackTrace(this, PropertyError);
+		} else {
+			this.stack = (new Error()).stack;
+		}
+
+	}
+
+	PropertyError.prototype = Object.create(Error.prototype);
+
+	try {
+
+		// receive from server
+		var data = '{"name":"Vasya"}';
+
+		var user = JSON.parse(data);
+		
+		if (!user.isAdmin) {
+			throw new PropertyError('isAdmin111');
+		}
+
+		alert(user.isAdmin);
+		
+	} catch(err) {
+		console.log('Error name: ' + err.name);
+		console.log('Message: ' + err.message);
+		console.log('Call stak ' + err.stack);
+		console.log(err.slonik);
+	}
+	
+
+</script>
+</html>

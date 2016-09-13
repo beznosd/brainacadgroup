@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Session Storage</title>
+</head>
+<script>
+
+	sessionStorage.colorSetting = '#a4509b';
+	sessionStorage['fontSetting'] = '2.5rem';
+	sessionStorage.setItem('heightSetting', '325px');
+
+	console.log(sessionStorage.colorSetting);
+	console.log(sessionStorage['fontSetting']);
+	console.log(sessionStorage.getItem('heightSetting'));
+
+	sessionStorage.setItem('key', 'value');
+
+	sessionStorage.removeItem("key");
+
+	console.log(sessionStorage.getItem('key'));
+
+	/*
+	* ONLY STRINGS
+	*/
+
+	//создадим объект
+	var obj = {
+	    item1: 1,
+	    item2: [123, "two", 3.0],
+	    item3:"hello"
+	};
+	 
+	//сериализуем его
+	var serialObj = JSON.stringify(obj); 
+	 
+	//запишем его в хранилище по ключу "myKey"
+	sessionStorage.setItem("key", serialObj); 
+	 
+	//спарсим его обратно объект
+	var returnObj = JSON.parse(sessionStorage.getItem("key"))
+
+	console.log(returnObj);
+
+	
+
+</script>
+<body>
+	
+</body>
+</html>

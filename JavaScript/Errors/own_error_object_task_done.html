@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Error object</title>
+</head>
+<body>
+	
+</body>
+<script>
+	function FunctionNameError(funcName) {
+		Error.call(this, funcName) ;
+		this.name = "FunctionNameError";
+
+		this.funcName = funcName;
+		this.message = "Such function doesn't exists: " + funcName;
+
+		if (Error.captureStackTrace) {
+			Error.captureStackTrace(this, FunctionNameError);
+		} else {
+			this.stack = (new Error()).stack;
+		}
+	}
+
+	FunctionNameError.prototype = Object.create(Error.prototype);
+
+
+	try {
+		// receive from server
+		var object = JSON.parse('{ "functions": ["foo", "bar"] }');
+
+		if ( object.functions[1] !== 'baz') {
+			throw new FunctionNameError('baz');
+		}
+
+	} catch(err) {
+		console.log('Error name: ' + err.name);
+		console.log('Message: ' + err.message);
+		console.log('Call stak ' + err.stack);
+		console.log('Error Function: ' + err.funcName);		
+	}
+</script>
+</html>
