@@ -1,0 +1,15 @@
+.navbar-btn {
+	margin-left: 10px;
+}
+
+.jumbotron {
+	background: url("../images/main.jpg") 0% 32%;
+}
+
+.jumbotron h1, .jumbotron p {
+	color: #fff !important;
+}
+
+.navbar {
+	margin-bottom: 0 !important;
+}
