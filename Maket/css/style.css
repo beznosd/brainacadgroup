@@ -13,3 +13,20 @@
 .navbar {
 	margin-bottom: 0 !important;
 }
+
+form {
+	padding: 20px 15px 23px;
+}
+
+.table-responsive{
+	padding-bottom: 50px;
+}
+
+footer.main {
+	background: black;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	font-weight: bold;
+	color: white;
+}
