@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tabs</title>
+	<link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<style>
+		.container {
+			margin-top: 10px;
+		}
+
+		.tab-content {
+			margin-top: 20px;
+			font-size: 3rem;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="container">
+	    <!-- Nav tabs -->
+	    <ul class="nav nav-pills">
+
+	        <li class="active"><a href="#home" aria-controls="home" data-toggle="tab">Home</a></li>
+
+	        <li><a href="#profile" aria-controls="profile" data-toggle="tab">Profile</a></li>
+
+	        <li><a href="#messages" aria-controls="messages" data-toggle="tab">Messages</a></li>
+
+	        <li><a href="#settings" aria-controls="settings" data-toggle="tab">Settings</a></li>
+
+	    </ul>
+	    <!-- Tab panes -->
+	    <div class="tab-content">
+	        <div class="tab-pane fade active" id="home">
+	        	Home section
+	        </div>
+	        <div class="tab-pane fade" id="profile">
+	        	Profile section
+	        </div>
+	        <div class="tab-pane fade" id="messages">
+	        	Messages section
+	        </div>
+	        <div class="tab-pane fade" id="settings">
+	        	Setting section
+	        </div>
+	    </div>
+	</div>
+
+	<!-- Fade effect -->
+
+
+	<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script>
+		$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+			console.log(e);
+			console.log('newly activated tab');
+			console.log(e.target); // newly activated tab
+			console.log('previous active tab');
+			console.log(e.relatedTarget); // previous active tab
+		});
+
+		setTimeout(function(){
+			$('a[href="#settings"]').tab('show');
+		}, 2000);
+	</script>
+</body>
+</html>
