@@ -37,14 +37,93 @@
 				</ul>
 
 				<ul class="nav navbar-nav navbar-right">
-					<li><button class="btn btn-default navbar-btn">Log In</button></li>
-					<li><button class="btn btn-success navbar-btn">Sing Up</button></li>
+					<li><button class="btn btn-default navbar-btn"  id="showFormLogin">Log In</button></li>
+					<!-- data-toggle="modal" data-target="#form-LogIn" -->
+					<li><button class="btn btn-success navbar-btn" data-toggle="modal" data-target="#form-SignUp">Sing Up</button></li>
 					<li></li>
 				</ul>
 			</div>
 		</div>
 
 	</nav>
+
+	<!-- modal dialogs -->
+
+	<!-- Log In -->
+		<div class="modal fade" id="form-LogIn" tabindex="-1" role="dialog" aria-labelledby="LogInModalLabel">
+		    <div class="modal-dialog modal-sm" role="document">
+		        <div class="modal-content">
+		            <div class="modal-header">
+		                <button type="button" class="close" data-dismiss="modal" aria-label="Exit"><span aria-hidden="true">&times;</span></button>
+		                <h4 class="modal-title" id="myModalLabel">Enter to the site</h4>
+		            </div>
+		            <div class="modal-body">
+						<label for="login-username">Enter login or e-mail</label>
+						<div class="input-group">
+						    <span class="input-group-addon glyphicon glyphicon-user" id="login-username"></span>
+						    <input type="text" class="form-control" id="login-user-name" aria-describedby="login-username" placeholder="Type your login or e-mail here"> 
+						</div>
+
+						<label for="login-password">Password</label>
+						<div class="input-group">
+						    <span class="input-group-addon glyphicon glyphicon-user" id="loginpassword"></span>
+						    <input type="password" class="form-control" id="login-password" aria-describedby="loginpassword" placeholder="Enter password"> 
+						</div>
+
+		            </div>
+		            <div class="modal-footer">
+		                <button type="button" class="btn btn-default" data-dismiss="modal">Exit</button>
+		                <button type="button" class="btn btn-primary" id="btn-login">Log In</button>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+
+	<!-- Sign up -->
+		<div class="modal fade" id="form-SignUp" tabindex="-1" role="dialog" aria-labelledby="SignUpModalLabel">
+		    <div class="modal-dialog modal-sm" role="document">
+		        <div class="modal-content">
+		            <div class="modal-header">
+		                <button type="button" class="close" data-dismiss="modal" aria-label="Exit"><span aria-hidden="true">&times;</span></button>
+		                <h4 class="modal-title" id="myModalLabel">Register to the Site</h4>
+		            </div>
+		            <div class="modal-body">
+						<label for="reg-username">Enter login name</label>
+						<div class="input-group">
+						    <span class="input-group-addon glyphicon glyphicon-user"></span>
+						    <input type="text" class="form-control" id="reg-username" aria-describedby="login-username" placeholder="Type your login here"> 
+						</div>
+
+
+						<label for="reg-email">Enter email</label>
+						<div class="input-group">
+						    <span class="input-group-addon">@</span>
+						    <input type="email" class="form-control" id="reg-email" aria-describedby="login-username" placeholder="Type your e-mail here"> 
+						</div>
+
+						<label for="reg-password">Password</label>
+						<div class="input-group">
+						    <span class="input-group-addon glyphicon glyphicon-lock"></span>
+						    <input type="password" class="form-control" id="reg-password" aria-describedby="loginpassword" placeholder="Enter password"> 
+						</div>
+
+						<label for="reg-re-password">re-Password</label>
+						<div class="input-group">
+						    <span class="input-group-addon glyphicon glyphicon-lock"></span>
+						    <input type="password" class="form-control" id="reg-re-password" aria-describedby="loginpassword" placeholder="re-Enter password"> 
+						</div>
+
+
+		            </div>
+		            <div class="modal-footer">
+		                <button type="button" class="btn btn-default" data-dismiss="modal">Exit</button>
+		                <button type="button" class="btn btn-primary" id="btn-Send">Send</button>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+
+
 
 	<div class="jumbotron">
 		<div class="container">
@@ -227,5 +306,6 @@
 
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>	
+<script src="js/main.js"></script>
 </body>
 </html>
