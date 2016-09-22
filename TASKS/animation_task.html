@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Animation task</title>
+	<style>
+
+		/*
+			transition-property
+			transition-duration
+			transition-timing-function
+			transition-delay
+		*/
+
+		.block {
+			background: blue;
+			width: 100px;
+			height: 100px;
+			margin: 350px auto 0;
+			border-radius: 50%;
+			transition: all 0.5s cubic-bezier(.65, 1.95, .03, .32);;
+		}
+
+		.line {
+			height: 3px;
+			width: 100%;
+			background: green;
+			position: fixed;
+			top: 449px;
+		}
+	</style>
+</head>
+<body>
+	
+	<div class="block"></div>
+	<div class="line"></div>
+	<script src="js/jquery-3.1.0.min.js"></script>
+	<script>
+		var block = document.body.children[0];
+
+		/*
+		* Yore code ...
+		*/
+
+	</script>
+</body>
+</html>
