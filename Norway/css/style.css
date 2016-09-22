@@ -1,0 +1,25 @@
+.jumbotron {
+	background: url('../images/main.jpg') 0% 32%;
+}
+
+.jumbotron h1, .jumbotron p {
+	color: #fff;
+	// background: cover;
+}
+
+.navbar {
+	margin-bottom: 0;
+	border-radius: none;
+}
+
+.navbar-btn {
+	margin-left: 10px;
+}
+
+.footer {
+	text-align: center;
+	box-sizing: borde-box;
+	background-color: black;
+	color: #fff;
+	padding-top: 2%;
+}
