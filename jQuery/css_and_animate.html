@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Css and animate</title>
+	<style>
+		/*.block {
+			border: 6px solid lightgrey;
+		}*/
+	</style>
+</head>
+<body>
+	<div class="block">
+		
+	</div>
+
+	<button class="left">Go Left!</button>
+	<button class="right">Go Right!</button>
+	<script src="jquery-3.1.0.min.js"></script>
+	<script>
+
+		/*
+		* CSS
+		*/
+ 
+		$('.block').css({
+			position: 'absolute',
+			'height': '200px',
+			'width': '200px',
+			'top': '15%'
+		});
+
+		$('.block').css({'background':'red'});
+
+
+		// http://api.jquery.com/css/
+
+		/*
+		* Animate
+		*/
+
+		$('.left').click(function(){
+			$('.block').animate({
+				'left': '1%'
+			}, 300);
+		});
+
+		$('.right').click(function(){
+			$('.block').animate({
+				'left': '85%'
+			}, 300);
+		});
+
+		// http://api.jquery.com/animate/
+
+	</script>
+</body>
+</html>

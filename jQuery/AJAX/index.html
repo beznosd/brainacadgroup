@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery AJAX</title>
+</head>
+<body>
+	<script src="jquery.min.js"></script>
+	<script>
+		$.get('server.php', function(data){
+			var el = document.createElement('p');
+			el.textContent = data;
+			document.body.appendChild(el);
+		});
+
+		$.post('server.php', function(data){
+			var el = document.createElement('p');
+			el.textContent = data;
+			document.body.appendChild(el);
+		});
+
+
+		$.ajax({
+			method: 'POST',
+			url: 'server.php',
+			data: {
+				is_ajax_method: true
+			},
+			success: function(data){
+				var el = document.createElement('p');
+				el.textContent = data;
+				document.body.appendChild(el);
+			},
+			error: function(){
+				console.log('Server is not available!');
+			}
+		});
+
+		// // http://api.jquery.com/jQuery.ajax/
+
+		$.ajax({
+			method: 'DELETE',
+			url: 'server.php',
+			success: function(data){
+				var el = document.createElement('p');
+				el.textContent = data;
+				document.body.appendChild(el);
+			},
+			error: function(){
+				console.log('Server is not available!');
+			}
+		});
+
+		$.ajax({
+			method: 'PUT',
+			url: 'server.php',
+			success: function(data){
+				var el = document.createElement('p');
+				el.textContent = data;
+				document.body.appendChild(el);
+			},
+			error: function(){
+				console.log('Server is not available!');
+			}
+		});
+
+
+	</script>
+</body>
+</html>

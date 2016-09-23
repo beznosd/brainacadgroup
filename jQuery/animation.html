@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Animation</title>
+	<link rel="stylesheet" href="css/events.css">
+	<style>
+
+		/*
+			transition-property
+			transition-duration
+			transition-timing-function
+			transition-delay
+		*/
+
+		.block {
+			background: salmon;
+			width: 200px;
+			height: 200px;
+			margin: 100px auto;
+			transition: all 0.5s linear;
+		}
+
+		.block:hover {
+			background: purple;
+		}
+	</style>
+</head>
+<body>
+	
+	<div class="block"></div>
+
+	<script>
+
+		var block = document.body.children[0];
+
+		block.onclick = function(){
+			this.style.backgroundColor = 'yellow';
+		};
+
+		block.onmouseout = function(){
+			this.style.backgroundColor = 'salmon';
+		};
+
+	</script>
+</body>
+</html>

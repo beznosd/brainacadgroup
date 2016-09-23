@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Animation JS</title>
+	<style>
+		img {
+			margin-top: 50px;
+		}
+	</style>
+</head>
+<body>
+
+	<img src="train.gif" alt="train">
+
+	<script>
+
+		var train = document.body.children[0];
+
+		// сохранить время начала
+		var start = Date.now(); 
+
+		var timer = setInterval(function() {
+
+		  	// вычислить сколько времени прошло с начала анимации
+		  	var timePassed = Date.now() - start;
+
+			// конец через 2 секунды
+		  	if (timePassed >= 2000) {
+		    	clearInterval(timer); 
+		    	return;
+		  	}
+
+		  	// рисует состояние анимации, соответствующее времени timePassed
+		  	draw(timePassed);
+
+		}, 10);
+
+		// в то время как timePassed идёт от 0 до 2000
+		// left принимает значения от 0 до 400px
+		function draw(timePassed) {
+		 	train.style.marginLeft = timePassed / 5 + 'px';
+		}
+
+	</script>
+</body>
+</html>
