@@ -1,0 +1,10 @@
+.header {
+  color: #fd23ff;
+  font-size: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+body,
+html {
+  margin: 0px;
+  padding: 0;
+}
