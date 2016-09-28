@@ -1,6 +1,8 @@
-const gulp = require('gulp');
+var gulp = require('gulp');
 
-const less = require('gulp-less');
+var less = require('gulp-less');
+
+var runSequence = require('run-sequence');
 
 gulp.task('styles', function(){
 	gulp.src('src/styles/main.less')
@@ -14,7 +16,6 @@ gulp.task('assets', function(){
 });
 
 gulp.task('build', function(){
-	gulp.run('styles');
-	gulp.run('assets');
+	runSequence('styles','assets');
 });
 

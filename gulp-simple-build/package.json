@@ -11,5 +11,8 @@
   "dependencies": {
     "gulp": "^3.9.1",
     "gulp-less": "^3.1.0"
+  },
+  "devDependencies": {
+    "run-sequence": "^1.2.2"
   }
 }
