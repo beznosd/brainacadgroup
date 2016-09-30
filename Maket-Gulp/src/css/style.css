@@ -1,0 +1,37 @@
+.navbar-btn {
+	margin-left: 10px;
+}
+
+.jumbotron {
+	background: url("../images/main.jpg") 0% 32%;
+}
+
+.jumbotron h1, .jumbotron p {
+	color: #fff !important;
+}
+
+.navbar {
+	margin-bottom: 0 !important;
+}
+
+form {
+	padding: 20px 15px 23px;
+}
+
+.table-responsive{
+	padding-bottom: 50px;
+}
+
+footer.main {
+	background: black;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	font-weight: bold;
+	color: white;
+}
+
+.user-name {
+	color: white;
+	font-weight: bold;
+}

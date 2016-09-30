@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<nav class="navbar navbar-inverse">
+		<div class="container">
+			<div class="navbar-header">
+				<button class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="#" class="navbar-brand">Bootstrap Template</a>
+			</div>
+
+			<div id="myNavbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Contact</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown
+							<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Action</a></li>							
+							<li><a href="#">Action 2</a></li>	
+							<li class="divider"></li>						
+							<li><a href="#">Action 3</a></li>
+						</ul>
+					</li>
+				</ul>
+
+				<ul class="nav navbar-nav navbar-right">
+					<li><button class="btn btn-default navbar-btn"  id="showFormLogin">Log In</button></li>
+					<!-- data-toggle="modal" data-target="#form-LogIn" -->
+					<li><button class="btn btn-success navbar-btn" data-toggle="modal" data-target="#form-SignUp">Sing Up</button></li>
+					<li></li>
+				</ul>
+			</div>
+		</div>
+
+	</nav>
+
+	<!-- modal dialogs -->
+
+	<!-- Log In -->
+		<div class="modal fade" id="form-LogIn" tabindex="-1" role="dialog" aria-labelledby="LogInModalLabel">
+		    <div class="modal-dialog modal-sm" role="document">
+		        <div class="modal-content">
+		            <div class="modal-header">
+		                <button type="button" class="close" data-dismiss="modal" aria-label="Exit"><span aria-hidden="true">&times;</span></button>
+		                <h4 class="modal-title" id="myModalLabel">Enter to the site</h4>
+		            </div>
+		            <div class="modal-body">
+						<label for="login-username">Enter login or e-mail</label>
+						<div class="input-group">
+						    <span class="input-group-addon"><span class="glyphicon glyphicon-user" id="login-username"></span></span>
+						    <input type="text" class="form-control" id="login-user-name" aria-describedby="login-username" placeholder="Type your login or e-mail here"> 
+						</div>
+
+						<label for="login-password">Password</label>
+						<div class="input-group">
+						    <span class="input-group-addon"><span class="glyphicon glyphicon-lock" id="loginpassword"></span></span>
+						    <input type="password" class="form-control" id="login-password" aria-describedby="loginpassword" placeholder="Enter password"> 
+						</div>
+
+		            </div>
+		            <div class="modal-footer">
+		                <button type="button" class="btn btn-default" data-dismiss="modal">Exit</button>
+		                <button type="button" class="btn btn-primary" id="btn-login">Log In</button>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+
+	<!-- Sign up -->
+		<div class="modal fade" id="form-SignUp" tabindex="-1" role="dialog" aria-labelledby="SignUpModalLabel">
+		    <div class="modal-dialog modal-sm" role="document">
+		        <div class="modal-content">
+		            <div class="modal-header">
+		                <button type="button" class="close" data-dismiss="modal" aria-label="Exit"><span aria-hidden="true">&times;</span></button>
+		                <h4 class="modal-title" id="myModalLabel">Register to the Site</h4>
+		            </div>
+		            <div class="modal-body">
+						<label for="reg-username">Enter login name</label>
+						<div class="input-group">
+						    <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+						    <input type="text" class="form-control" id="reg-username" aria-describedby="login-username" placeholder="Type your login here"> 
+						</div>
+
+
+						<label for="reg-email">Enter email</label>
+						<div class="input-group">
+						    <span class="input-group-addon">@</span>
+						    <input type="email" class="form-control" id="reg-email" aria-describedby="login-username" placeholder="Type your e-mail here"> 
+						</div>
+
+						<label for="reg-password">Password</label>
+						<div class="input-group">
+						    <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+						    <input type="password" class="form-control" id="reg-password" aria-describedby="loginpassword" placeholder="Enter password"> 
+						</div>
+
+						<label for="reg-re-password">re-Password</label>
+						<div class="input-group">
+						    <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+						    <input type="password" class="form-control" id="reg-re-password" aria-describedby="loginpassword" placeholder="re-Enter password"> 
+						</div>
+
+
+		            </div>
+		            <div class="modal-footer">
+		                <button type="button" class="btn btn-default" data-dismiss="modal">Exit</button>
+		                <button type="button" class="btn btn-primary" id="btn-Send">Send</button>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+
+
+
+	<div class="jumbotron">
+		<div class="container">
+			<h1>Amazing Norway</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur fugiat accusamus, expedita rem assumenda numquam blanditiis tenetur impedit labore cupiditate quam in incidunt consequuntur sit eligendi, deserunt voluptate maiores asperiores?</p>
+			<p>
+				<a href="#" class="btn btn-primary btn-lg">Learn more</a>
+			</p>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-6 col-md-4">
+				<div class="thumbnail">
+					<img class="img-responsive" src="images/1.jpg" alt="image 1"></img>
+					<div class="caption">
+						<h2>Beautiful village</h2>
+						<p>
+							<span class="label label-primary">mountains</span>
+							<span class="label label-info">lakes</span>
+							<span class="label label-success">spring</span>
+						</p>
+
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+						<p><a href="#"><strong>Read more about this this place</strong></a></p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-4 col-sm-6 col-xs-12">
+				<div class="thumbnail">
+					<img class="img-responsive" src="images/2.jpg" alt="image 2"></img>
+					<div class="caption">
+						<h2>Spring Valley</h2>
+						<p>
+							<span class="label label-primary">mountains</span>
+							<span class="label label-warning">sun</span>
+							<span class="label label-success">spring</span>
+						</p>
+
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						
+						<p><a href="#"><strong>Read more about this this place</strong></a></p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-4 col-xs-12">
+				<div class="thumbnail">
+					<img class="img-responsive" src="images/3.jpg" alt="image 3"></img>
+					<div class="caption">
+						<h2>Sunrise in mountains</h2>
+						<p>
+							<span class="label label-danger">red-house</span>
+							<span class="label label-info">sea</span>
+							<span class="label label-success">spring</span>
+						</p>
+
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						
+						<p><a href="#"><strong>Read more about this this place</strong></a></p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+			<footer class="text-right lead text-primary">ullamco laboris nisi</footer>
+		</blockquote>
+
+		<div class="row">
+			<div class="col-sm-8 col-xs-12">
+				<div class="panel panel-primary">
+					<div class="panel-heading"><strong>Our prices</strong></div>
+					<div class="panel-body">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat.</p>
+					</div>
+			
+					<div class="table-responsive">
+						<table class="table">
+						    <thead>
+						        <tr>
+						            <th>Trip duration</th>
+						            <th>One week</th>
+						            <th>Two week</th>
+						            <th>Month</th>
+						        </tr>
+						    </thead>
+						    <tbody>
+						        <tr>
+						            <th scope="row">3* hotel</th>
+						            <td>$300</td>
+						            <td>$450</td>
+						            <td>$600</td>
+						        </tr>
+						        <tr>
+						            <th scope="row">4* hotel</th>
+						            <td>$500</td>
+						            <td>$700</td>
+						            <td>$1000</td>
+						        </tr>
+						        <tr>
+						            <th scope="row">5* hotel</th>
+						            <td>$990</td>
+						            <td>$1200</td>
+						            <td>$1700</td>
+						        </tr>
+						    </tbody>
+						</table>
+					</div>
+
+				</div>
+			</div>
+			<div class="col-sm-4 col-xs-12">
+				<div class="panel panel-primary">
+					<div class="panel-heading"><strong>Provide your contacts here</strong></div>
+
+					<form>
+						<div class="form-group">
+							<label for="user-name">Your name</label>
+							<div class="input-group">
+							    <span class="input-group-addon"><span class="glyphicon glyphicon-user" id="edit-username"></span></span>
+							    <input type="text" class="form-control" id="user-name" aria-describedby="edit-username" placeholder="Type your name here"> 
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="e-mail">Email address</label>
+							<div class="input-group">
+							    <span class="input-group-addon" id="edit-email">@</span>
+							    <input type="email" class="form-control" id="e-mail" aria-describedby="edit-email" placeholder="Type your email here"> 
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="phone">Your contact phone</label>
+							<div class="input-group">
+							    <span class="input-group-addon"><span class="glyphicon glyphicon-phone" id="edit-phone"></span></span>
+							    <input type="email" class="form-control" id="phone" aria-describedby="edit-phone" placeholder="Type your phone here"> 
+							</div>
+						</div>
+
+						<button type="button" class="btn btn-block btn-success"><strong>Contact me</strong></button>
+
+
+					</form>
+
+
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+	<footer class="main">&copy; Norway Country</footer>
+
+
+<script src="js/main.js"></script>
+</body>
+</html>
