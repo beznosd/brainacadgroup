@@ -1,0 +1,31 @@
+/* Base styles */
+
+body {
+    font-family: sans-serif;
+}
+
+h1 {
+    color: #ccc;
+    font-weight: 300;
+    margin-top: 0;
+}
+
+figure {
+    margin: 0;
+}
+
+section {
+    margin: 50px 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+.content {
+    text-align: center;
+}
+
+.big-height {
+    height: 2000px;
+}
