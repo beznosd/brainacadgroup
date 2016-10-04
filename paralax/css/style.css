@@ -1,0 +1,155 @@
+/* Base styles */
+
+body {
+    font-family: sans-serif;
+}
+
+h1 {
+    color: #ccc;
+    font-weight: 300;
+    margin-top: 0;
+}
+
+figure {
+    margin: 0;
+}
+
+section {
+    margin: 50px 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+.content {
+    text-align: center;
+}
+
+.big-height {
+    height: 2000px;
+}
+
+/* Paralax header */
+
+.bird-box {
+    position: relative;
+    height: 600px;
+    background: url('../images/bird-bg.jpg') center top;
+    background-size: auto 600px;
+    overflow: hidden;
+
+}
+
+.logo {
+    height: 100px;
+    width: 100%;
+    background: url('../images/black-bird-logo.svg') center no-repeat;
+    position: absolute;
+    top: calc(50% - 50px);
+}
+
+.fore-bird {
+    width: 960px;
+    height: 733px;
+    background: url('../images/fore-bird.png') right bottom no-repeat;
+    position: absolute;
+    left: calc(50% - 480px);
+    top: 400px;
+}
+
+.back-bird {
+    width: 960px;
+    height: 298px;
+    background: url('../images/back-bird.png') left top no-repeat;
+    position: absolute;
+    left: 50%;
+    margin-left: -480px;
+}
+
+/* Models grid */
+
+.img-row {
+    margin-bottom: 20px;
+}
+
+.img-row figure {
+    position: relative;
+    opacity: 0;
+    overflow: hidden;
+    transform: translateX(20px);
+    transition: all 0.3s ease-in-out;
+}
+
+.img-row figure.is-showing {
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+.img-row img {
+    display: block;
+    transform: scale(1);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.img-row img:hover{
+    transform: scale(1.2);
+}
+
+/* Circle with paralax */
+
+.large-window {
+    position: relative;
+    height: 555px;
+    background: url('../images/model2.jpg') center 0px;
+    background-attachment: fixed;
+    border-radius: 50%;
+}
+
+.window-tint {
+    background: rgba(0,0,0,0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 50%;
+    z-index: 5;
+}
+
+.promo-text {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 40%;
+    color: #fff;
+    height: 555px;
+    line-height: 1em;
+    font-size: 50px;
+    font-weight: 100;
+    z-index: 10;
+}
+
+.promo-text strong {
+    font-size: 40px;
+}
+
+.promo-text i {
+    font-size: 22px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.promo-text a {
+    font-size: 20px;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 10px 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.promo-text a:hover {
+    background: #fff;
+    color: #000;
+}
