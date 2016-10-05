@@ -24,6 +24,13 @@ img {
 
 .content {
     text-align: center;
+    position: relative;
+	margin-top: 10px;
+	margin-bottom: 230px;
+	background: #fff;
+	box-shadow: 0 0px 60px 0px rgba(0, 0, 0, 0.6);
+	z-index: 1;
+    overflow-x: hidden;
 }
 
 .big-height {
@@ -152,4 +159,90 @@ img {
 .promo-text a:hover {
     background: #fff;
     color: #000;
+}
+
+.post {
+	background: #fff;
+	padding: o 10px 10px;
+}
+
+.post-content {
+	border: 1px solid #e1e1e1;
+	padding: 0 10px 10px;
+}
+
+.post a {
+	display: block;
+	marging-top: 10px;
+	width: 100%;
+	padding: 10px 20px;
+	color: #000;
+	text-decoration: none;
+	border: 1px solid #000;
+	cursor: pointer;
+}
+
+.menu {
+	position: fixed;
+	width: 100%;
+	z-index: 2;
+	top: 0;
+	background: #fff;
+	font-size: 1.5rem;
+	overflow: hidden;  /*   vmesto clearfix */
+	padding: 35px; 
+	transition: all 0.3s;
+}
+
+.menu div {
+	float: left;
+    cursor: pointer;
+}
+
+.menu nav {
+	float: right;
+	font-weight: 100;
+}
+
+.menu span {
+	padding-left: 20px;
+	cursor: pointer;
+}
+
+.menu span:hover, .menu .home:hover {
+	text-decoration: underline;
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	background: #ccc;
+	color: #000;
+	padding: 80px;
+	font-size: 4rem;
+	font-weight: 100;
+}
+
+.scroller {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    background: #000;
+    bottom: 40px;
+    right: -40px;
+    z-index: 3;
+    font-size: 1.5rem;
+    line-height: 40px;
+    text-align: center;
+    font-weight: bold;
+    transition: all 0.3s;
+    opacity: 0.5;
+}
+
+.scroller:hover {
+    cursor: pointer;
+    opacity: 1;
 }
