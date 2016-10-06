@@ -50,10 +50,3 @@ function scroll() {
 	}
 
 }
-
-
-// Top scroller
-
-/*
-* Your code ...
-*/
