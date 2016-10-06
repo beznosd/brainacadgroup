@@ -1,5 +1,9 @@
 /* Base styles */
 
+body, html {
+    transition: all 0.5s;
+}
+
 body {
     font-family: sans-serif;
 }
@@ -22,13 +26,9 @@ img {
     max-width: 100%;
 }
 
-.content {
-    text-align: center;
-}
-
-.big-height {
-    height: 2000px;
-}
+// .big-height {
+//     height: 2000px;
+// }
 
 /* Paralax header */
 
@@ -57,6 +57,8 @@ img {
     left: calc(50% - 480px);
     top: 400px;
 }
+
+
 
 .back-bird {
     width: 960px;
@@ -97,7 +99,7 @@ img {
     transform: scale(1.2);
 }
 
-/* Circle with paralax */
+/* Large window */
 
 .large-window {
     position: relative;
@@ -152,4 +154,84 @@ img {
 .promo-text a:hover {
     background: #fff;
     color: #000;
+}
+
+/* Posts */
+
+.post {
+    background: #fff;
+    position: relative;
+}
+
+.post-content {
+    border: 1px solid #e1e1e1;
+    padding: 0 10px 10px;
+}
+
+.post a {
+    display: block;
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px 20px;
+    color: #000;
+    text-decoration: none;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+
+/* Footer */
+
+.content {
+    position: relative;
+    z-index: 1;
+    margin-top: 70px;
+    margin-bottom: 230px;
+    background: #fff;
+    text-align: center;
+    box-shadow: 0 0 60px 0px rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background: #ccc;
+    color: #000;
+    padding: 80px;
+    font-size: 4rem;
+    font-weight: 100;
+}
+
+/* Menu */
+
+.menu {
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    padding: 35px;
+    background: #fff;
+    font-size: 1.5rem;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+
+.menu div {
+    float: left;
+}
+
+.menu nav {
+    float: right;
+    font-weight: 100;
+}
+
+.menu span {
+    padding-left: 20px;
+    cursor: pointer;
+}
+
+.menu span:hover {
+    text-decoration: underline;
 }

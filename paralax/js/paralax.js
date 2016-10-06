@@ -25,10 +25,81 @@ window.onscroll = function() {
 		});
 	}
 
-	/*
-	* Your code for circle with paralax
-	*/
+	// Large window
 
-	// ... code
+	var largeWindow = document.querySelector('.large-window');
+	var windowTint = largeWindow.querySelector('.window-tint');
+	if (wScroll > largeWindow.offsetTop - document.documentElement.clientHeight) {
+		var opacity = ( wScroll - largeWindow.offsetTop + 500) / (wScroll / 5);
+		windowTint.style.opacity = opacity;
+	}
+
+	// Blog posts
+	var blogPosts = document.querySelector('.blog-posts');
+	var post1 = document.querySelector('.post-1');
+	var post3 = document.querySelector('.post-3');
+
+	if (wScroll > blogPosts.offsetTop - document.documentElement.clientHeight) {
+		console.log('topScroll => ' + wScroll);
+		console.log('posts start at => ' + blogPosts.offsetTop);
+		var offset = wScroll - blogPosts.offsetTop + 200;
+		offset = Math.min(0, offset);
+
+		post1.style.transform = 'translate(' + offset + 'px, ' + Math.abs(offset * 0.2) + 'px)';
+		post3.style.transform = 'translate(' + Math.abs(offset) + 'px, ' + Math.abs(offset * 0.2) + 'px)';
+	}
+
+	// Header colapsing
+
+	var menu = document.querySelector('.menu');
+	if ( wScroll > menu.clientHeight ) {
+		menu.style.paddingTop = '15px';
+		menu.style.paddingBottom = '15px';
+		menu.style.fontSize = '1.2rem';
+	} else {
+		menu.style.paddingTop = '35px';
+		menu.style.paddingBottom = '35px';
+		menu.style.fontSize = '1.5rem';
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	// Top Scroller
+
+	if ( wScroll > 600 ) {
+		document.querySelector('.scroller').classList.add('is-showing');
+	} else {
+		document.querySelector('.scroller').classList.remove('is-showing');
+	}
 
 }
+
+
+// var body = document.body;
+// var html = document.documentElement;
+
+// document.querySelector('.store').onclick = function() {
+// 	// body.scrollTop += 500;
+// 	// html.scrollTop += 500;
+// 	window.scrollTo(0, 500);
+// };
