@@ -62,44 +62,4 @@ window.onscroll = function() {
 		menu.style.fontSize = '1.5rem';
 	}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	// Top Scroller
-
-	if ( wScroll > 600 ) {
-		document.querySelector('.scroller').classList.add('is-showing');
-	} else {
-		document.querySelector('.scroller').classList.remove('is-showing');
-	}
-
 }
-
-
-// var body = document.body;
-// var html = document.documentElement;
-
-// document.querySelector('.store').onclick = function() {
-// 	// body.scrollTop += 500;
-// 	// html.scrollTop += 500;
-// 	window.scrollTo(0, 500);
-// };
