@@ -61,5 +61,13 @@ window.onscroll = function() {
 		menu.style.paddingBottom = '35px';
 		menu.style.fontSize = '1.5rem';
 	}
+	
+	
+	
+	// Top scroller
+
+	/*
+	* Your code ...
+	*/
 
 }
