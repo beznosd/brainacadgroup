@@ -50,3 +50,15 @@ function scroll() {
 	}
 
 }
+
+document.querySelector('.scroller').onclick = function() {
+	var iTop = setInterval(function() {
+		// get the top of the page
+		if (window.pageYOffset === 0) {
+			clearInterval(iTop);
+			return false;
+		}
+
+		window.scrollBy(0, -100);
+	}, 15);
+}
