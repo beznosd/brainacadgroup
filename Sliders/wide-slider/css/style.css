@@ -1,0 +1,72 @@
+body, html {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+.slider {
+	position: relative;
+	height: 100%;
+	overflow: hidden;
+	-webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.slides {
+	width: auto;
+	height: 100%;
+	overflow: hidden;
+	transition: all .5s ease;
+}
+
+.slide {
+	height: 100%;
+	display: block;
+	float: left;
+}
+
+.arrow {
+	position: absolute;
+	top: 50%;
+	color: white;
+	font-size: 3.5rem;
+	transform: translate(0, -50%);
+	cursor: pointer;
+	opacity: 0;
+	transition: all .5s;
+}
+
+.arrow-right {
+	right: 20px;
+}
+
+.arrow-left {
+	left: 20px;
+}
+
+.controls {
+	position: absolute;
+	width: 100%;
+	bottom: 3%;
+	text-align: center;
+}
+
+.controls span {
+	display: inline-block;
+	margin: 5px;
+	height: 20px;
+	width: 20px;
+	border-radius: 50%;
+	border: 3px solid white;
+	cursor: pointer;
+	transition: all .2s;
+}
+
+.controls span:hover {
+	background: white;
+}
+
+.controls span.active {
+	background: white;
+}
