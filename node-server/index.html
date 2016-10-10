@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Client</title>
+</head>
+<style>
+	input, button, div {
+		font-size: 3rem;
+	}
+</style>
+<body>
+	<form>
+		<input name="email" type="text" placeholder="Type your email here">
+		<button type="submit">Check email</button>
+	</form>
+
+	<div class="messages">
+		
+	</div>
+
+	<script>
+		document.forms[0].onsubmit = function() {
+			// console.log(this.email.value);
+
+			if (!this.email.value.trim()) return false;
+
+			var body = {
+				email: this.email.value.trim()
+			};
+
+			var xhr = new XMLHttpRequest();
+
+			xhr.open('POST', 'http://localhost:3000/validate', true);
+			xhr.setRequestHeader('Content-Type', 'application/json');
+
+			body = JSON.stringify(body);
+			xhr.send(body);
+
+			xhr.onload = function() {
+				if ( xhr.status == 200 ) {
+				  	// console.log( xhr.status + ': ' + xhr.statusText );
+				  	var data = JSON.parse(xhr.responseText);
+				  	var textNode = document.createTextNode(data.status);
+				  	var newLine = document.createElement('br');
+				  	document.querySelector('.messages').appendChild(textNode);
+				  	document.querySelector('.messages').appendChild(newLine);
+				} else {
+					console.log('error');
+				}
+			}
+
+			return false;
+		}
+	</script>
+</body>
+</html>
