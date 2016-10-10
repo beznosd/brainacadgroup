@@ -64,10 +64,12 @@ window.onscroll = function() {
 	
 	
 	
-	// Top scroller
+	// Top Scroller
 
-	/*
-	* Your code ...
-	*/
+	if ( wScroll > document.documentElement.clientHeight ) {
+		document.querySelector('.scroller').classList.add('is-showing');
+	} else {
+		document.querySelector('.scroller').classList.remove('is-showing');
+	}
 
 }
