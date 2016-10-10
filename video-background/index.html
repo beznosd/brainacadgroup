@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Video Background</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	
+	<div class="video-container">
+		<video poster="poster.png" muted autoplay loop>
+			<source src="video.mp4" type="video/mp4">
+			<source src="video.webm" type="video/webm">
+		</video>
+
+		<h1>This is a video background</h1>
+	</div>
+
+	<!-- <div class="content">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit rem consequuntur, facilis, quod ducimus ipsam fuga placeat provident, ad suscipit mollitia rerum adipisci, ea enim laudantium culpa similique quis quam.
+	</div> -->
+
+</body>
+<script>
+	document.getElementsByTagName('video')[0].addEventListener('loadedmetadata', function() {
+	  this.currentTime = 50;
+	}, false);
+</script>
+</html>

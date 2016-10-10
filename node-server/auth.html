@@ -28,9 +28,37 @@
 	</div>
 
 	<script>
-		/*
-		* Yout code ...
-		*/
+		document.forms[0].onsubmit = function() {
+			// console.log(this.email.value);
+
+			if (!this.login.value.trim() || !this.pass.value.trim()) 
+				return false;
+
+			var body = {
+				login: this.login.value.trim(),
+				pass: this.pass.value.trim()
+			};
+
+			var xhr = new XMLHttpRequest();
+
+			xhr.open('POST', 'http://localhost:3000/login', true);
+			xhr.setRequestHeader('Content-Type', 'application/json');
+
+			body = JSON.stringify(body);
+			xhr.send(body);
+
+			xhr.onload = function() {
+				if ( xhr.status == 200 ) {
+				  	// console.log( xhr.status + ': ' + xhr.statusText );
+				  	var data = JSON.parse(xhr.responseText);
+				  	document.querySelector('.messages').innerHTML = data.status;
+				} else {
+					document.querySelector('.messages').innerHTML = xhr.status + ': ' + xhr.statusText;
+				}
+			}
+
+			return false;
+		}
 	</script>
 </body>
 </html>
