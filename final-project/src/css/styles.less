@@ -19,6 +19,10 @@ body, html {
 	height: 100%;
 }
 
+* {
+	box-sizing: border-box;
+}
+
 .clearfix:after {
 	content: '';
 	clear: both;
@@ -40,70 +44,94 @@ header {
 	height: 100%;
 	background: url('../images/eagle.jpg') no-repeat center;
 	background-size: cover;
-	top: 50%;
-	left: 50%;
 	z-index: -1;
-	transform: translate(-50%, -50%);
 	min-height: 100%;
 	min-width: 100%;
 	z-index: -1;
 	opacity: 0.1;
 }
 
-.header > h1 {
-	font-family: KaushanScript;
-	color: #fff;
-	font-size: 4em;
-	text-align: center;
-}
+.header {
+	padding-bottom: 22.8%;
+	height: 100%;
+	
 
-.header > h2 {
-	font-family: MonserratBold;
-	font-size: 8.33em;
-	color: white;
-	text-transform: uppercase;
-	text-align: center;
-}  
-
-.header-logo {
-	float: left;
-	color: #fff;
-	font-family: MonserratBold;
-	font-size: 1.66em;
-	padding: 1.55rem 0;
-}
-
-.header-menu {
-	float: right;
-	font-family: Monserrat;
-	font-size: 0.77em;
-	text-transform: uppercase;
-	padding: 2rem 0;
-}
-
-.header-link {
-	color: #fff;
-	text-decoration: none;
-	font-weight: bold;
-	cursor: pointer;
-	margin-left: 55px;
-	position: relative;
-
-	&:hover,
-	&__active {
-		color: #fce38a;
+	&>h1 {
+		font-family: KaushanScript;
+		color: #fff;
+		font-size: 4em;
+		text-align: center;
+		margin-top: 13.6%;
+	}
+	&>h2 {
+		font-family: MonserratBold;
+		font-size: 8.33em;
+		color: white;
+		text-transform: uppercase;
+		text-align: center;
+		line-height: 0.93em;
+		margin: 2.66rem 0;
+	}  
+	&-logo {
+		float: left;
+		color: #fff;
+		font-family: MonserratBold;
+		font-size: 1.66em;
+		padding: 1.55rem 0;
+	}
+	&-menu {
+		float: right;
+		font-family: Monserrat;
+		font-size: 0.77em;
+		text-transform: uppercase;
+		padding: 2rem 0;
 	}
 
-	&:hover:after,
-	&__active:after {
-		content: '';	
-		position: absolute;
-		display: block;
-		background: #fce38a;
-		height: 2px;
-		left: 0;
-		right: 0;
-		bottom: -12px;
+	&-link {
+		color: #fff;
+		text-decoration: none;
+		font-weight: bold;
+		cursor: pointer;
+		margin-left: 55px;
+		position: relative;
+		transition: all 0.3s;
+
+		&:hover,
+		&__active {
+			color: #fce38a;
+		}
+
+		&:hover:after,
+		&__active:after {
+			content: '';	
+			position: absolute;
+			display: block;
+			background: #fce38a;
+			height: 2px;
+			left: 0;
+			right: 0;
+			bottom: -12px;
+		}
+
+		&__cart,
+		&__search {
+			display: inline-block;
+			width: 18px;
+			height: 18px;
+
+			&:hover:after {
+				display: none;
+			}
+		}
+		&__cart {
+			background: url('../images/icons/SHOPPING-CART.png') no-repeat center;
+		}
+		&__search {
+			background: url('../images/icons/MAGNIFYING-GLASS.png') no-repeat center;
+		}
+
+
+
 	}
 }
 
@@ -112,7 +140,27 @@ header {
 	width: 60px;
 	height: 3px;
 	margin: 0 auto;
-	
+	display: block;
+}
+
+.button {
+	display: inline-block;
+	font-family: MonserratBold;
+	font-size: 0.77em;
+	color: #fff;
+	padding: 10px 30px;
+	border: 2px solid #fff;
+	text-transform: uppercase;
+	text-decoration: none;
+	cursor: pointer;
+	margin-top: 2.66rem;
+	transition: all 0.3s;
+	margin-left: 50%;
+	transform: translate(-50%,0);
+
+	&:hover {
+		background: #f38181;
+	}
 }
 
 
