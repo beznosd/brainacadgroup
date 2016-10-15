@@ -1,0 +1,121 @@
+@font-face {
+	font-family: KaushanScript;
+	src: url('../fonts/KaushanScript-Regular.otf');
+}
+
+@font-face {
+	font-family: Montserrat;
+	src: url('../fonts/Montserrat-Regular.otf');
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: MonserratBold;
+	src: url('../fonts/Montserrat-Bold.otf');
+	font-weight: bold;
+}
+
+body, html {
+	height: 100%;
+}
+
+.clearfix:after {
+	content: '';
+	clear: both;
+	display: block;
+}
+
+header {
+	position: relative;
+	background: linear-gradient(to bottom, #f38181, #fce38a);
+	height: 100%;
+	widht: 100%;
+	opacity: 0.9;
+	z-index: 2;
+ }
+
+
+.eagle {
+	position: absolute;
+	height: 100%;
+	background: url('../images/eagle.jpg') no-repeat center;
+	background-size: cover;
+	top: 50%;
+	left: 50%;
+	z-index: -1;
+	transform: translate(-50%, -50%);
+	min-height: 100%;
+	min-width: 100%;
+	z-index: -1;
+	opacity: 0.1;
+}
+
+.header > h1 {
+	font-family: KaushanScript;
+	color: #fff;
+	font-size: 4em;
+	text-align: center;
+}
+
+.header > h2 {
+	font-family: MonserratBold;
+	font-size: 8.33em;
+	color: white;
+	text-transform: uppercase;
+	text-align: center;
+}  
+
+.header-logo {
+	float: left;
+	color: #fff;
+	font-family: MonserratBold;
+	font-size: 1.66em;
+	padding: 1.55rem 0;
+}
+
+.header-menu {
+	float: right;
+	font-family: Monserrat;
+	font-size: 0.77em;
+	text-transform: uppercase;
+	padding: 2rem 0;
+}
+
+.header-link {
+	color: #fff;
+	text-decoration: none;
+	font-weight: bold;
+	cursor: pointer;
+	margin-left: 55px;
+	position: relative;
+
+	&:hover,
+	&__active {
+		color: #fce38a;
+	}
+
+	&:hover:after,
+	&__active:after {
+		content: '';	
+		position: absolute;
+		display: block;
+		background: #fce38a;
+		height: 2px;
+		left: 0;
+		right: 0;
+		bottom: -12px;
+	}
+}
+
+.line {
+	background: #fff;
+	width: 60px;
+	height: 3px;
+	margin: 0 auto;
+	
+}
+
+
+.big-content {
+	height: 1000px;
+}
