@@ -15,10 +15,10 @@ var gulp = require('gulp'),
 
 
 gulp.task('css', function(cb){
-	gulp.src(['node_modules/normalize.css/normalize.css','node_modules/bootstrap-grid/dist/grid.min.css','node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css','src/css/*.less'])
+	gulp.src(['node_modules/normalize.css/normalize.css','node_modules/bootstrap-grid/dist/grid.min.css','node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css','src/accordeon/accordeon-style.css','src/css/*.less'])
 		.pipe(sourcemaps.init())
 		.pipe(less({
-    				plugins: [autoprefix]
+    			plugins: [autoprefix]
   		}))
 		.pipe(concat('styles.css'))
 	//	.pipe(cleanCSS())
@@ -28,10 +28,10 @@ gulp.task('css', function(cb){
 });
 
 gulp.task('js', function(cb){
-	gulp.src(['node_modules/jquery/dist/jquery.min.js','node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js','src/js/*.js'])
+	gulp.src(['node_modules/jquery/dist/jquery.min.js','node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js','src/accordeon/accordeon.js','src/js/*.js'])
 		.pipe(sourcemaps.init())
 		.pipe(concat('main.js'))
-		.pipe(uglify())
+		//.pipe(uglify())
 		.pipe(sourcemaps.write())
 		.pipe(gulp.dest('public/js'));
 	cb();
@@ -81,7 +81,7 @@ gulp.task('watch', function(cb){
 	gulp.watch('src/js/*.*', ['js']);
 	gulp.watch('src/*.html', ['html']);
 	gulp.watch('src/fonts/*.*', ['fonts']);
-	gulp.watch('src/img/**/*.*', ['img']);
+	gulp.watch('src/images/**/*.*', ['img']);
 });
 
 
