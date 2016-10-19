@@ -25,12 +25,49 @@ window.onscroll = function() {
 		});
 	}
 
+	// Large window
+
+	var largeWindow = document.querySelector('.large-window');
+	var windowTint = largeWindow.querySelector('.window-tint');
+	if (wScroll > largeWindow.offsetTop - document.documentElement.clientHeight) {
+		var opacity = ( wScroll - largeWindow.offsetTop + 500) / (wScroll / 5);
+		windowTint.style.opacity = opacity;
+	}
+
+	// Blog posts
+	var blogPosts = document.querySelector('.blog-posts');
+	var post1 = document.querySelector('.post-1');
+	var post3 = document.querySelector('.post-3');
+
+	if (wScroll > blogPosts.offsetTop - document.documentElement.clientHeight) {
+		console.log('topScroll => ' + wScroll);
+		console.log('posts start at => ' + blogPosts.offsetTop);
+		var offset = wScroll - blogPosts.offsetTop + 200;
+		offset = Math.min(0, offset);
+
+		post1.style.transform = 'translate(' + offset + 'px, ' + Math.abs(offset * 0.2) + 'px)';
+		post3.style.transform = 'translate(' + Math.abs(offset) + 'px, ' + Math.abs(offset * 0.2) + 'px)';
+	}
+
+	// Header colapsing
+
+	var menu = document.querySelector('.menu');
+	if ( wScroll > menu.clientHeight ) {
+		menu.style.paddingTop = '15px';
+		menu.style.paddingBottom = '15px';
+		menu.style.fontSize = '1.2rem';
+	} else {
+		menu.style.paddingTop = '35px';
+		menu.style.paddingBottom = '35px';
+		menu.style.fontSize = '1.5rem';
+	}
+	
+	
+	
+	// Top scroller
+
 	/*
-	* Your code for circle with paralax
+	* Your code ...
 	*/
 
-	// ... code
-
-	var tint = document.querySelector('.window-tint');
-	tint.style.opacity = -0.4+Math.pow((wScroll/2000),2);
 }
