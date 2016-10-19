@@ -126,11 +126,15 @@ header {
 		padding: 1.55rem 0;
 	}
 	&-menu {
-		float: right;
+		float: left;
 		font-family: Monserrat;
 		font-size: 0.77em;
 		text-transform: uppercase;
 		padding: 2rem 0;
+
+		&-wrap {
+			float: right;
+		}
 	}
 
 	&-link {
@@ -189,6 +193,12 @@ header {
 		background: #f38181;
 	}
 
+	&_slider {
+		display: inline-block;
+		background: #f38181;
+		vertical-align: middle;
+	}
+
 	&_mobile,
 	&_tablet,
 	&_desktop {
@@ -216,15 +226,138 @@ header {
 		.line_tablet {
 			display: block;
 		}
+
+		.design {
+			&__mobile {
+				transform: translate(-20px,0) !important;
+			}
+		}
+
+		.header {
+			&-logo {
+				float: none;
+				text-align: center;
+			}
+			&-menu {
+//				float: none;
+//				width: 90%;
+//				margin: 0 auto;
+
+				&-wrap {
+					float: none;
+					width: 90%;
+					margin: 0 auto;
+				}
+			}
+			&-link {
+				margin-left: 45px;
+			}
+		}
 	}
 	@media @mobile {
 		.line_mobile {
 			display: block;
 		}
+
+		.header {
+
+			&>h1 {
+				font-size: 2em;
+			}
+			&>h2 {
+				font-size: 4em;
+			}  
+		}
+		.counters {
+			&__column {
+				border-bottom: 1px solid #fff;
+				border-left: 0px !important;
+			}
+			&__column:last-child {
+				border-right: 0px !important;
+			}
+		}
+		.design {
+			&__mobile {
+				transform: translate(-100px,0) !important;
+			}
+		}
+		.header {
+			&-logo {
+				float: none;
+				text-align: center;
+			}
+			&-menu {
+				float: none;
+				width: 90%;
+				margin: 0 auto;
+				text-align: center;
+				padding: 0;
+				margin-bottom: 22px;
+
+				&-wrap {
+					float: none;
+					width: 90%;
+					margin: 0 auto;
+				}
+			}
+			&-link {
+				margin-left: 35px;
+				text-align: center;
+			}
+		}
+		.service__img-wrapper {
+			margin-bottom: 20px;
+		}
 	}
 	@media @smart {
 		.line_mobile {
 			display: block;
+		}
+
+		.header {
+			&>h1 {
+				font-size: 2em;
+			}
+			&>h2 {
+				font-size: 5em;
+			}  
+		}
+		.counters {
+			&__column {
+				border-bottom: 1px solid #fff;
+				border-left: 0px !important;
+			}
+			&__column:last-child {
+				border-right: 0px !important;
+			}
+		}
+		.design {
+			&__mobile {
+				transform: translate(-100px,0) !important;
+			}
+		}
+		.header {
+			&-logo {
+				float: none;
+				text-align: center;
+			}
+			&-menu {
+				float: none;
+				width: 90%;
+				margin: 0 auto;
+				text-align: center;
+				padding: 0;
+				margin-bottom: 22px;
+
+				&-wrap {
+					float: none;
+					width: 100%;
+				}
+			}
+		}
+		.service__img-wrapper {
+			margin-bottom: 20px;
 		}
 	}
 }
@@ -265,7 +398,7 @@ section {
 		margin-top: 1.55rem 0 2.22rem;
 	}
 	& > blockquote {
-		padding: 45px 122px;
+		padding: 45px 0px;
 		color: #999999;
 		text-align: center;
 		font-size: 0.83em;
@@ -281,17 +414,64 @@ section {
 
 	overflow: hidden;
 	display: block;
-	transition: all 0.3s;
+	transition: all 0.5s;
 	padding: 0;
-	margin: 10px auto;
 
 	&-wrapper {
-		// max-height: 250px;
+		position: relative;
+		max-width: 390px;
+		margin: 10px auto;
+
+		&:hover .about-img {
+			transform: translate(-10px,-10px);
+			box-shadow: 10px 10px #95e1d3;
+		}
+
+		&:hover .about-img-gradient {
+			transform: translate(-10px,-10px);
+			opacity: 0.9;
+		}
+
+		&:hover .about-img__link {
+			transform: translate(-10px,-10px);
+			opacity: 1;
+		}
+
+	}
+	&__link {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 11;
+		opacity: 0;
+		transition: all 0.5s;
+		cursor: pointer;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-family: MonserratBold;
+		font-size: 1rem;
+		text-align: center;
+		color: #fff;
+	}
+	&__link-icon {
+		display: block;
+		width: 30px;
+		margin: 25% auto 10px;
+		//transform: translate(0,-200%);
 	}
 
-	&:hover {
-		transform: translate(-10px,-10px);
-		box-shadow: 10px 10px #95e1d3;
+	&-gradient {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(to bottom, #f38181, #fce38a);
+		z-index: 10;
+		opacity: 0;
+		transition: all 0.5s;
 	}
 }
 
@@ -439,9 +619,44 @@ section {
 }
 
 .slider {
-	&__background {
+	&-background {
 		background: #f8f8f8;
+		margin-bottom: 60px;
 	}
+}
+
+.slide__img {
+	width: 110px;
+	height: 110px;
+	margin: 20% auto;
+	border-radius: 50%;
+	overflow: hidden;
+
+}
+
+.slide__img img {
+	width: 110px;
+	height: 110px;
+	vertical-align: middle;
+	display: inline-block;;
+}
+
+.slide {
+	padding: 50px;
+}
+
+.slide__sign {
+	font-family: KaushanScript;
+	color: #000;
+	font-size: 1.33rem;
+	margin-left: 10px;
+}
+
+.slide__text {
+	font-style: italic;
+	color: #999999;
+	font-size: 1.33rem;
+	line-height: 2rem;
 }
 
 footer {
@@ -513,6 +728,7 @@ footer {
 	cursor: pointer;
 	margin-left: 17px;
 	transition: all 0.3s;
+	vertical-align: middle;
 
 	&:hover {
 		transform: translate(-2px,-2px);
